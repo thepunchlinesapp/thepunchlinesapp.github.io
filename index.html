@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punchlines - L'app pour les punchlines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'marker': ['"Permanent Marker"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="py-6">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-4xl font-marker text-center">Punchlines</h1>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="flex-grow">
+            <div class="max-w-4xl mx-auto px-6 py-8">
+                <!-- Hero section -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Découvrez les meilleures punchlines</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Une application simple pour retrouver et partager vos punchlines préférées
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-xl font-semibold mb-2">Découvrir</div>
+                        <p class="text-gray-600">
+                            Explorez une collection quotidiennement mise à jour des meilleures punchlines.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-xl font-semibold mb-2">Partager</div>
+                        <p class="text-gray-600">
+                            Partagez facilement vos punchlines préférées sur les réseaux sociaux.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-xl font-semibold mb-2">Personnaliser</div>
+                        <p class="text-gray-600">
+                            Créez votre propre collection et découvrez du contenu adapté à vos goûts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download buttons -->
+                <div class="text-center mb-16">
+                    <p class="text-xl mb-6">Téléchargez l'application maintenant</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#" class="inline-block bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.0754 20.9351C16.2494 21.7351 15.2994 21.1177 14.2254 20.7744C13.0854 20.416 12.0441 20.4321 10.9471 20.7744C9.5317 21.2374 8.7957 20.4082 8.0497 19.6669C5.1897 16.7405 5.5217 12.1462 8.8117 11.8989C9.9597 11.9722 10.7537 12.5576 11.4417 12.6359C12.4904 12.3886 13.4884 11.7822 14.5664 11.9215C15.8584 12.0978 16.8031 12.7233 17.3981 13.7915C14.2254 15.4376 14.9607 19.6003 17.0754 20.9351M12.1357 11.5348C11.9587 9.67844 13.4884 8.09926 15.2397 7.95691C15.5071 10.0825 13.4884 11.7139 12.1357 11.5348Z"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-xs">Télécharger sur</div>
+                                    <div class="text-sm font-semibold">App Store</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="inline-block bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3.57214 21.3133C3.38499 20.9744 3.33361 20.5978 3.33361 20.2212V3.77902C3.33361 3.4025 3.38499 3.0259 3.57214 2.68702L12.3407 12.0001L3.57214 21.3133ZM16.175 15.9437L6.20284 21.8371C6.37999 21.8773 6.55721 21.9 6.72443 21.9C7.15096 21.9 7.57741 21.788 7.9453 21.5842L16.9694 16.4305L16.175 15.9437ZM20.5239 10.8227L17.1538 8.93341L16.2566 12.0001L17.1538 15.0669L20.5239 13.1775C21.5038 12.6353 21.5038 11.3649 20.5239 10.8227ZM6.20284 2.16292L16.175 8.05643L16.9694 7.56977L7.9453 2.42825C7.57741 2.21219 7.15096 2.10022 6.72443 2.10022C6.55721 2.10022 6.37999 2.12293 6.20284 2.16292Z"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-xs">Télécharger sur</div>
+                                    <div class="text-sm font-semibold">Google Play</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-8 border-t border-gray-200">
+            <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+                <p class="mb-2">&copy; 2023 Punchlines. Tous droits réservés.</p>
+                <p>
+                    <a href="privacy.html" class="text-blue-600 hover:underline">Politique de confidentialité</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
