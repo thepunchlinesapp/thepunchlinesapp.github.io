@@ -170,5 +170,18 @@
   },
   "languageSwitcher": {
     "label": "Langue"
+  },
+  "supportPage": {
+    "title": "Support",
+    "needHelp": {
+      "title": "Besoin d'aide ?",
+      "content": "Tu rencontres un problème avec l'application Punchlines ou tu as une question ? On est là pour t'aider !"
+    },
+    "contact": {
+      "title": "Contacte-nous",
+      "content": "Envoie-nous un email et on te répondra aussi vite que possible :",
+      "button": "support@thepunchlines.app"
+    },
+    "response": "Nous répondons généralement sous 1 à 2 jours ouvrés."
   }
 } 
