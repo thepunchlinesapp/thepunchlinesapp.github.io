@@ -8,6 +8,12 @@ let currentLanguage = 'en';
 // Available languages
 const availableLanguages = ['en', 'fr'];
 
+// Languages directory mapping
+const languageFolders = {
+  'en': 'English (en-US)',
+  'fr': 'French (fr-FR)'
+};
+
 // Translations storage
 let translations = {};
 
@@ -38,6 +44,9 @@ async function initI18n() {
   
   // Apply translations
   translatePage();
+  
+  // Update screenshots based on language
+  updateScreenshots(currentLanguage);
   
   // Set up language switcher event listeners
   setupLanguageSwitcher();
@@ -109,6 +118,29 @@ function getTranslation(key) {
   return value;
 }
 
+// Update screenshots based on selected language
+function updateScreenshots(lang) {
+  // Get all elements with data-screenshot attribute
+  const screenshotElements = document.querySelectorAll('[data-screenshot]');
+  
+  if (screenshotElements.length > 0) {
+    // Get the folder name for the current language
+    const langFolder = languageFolders[lang] || languageFolders['en']; // Fallback to English if language folder not found
+    
+    // Update src for each screenshot
+    screenshotElements.forEach(img => {
+      const screenshotNumber = img.getAttribute('data-screenshot');
+      const alt = img.getAttribute('alt');
+      
+      // Update src with appropriate language folder
+      img.src = `assets/screens/${langFolder}/iOS Phones  6.9/${screenshotNumber}.png`;
+      
+      // Update loading behavior for better performance
+      img.loading = "lazy";
+    });
+  }
+}
+
 // Set up the language switcher dropdown
 function setupLanguageSwitcher() {
   const languageSwitchers = document.querySelectorAll('.language-switcher');
@@ -133,6 +165,9 @@ function setupLanguageSwitcher() {
           
           // Translate page
           translatePage();
+          
+          // Update screenshots
+          updateScreenshots(currentLanguage);
         }
       });
     });
