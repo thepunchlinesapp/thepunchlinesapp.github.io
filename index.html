@@ -50,6 +50,7 @@
             scrollbar-width: none;  /* Firefox */
         }
     </style>
+    <script src="/js/i18n.js"></script>
 </head>
 <body class="bg-gradient-blue min-h-screen">
     <!-- Navbar -->
@@ -59,10 +60,21 @@
                 <span class="font-marker">Punchlines</span>
             </h1>
         </div>
-        <div class="flex space-x-6 text-gray-800">
-            <a href="privacy.html" class="hover:text-black hover:underline">Privacy</a>
-            <a href="terms.html" class="hover:text-black hover:underline">Terms</a>
-            <a href="mailto:support@thepunchlines.app" class="hover:text-black hover:underline">Support</a>
+        <div class="flex items-center space-x-6 text-gray-800">
+            <!-- Language Switcher -->
+            <div class="relative language-switcher">
+                <div class="flex items-center space-x-2 cursor-pointer">
+                    <button data-lang="en" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
+                        <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
+                    </button>
+                    <button data-lang="fr" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
+                        <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
+                    </button>
+                </div>
+            </div>
+            <a href="privacy.html" class="hover:text-black hover:underline" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" class="hover:text-black hover:underline" data-i18n="nav.terms">Terms</a>
+            <a href="mailto:support@thepunchlines.app" class="hover:text-black hover:underline" data-i18n="nav.support">Support</a>
         </div>
     </nav>
 
@@ -71,10 +83,10 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <!-- Left side with text -->
             <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero.title">
                     Daily affirmations that <span class="font-marker text-gray-800">elevate</span> your mindset
                 </h2>
-                <p class="text-xl text-gray-700 mb-8">
+                <p class="text-xl text-gray-700 mb-8" data-i18n="hero.subtitle">
                     Boost your mood with raw truths and positive punchlines tailored to your vibe.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
@@ -82,13 +94,13 @@
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.0754 20.9351C16.2494 21.7351 15.2994 21.1177 14.2254 20.7744C13.0854 20.416 12.0441 20.4321 10.9471 20.7744C9.5317 21.2374 8.7957 20.4082 8.0497 19.6669C5.1897 16.7405 5.5217 12.1462 8.8117 11.8989C9.9597 11.9722 10.7537 12.5576 11.4417 12.6359C12.4904 12.3886 13.4884 11.7822 14.5664 11.9215C15.8584 12.0978 16.8031 12.7233 17.3981 13.7915C14.2254 15.4376 14.9607 19.6003 17.0754 20.9351M12.1357 11.5348C11.9587 9.67844 13.4884 8.09926 15.2397 7.95691C15.5071 10.0825 13.4884 11.7139 12.1357 11.5348Z"></path>
                         </svg>
-                        App Store
+                        <span data-i18n="hero.appStore">App Store</span>
                     </a>
                     <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M3.57214 21.3133C3.38499 20.9744 3.33361 20.5978 3.33361 20.2212V3.77902C3.33361 3.4025 3.38499 3.0259 3.57214 2.68702L12.3407 12.0001L3.57214 21.3133ZM16.175 15.9437L6.20284 21.8371C6.37999 21.8773 6.55721 21.9 6.72443 21.9C7.15096 21.9 7.57741 21.788 7.9453 21.5842L16.9694 16.4305L16.175 15.9437ZM20.5239 10.8227L17.1538 8.93341L16.2566 12.0001L17.1538 15.0669L20.5239 13.1775C21.5038 12.6353 21.5038 11.3649 20.5239 10.8227ZM6.20284 2.16292L16.175 8.05643L16.9694 7.56977L7.9453 2.42825C7.57741 2.21219 7.15096 2.10022 6.72443 2.10022C6.55721 2.10022 6.37999 2.12293 6.20284 2.16292Z"></path>
                         </svg>
-                        Google Play
+                        <span data-i18n="hero.googlePlay">Google Play</span>
                     </a>
                 </div>
             </div>
@@ -103,43 +115,43 @@
     <!-- Features Section -->
     <section class="py-16 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16">Personalized Affirmations for Your Daily Life</h2>
+            <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features.title">Personalized Affirmations for Your Daily Life</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Daily Affirmations</h3>
-                    <p class="text-gray-600">Get flawless affirmations every day to kickstart your morning with the right mindset.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.0.title">Daily Affirmations</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.0.description">Get flawless affirmations every day to kickstart your morning with the right mindset.</p>
                 </div>
                 
                 <!-- Feature 2 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Motivation Boost</h3>
-                    <p class="text-gray-600">Boost your mood with raw truths that help you stay motivated and focused on your goals.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.1.title">Motivation Boost</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.1.description">Boost your mood with raw truths that help you stay motivated and focused on your goals.</p>
                 </div>
                 
                 <!-- Feature 3 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Complete Personalization</h3>
-                    <p class="text-gray-600">Pick the vibes that fit your flow and match your current state of mind.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.2.title">Complete Personalization</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.2.description">Pick the vibes that fit your flow and match your current state of mind.</p>
                 </div>
                 
                 <!-- Feature 4 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Negativity Filter</h3>
-                    <p class="text-gray-600">Block out the bad vibes and focus on positive thoughts that move you forward.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.3.title">Negativity Filter</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.3.description">Block out the bad vibes and focus on positive thoughts that move you forward.</p>
                 </div>
                 
                 <!-- Feature 5 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Tailored to Your Needs</h3>
-                    <p class="text-gray-600">Content customized to your lifestyle and tailored to your grind.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.4.title">Tailored to Your Needs</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.4.description">Content customized to your lifestyle and tailored to your grind.</p>
                 </div>
                 
                 <!-- Feature 6 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Create Your Own</h3>
-                    <p class="text-gray-600">Write and save your own punchlines for when you need them most.</p>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="features.cards.5.title">Create Your Own</h3>
+                    <p class="text-gray-600" data-i18n="features.cards.5.description">Write and save your own punchlines for when you need them most.</p>
                 </div>
             </div>
         </div>
@@ -148,7 +160,7 @@
     <!-- Screenshots Section -->
     <section class="py-16 px-6 bg-white bg-opacity-30">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">Discover the App</h2>
+            <h2 class="text-3xl font-bold mb-12" data-i18n="screenshots.title">Discover the App</h2>
             
             <div class="flex overflow-x-auto pb-8 gap-4 scrollbar-hide">
                 <!-- Real screenshots -->
@@ -157,7 +169,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" alt="Get flawless affirmations" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Get flawless affirmations every day</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.0">Get flawless affirmations every day</p>
                     </div>
                 </div>
                 
@@ -166,7 +178,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" alt="Boost your mood" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Boost your mood with raw truths</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.1">Boost your mood with raw truths</p>
                     </div>
                 </div>
                 
@@ -175,7 +187,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" alt="Pick your vibes" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Pick the vibes that fit your flow</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.2">Pick the vibes that fit your flow</p>
                     </div>
                 </div>
                 
@@ -184,7 +196,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" alt="Block negativity" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Block out the bad vibes</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.3">Block out the bad vibes</p>
                     </div>
                 </div>
                 
@@ -193,7 +205,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" alt="Tailored content" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Tailored to your grind</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.4">Tailored to your grind</p>
                     </div>
                 </div>
                 
@@ -202,7 +214,7 @@
                         <img src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" alt="Create your own" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-3 text-center">
-                        <p class="text-sm font-medium">Write and save your own punchlines</p>
+                        <p class="text-sm font-medium" data-i18n="screenshots.captions.5">Write and save your own punchlines</p>
                     </div>
                 </div>
             </div>
@@ -214,13 +226,13 @@
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1">© 2023 Punchlines. All rights reserved.</p>
+                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline">Terms of Use</a>
-                <a href="mailto:support@thepunchlines.app" class="text-gray-700 hover:underline">Support</a>
+                <a href="privacy.html" class="text-gray-700 hover:underline" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-700 hover:underline" data-i18n="footer.terms">Terms of Use</a>
+                <a href="mailto:support@thepunchlines.app" class="text-gray-700 hover:underline" data-i18n="footer.support">Support</a>
             </div>
         </div>
     </footer>

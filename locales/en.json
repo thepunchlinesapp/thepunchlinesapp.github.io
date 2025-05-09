@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Punchlines - Daily Positive Affirmations"
+  },
+  "nav": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support"
+  },
+  "hero": {
+    "title": "Daily affirmations that <span>elevate</span> your mindset",
+    "subtitle": "Boost your mood with raw truths and positive punchlines tailored to your vibe.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "features": {
+    "title": "Personalized Affirmations for Your Daily Life",
+    "cards": [
+      {
+        "title": "Daily Affirmations",
+        "description": "Get flawless affirmations every day to kickstart your morning with the right mindset."
+      },
+      {
+        "title": "Motivation Boost",
+        "description": "Boost your mood with raw truths that help you stay motivated and focused on your goals."
+      },
+      {
+        "title": "Complete Personalization",
+        "description": "Pick the vibes that fit your flow and match your current state of mind."
+      },
+      {
+        "title": "Negativity Filter",
+        "description": "Block out the bad vibes and focus on positive thoughts that move you forward."
+      },
+      {
+        "title": "Tailored to Your Needs",
+        "description": "Content customized to your lifestyle and tailored to your grind."
+      },
+      {
+        "title": "Create Your Own",
+        "description": "Write and save your own punchlines for when you need them most."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Discover the App",
+    "captions": [
+      "Get flawless affirmations every day",
+      "Boost your mood with raw truths",
+      "Pick the vibes that fit your flow",
+      "Block out the bad vibes",
+      "Tailored to your grind",
+      "Write and save your own punchlines"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2023 Punchlines. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "support": "Support",
+    "backToHome": "Back to home"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "intro": {
+      "title": "Introduction",
+      "content": "Welcome to the privacy policy of the Punchlines application. We place great importance on the protection of your personal data."
+    },
+    "dataCollected": {
+      "title": "Data Collected",
+      "content": "Our application only collects information that you provide during the initial onboarding:",
+      "items": [
+        "Your content preferences",
+        "Your personalization choices",
+        "Your usage settings"
+      ],
+      "note": "No personally identifiable information is collected without your explicit consent."
+    },
+    "dataUse": {
+      "title": "Use of Data",
+      "content": "All collected data is anonymized and used exclusively for:",
+      "items": [
+        "Improving your user experience",
+        "Personalizing content according to your preferences",
+        "Analyzing overall app usage for improvement purposes"
+      ]
+    },
+    "storage": {
+      "title": "Storage and Security",
+      "content": "Your data is securely stored on Supabase servers, with security protocols that comply with industry standards. Data is anonymized before any analytical processing."
+    },
+    "sharing": {
+      "title": "Data Sharing",
+      "content": "We do not sell, exchange, or transfer your anonymized information to third parties, except in the following cases:",
+      "items": [
+        "When necessary to provide a service you have requested",
+        "To comply with legal obligations"
+      ]
+    },
+    "purchases": {
+      "title": "In-App Purchases",
+      "content": "If you make in-app purchases via RevenueCat, please note that we only have access to transaction data, not your payment information."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "You have the right to:",
+      "items": [
+        "Access the data we hold about you",
+        "Request rectification or deletion of this data",
+        "Object to the processing of your data",
+        "Withdraw your consent at any time"
+      ]
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "We reserve the right to modify this privacy policy at any time. The changes will take effect as soon as they are published in the application or on our website."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For any questions regarding this privacy policy or your personal data, please contact us at:",
+      "email": "support@thepunchlines.app"
+    },
+    "lastUpdated": "Last updated:"
+  },
+  "termsPage": {
+    "title": "Terms of Use",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By using the Punchlines application, you agree to be bound by these Terms of Use. If you do not accept these terms, please do not use the application."
+    },
+    "use": {
+      "title": "Use of the Application",
+      "content": "You agree to use the Punchlines application only for lawful purposes and in accordance with these terms. It is prohibited to use the application in a way that could damage, disable, or overload the application."
+    },
+    "content": {
+      "title": "User Content",
+      "content": "By creating your own punchlines or affirmations, you retain all rights to your content, but you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display this content as part of the service."
+    },
+    "accounts": {
+      "title": "Accounts",
+      "content": "If you create an account on the application, you are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account."
+    },
+    "purchases": {
+      "title": "In-App Purchases",
+      "content": "All purchases made in the application are processed by the respective platforms (Apple App Store or Google Play Store) and are subject to their terms and conditions."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "The application is provided \"as is,\" without warranty of any kind. We do not guarantee that the application will be error-free or continuously available."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify these terms at any time. The changes will take effect as soon as they are published in the application or on our website."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For any questions regarding these terms of use, please contact us at:",
+      "email": "support@thepunchlines.app"
+    },
+    "lastUpdated": "Last updated:"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+} 

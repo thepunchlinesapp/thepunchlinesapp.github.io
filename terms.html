@@ -30,67 +30,79 @@
             }
         }
     </script>
+    <script src="/js/i18n.js"></script>
 </head>
 <body class="bg-gradient-blue min-h-screen text-gray-800 leading-relaxed">
     <header class="py-4 mb-6">
-        <div class="max-w-2xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
+            <!-- Language Switcher -->
+            <div class="relative language-switcher">
+                <div class="flex items-center space-x-2 cursor-pointer">
+                    <button data-lang="en" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
+                        <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
+                    </button>
+                    <button data-lang="fr" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
+                        <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
     
     <div class="max-w-2xl mx-auto px-6 pb-10">
         <div class="bg-white rounded-lg shadow-sm p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                Terms of Use - <span class="font-marker">Punchlines</span>
+                <span data-i18n="termsPage.title">Terms of Use</span> - <span class="font-marker">Punchlines</span>
             </h1>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Acceptance of Terms</h2>
-                <p>By using the Punchlines application, you agree to be bound by these Terms of Use. If you do not accept these terms, please do not use the application.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.acceptance.title">Acceptance of Terms</h2>
+                <p data-i18n="termsPage.acceptance.content">By using the Punchlines application, you agree to be bound by these Terms of Use. If you do not accept these terms, please do not use the application.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Use of the Application</h2>
-                <p>You agree to use the Punchlines application only for lawful purposes and in accordance with these terms. It is prohibited to use the application in a way that could damage, disable, or overload the application.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.use.title">Use of the Application</h2>
+                <p data-i18n="termsPage.use.content">You agree to use the Punchlines application only for lawful purposes and in accordance with these terms. It is prohibited to use the application in a way that could damage, disable, or overload the application.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">User Content</h2>
-                <p>By creating your own punchlines or affirmations, you retain all rights to your content, but you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display this content as part of the service.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.content.title">User Content</h2>
+                <p data-i18n="termsPage.content.content">By creating your own punchlines or affirmations, you retain all rights to your content, but you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display this content as part of the service.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Accounts</h2>
-                <p>If you create an account on the application, you are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.accounts.title">Accounts</h2>
+                <p data-i18n="termsPage.accounts.content">If you create an account on the application, you are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">In-App Purchases</h2>
-                <p>All purchases made in the application are processed by the respective platforms (Apple App Store or Google Play Store) and are subject to their terms and conditions.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.purchases.title">In-App Purchases</h2>
+                <p data-i18n="termsPage.purchases.content">All purchases made in the application are processed by the respective platforms (Apple App Store or Google Play Store) and are subject to their terms and conditions.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Limitation of Liability</h2>
-                <p>The application is provided "as is," without warranty of any kind. We do not guarantee that the application will be error-free or continuously available.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.liability.title">Limitation of Liability</h2>
+                <p data-i18n="termsPage.liability.content">The application is provided "as is," without warranty of any kind. We do not guarantee that the application will be error-free or continuously available.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Changes to Terms</h2>
-                <p>We reserve the right to modify these terms at any time. The changes will take effect as soon as they are published in the application or on our website.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.changes.title">Changes to Terms</h2>
+                <p data-i18n="termsPage.changes.content">We reserve the right to modify these terms at any time. The changes will take effect as soon as they are published in the application or on our website.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Contact</h2>
-                <p>For any questions regarding these terms of use, please contact us at:</p>
-                <p class="mt-2 font-medium">support@thepunchlines.app</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.contact.title">Contact</h2>
+                <p data-i18n="termsPage.contact.content">For any questions regarding these terms of use, please contact us at:</p>
+                <p class="mt-2 font-medium" data-i18n="termsPage.contact.email">support@thepunchlines.app</p>
             </section>
             
             <p class="text-sm text-gray-500 pt-4 border-t border-gray-200">
-                Last updated: <script>document.write(new Date().toLocaleDateString())</script>
+                <span data-i18n="termsPage.lastUpdated">Last updated:</span> <script>document.write(new Date().toLocaleDateString())</script>
             </p>
             
             <div class="mt-6 text-center">
-                <a href="index.html" class="text-blue-600 hover:underline">Back to home</a>
+                <a href="index.html" class="text-blue-600 hover:underline" data-i18n="footer.backToHome">Back to home</a>
             </div>
         </div>
     </div>
@@ -99,12 +111,12 @@
     <footer class="py-8 px-6 border-t border-gray-200">
         <div class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-4 sm:mb-0">
-                <p class="text-sm text-gray-600">© 2023 Punchlines. All rights reserved.</p>
+                <p class="text-sm text-gray-600" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
             </div>
             <div class="flex gap-6">
-                <a href="privacy.html" class="text-gray-600 hover:underline text-sm">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-600 hover:underline text-sm">Terms of Use</a>
-                <a href="mailto:support@thepunchlines.app" class="text-gray-600 hover:underline text-sm">Support</a>
+                <a href="privacy.html" class="text-gray-600 hover:underline text-sm" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-600 hover:underline text-sm" data-i18n="footer.terms">Terms of Use</a>
+                <a href="mailto:support@thepunchlines.app" class="text-gray-600 hover:underline text-sm" data-i18n="footer.support">Support</a>
             </div>
         </div>
     </footer>

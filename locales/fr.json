@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Punchlines - Affirmations positives quotidiennes"
+  },
+  "nav": {
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "support": "Support"
+  },
+  "hero": {
+    "title": "Des affirmations quotidiennes qui <span>élèvent</span> votre esprit",
+    "subtitle": "Boostez votre humeur avec des vérités brutes et des punchlines positives adaptées à votre vibe.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "features": {
+    "title": "Affirmations personnalisées pour votre quotidien",
+    "cards": [
+      {
+        "title": "Affirmations quotidiennes",
+        "description": "Recevez des affirmations parfaites tous les jours pour commencer votre journée du bon pied."
+      },
+      {
+        "title": "Boost de motivation",
+        "description": "Boostez votre humeur avec des vérités brutes qui vous aident à rester motivé et concentré sur vos objectifs."
+      },
+      {
+        "title": "Personnalisation complète",
+        "description": "Choisissez les vibes qui correspondent à votre flow et à votre état d'esprit actuel."
+      },
+      {
+        "title": "Filtre anti-négativité",
+        "description": "Bloquez les mauvaises ondes et concentrez-vous sur les pensées positives qui vous font avancer."
+      },
+      {
+        "title": "Adapté à vos besoins",
+        "description": "Contenu personnalisé à votre style de vie et adapté à votre grind."
+      },
+      {
+        "title": "Créez les vôtres",
+        "description": "Écrivez et sauvegardez vos propres punchlines pour les moments où vous en avez le plus besoin."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Découvrez l'application",
+    "captions": [
+      "Obtenez des affirmations parfaites chaque jour",
+      "Boostez votre humeur avec des vérités brutes",
+      "Choisissez les vibes qui correspondent à votre flow",
+      "Bloquez les mauvaises ondes",
+      "Adapté à votre grind",
+      "Écrivez et sauvegardez vos propres punchlines"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2023 Punchlines. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "support": "Support",
+    "backToHome": "Retour à l'accueil"
+  },
+  "privacyPage": {
+    "title": "Politique de Confidentialité",
+    "intro": {
+      "title": "Introduction",
+      "content": "Bienvenue dans la politique de confidentialité de l'application Punchlines. Nous accordons une grande importance à la protection de vos données personnelles."
+    },
+    "dataCollected": {
+      "title": "Données collectées",
+      "content": "Notre application collecte uniquement les informations que vous fournissez lors de l'onboarding initial :",
+      "items": [
+        "Vos préférences de contenu",
+        "Vos choix de personnalisation",
+        "Vos paramètres d'utilisation"
+      ],
+      "note": "Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite."
+    },
+    "dataUse": {
+      "title": "Utilisation des données",
+      "content": "Toutes les données collectées sont anonymisées et utilisées exclusivement pour :",
+      "items": [
+        "Améliorer votre expérience utilisateur",
+        "Personnaliser le contenu selon vos préférences",
+        "Analyser l'utilisation globale de l'application à des fins d'amélioration"
+      ]
+    },
+    "storage": {
+      "title": "Stockage et sécurité",
+      "content": "Vos données sont stockées de manière sécurisée sur des serveurs Supabase, avec des protocoles de sécurité conformes aux standards de l'industrie. Les données sont anonymisées avant tout traitement analytique."
+    },
+    "sharing": {
+      "title": "Partage des données",
+      "content": "Nous ne vendons, n'échangeons ni ne transférons vos informations anonymisées à des tiers, sauf dans les cas suivants :",
+      "items": [
+        "Lorsque cela est nécessaire pour fournir un service que vous avez demandé",
+        "Pour se conformer à des obligations légales"
+      ]
+    },
+    "purchases": {
+      "title": "Achats in-app",
+      "content": "Si vous effectuez des achats in-app via RevenueCat, sachez que nous n'avons accès qu'aux données de transaction, et non à vos informations de paiement."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "content": "Vous avez le droit de :",
+      "items": [
+        "Accéder aux données que nous détenons vous concernant",
+        "Demander la rectification ou la suppression de ces données",
+        "Vous opposer au traitement de vos données",
+        "Retirer votre consentement à tout moment"
+      ]
+    },
+    "changes": {
+      "title": "Modifications de cette politique",
+      "content": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications prendront effet dès leur publication dans l'application ou sur notre site web."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Pour toute question concernant cette politique de confidentialité ou vos données personnelles, veuillez nous contacter à :",
+      "email": "support@thepunchlines.app"
+    },
+    "lastUpdated": "Dernière mise à jour :"
+  },
+  "termsPage": {
+    "title": "Conditions d'Utilisation",
+    "acceptance": {
+      "title": "Acceptation des Conditions",
+      "content": "En utilisant l'application Punchlines, vous acceptez d'être lié par les présentes Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application."
+    },
+    "use": {
+      "title": "Utilisation de l'Application",
+      "content": "Vous vous engagez à utiliser l'application Punchlines uniquement à des fins légales et conformes aux présentes conditions. Il est interdit d'utiliser l'application d'une manière qui pourrait endommager, désactiver ou surcharger l'application."
+    },
+    "content": {
+      "title": "Contenu de l'Utilisateur",
+      "content": "En créant vos propres punchlines ou affirmations, vous conservez tous les droits sur votre contenu, mais vous nous accordez une licence mondiale, non exclusive et libre de redevance pour utiliser, reproduire et afficher ce contenu dans le cadre du service."
+    },
+    "accounts": {
+      "title": "Comptes",
+      "content": "Si vous créez un compte sur l'application, vous êtes responsable du maintien de la confidentialité de vos informations de compte et de toutes les activités qui se déroulent sous votre compte."
+    },
+    "purchases": {
+      "title": "Achats In-App",
+      "content": "Tous les achats effectués dans l'application sont traités par les plateformes respectives (Apple App Store ou Google Play Store) et sont soumis à leurs conditions générales."
+    },
+    "liability": {
+      "title": "Limitation de Responsabilité",
+      "content": "L'application est fournie \"telle quelle\", sans garantie d'aucune sorte. Nous ne garantissons pas que l'application sera exempte d'erreurs ou disponible en permanence."
+    },
+    "changes": {
+      "title": "Modifications des Conditions",
+      "content": "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prendront effet dès leur publication dans l'application ou sur notre site web."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Pour toute question concernant ces conditions d'utilisation, veuillez nous contacter à :",
+      "email": "support@thepunchlines.app"
+    },
+    "lastUpdated": "Dernière mise à jour :"
+  },
+  "languageSwitcher": {
+    "label": "Langue"
+  }
+} 
