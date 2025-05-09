@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Punchlines - Affirmations positives quotidiennes"
+    "title": "Punchlines - Des affirmations qui claquent"
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -8,50 +8,50 @@
     "support": "Support"
   },
   "hero": {
-    "title": "Des affirmations quotidiennes qui <span>élèvent</span> votre esprit",
-    "subtitle": "Boostez votre humeur avec des vérités brutes et des punchlines positives adaptées à votre vibe.",
+    "title": "Des punchlines quotidiennes qui <span>boostent</span> ton mindset",
+    "subtitle": "Reçois des phrases courtes, cash et ultra-motivantes pour traverser ton existence avec un état d'esprit plus positif.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt"
   },
   "features": {
-    "title": "Affirmations personnalisées pour votre quotidien",
+    "title": "Des punchlines qui claquent pour ton quotidien",
     "cards": [
       {
-        "title": "Affirmations quotidiennes",
-        "description": "Recevez des affirmations parfaites tous les jours pour commencer votre journée du bon pied."
+        "title": "Punchlines quotidiennes",
+        "description": "Des rappels quotidiens avec des punchlines fraîches pour démarrer ta journée du bon pied."
       },
       {
         "title": "Boost de motivation",
-        "description": "Boostez votre humeur avec des vérités brutes qui vous aident à rester motivé et concentré sur vos objectifs."
+        "description": "Des phrases cash et motivantes qui t'aident à rester focus sur tes objectifs."
       },
       {
-        "title": "Personnalisation complète",
-        "description": "Choisissez les vibes qui correspondent à votre flow et à votre état d'esprit actuel."
+        "title": "Choisis ta sauce",
+        "description": "\"Gangsta vibes\", \"Calmer le mental\", \"Attirer la money\"... ou compose ta propre sauce."
       },
       {
-        "title": "Bouclier anti-négativité",
-        "description": "Bloquez les mauvaises ondes et concentrez-vous sur les pensées positives qui vous font avancer."
+        "title": "Pare-feu à négativité",
+        "description": "Entoure-toi d'un bouclier de mots et de pensées pour rester au top."
       },
       {
-        "title": "Adapté à vos besoins",
-        "description": "Contenu personnalisé à votre style de vie et adapté à votre grind."
+        "title": "Objectifs sur-mesure",
+        "description": "Dis-nous ton but, et on calibre les punchlines pour t'y propulser."
       },
       {
-        "title": "Créez les vôtres",
-        "description": "Écrivez et sauvegardez vos propres punchlines pour les moments où vous en avez le plus besoin."
+        "title": "Crée & partage",
+        "description": "Écris, sauvegarde et affiche tes propres punchlines quand tu en as besoin."
       }
     ]
   },
   "screenshots": {
-    "title": "Découvrez l'application",
+    "title": "Découvre l'application",
     "captions": [
-      "Obtenez des affirmations parfaites chaque jour",
-      "Boostez votre humeur avec des vérités brutes",
-      "Choisissez les vibes qui correspondent à votre flow",
-      "Bloquez les mauvaises ondes",
-      "Adapté à votre grind",
-      "Écrivez et sauvegardez vos propres punchlines"
+      "Des punchlines qui claquent chaque jour",
+      "Boost ton humeur avec des phrases cash",
+      "Choisis ta sauce et tes vibes",
+      "Pare-feu à négativité activé",
+      "Calibré pour tes objectifs",
+      "Crée & partage tes propres punchlines"
     ]
   },
   "footer": {
