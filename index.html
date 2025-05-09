@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -52,7 +53,7 @@
     </style>
     <script src="/js/i18n.js"></script>
 </head>
-<body class="bg-gradient-blue min-h-screen">
+<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen">
     <!-- Navbar -->
     <nav class="py-4 px-6 md:px-12 flex justify-between items-center">
         <div class="flex items-center">
@@ -90,20 +91,16 @@
                     Boost your mood with raw truths and positive punchlines tailored to your vibe.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center">
-                        <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.0754 20.9351C16.2494 21.7351 15.2994 21.1177 14.2254 20.7744C13.0854 20.416 12.0441 20.4321 10.9471 20.7744C9.5317 21.2374 8.7957 20.4082 8.0497 19.6669C5.1897 16.7405 5.5217 12.1462 8.8117 11.8989C9.9597 11.9722 10.7537 12.5576 11.4417 12.6359C12.4904 12.3886 13.4884 11.7822 14.5664 11.9215C15.8584 12.0978 16.8031 12.7233 17.3981 13.7915C14.2254 15.4376 14.9607 19.6003 17.0754 20.9351M12.1357 11.5348C11.9587 9.67844 13.4884 8.09926 15.2397 7.95691C15.5071 10.0825 13.4884 11.7139 12.1357 11.5348Z"></path>
-                        </svg>
+                    <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center">
+                        <i class="fab fa-apple mr-2 text-xl"></i>
                         <span data-i18n="hero.appStore">App Store</span>
                     </a>
                     <div class="relative">
-                        <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center opacity-70 cursor-default">
-                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3.57214 21.3133C3.38499 20.9744 3.33361 20.5978 3.33361 20.2212V3.77902C3.33361 3.4025 3.38499 3.0259 3.57214 2.68702L12.3407 12.0001L3.57214 21.3133ZM16.175 15.9437L6.20284 21.8371C6.37999 21.8773 6.55721 21.9 6.72443 21.9C7.15096 21.9 7.57741 21.788 7.9453 21.5842L16.9694 16.4305L16.175 15.9437ZM20.5239 10.8227L17.1538 8.93341L16.2566 12.0001L17.1538 15.0669L20.5239 13.1775C21.5038 12.6353 21.5038 11.3649 20.5239 10.8227ZM6.20284 2.16292L16.175 8.05643L16.9694 7.56977L7.9453 2.42825C7.57741 2.21219 7.15096 2.10022 6.72443 2.10022C6.55721 2.10022 6.37999 2.12293 6.20284 2.16292Z"></path>
-                            </svg>
+                        <a href="#" class="bg-black/75 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default">
+                            <i class="fab fa-google-play mr-2 text-xl"></i>
                             <span data-i18n="hero.googlePlay">Google Play</span>
                         </a>
-                        <div class="absolute -top-3 -right-3 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full text-gray-800" data-i18n="hero.soon">
+                        <div class="absolute -top-3 -right-3 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full text-gray-800 shadow-md" data-i18n="hero.soon">
                             Soon
                         </div>
                     </div>
@@ -118,13 +115,13 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-6">
+    <section class="py-16 px-6 bg-white bg-opacity-5">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features.title">Personalized Affirmations for Your Daily Life</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -135,7 +132,7 @@
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -146,7 +143,7 @@
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
@@ -157,7 +154,7 @@
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
@@ -168,7 +165,7 @@
                 </div>
                 
                 <!-- Feature 5 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -179,7 +176,7 @@
                 </div>
                 
                 <!-- Feature 6 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
+                <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
@@ -193,7 +190,7 @@
     </section>
 
     <!-- Screenshots Section -->
-    <section class="py-16 px-6 bg-white bg-opacity-30">
+    <section class="py-16 px-6 bg-white bg-opacity-10 backdrop-blur-sm">
         <!-- Titre centré -->
         <div class="max-w-6xl mx-auto text-center mb-12">
             <h2 class="text-3xl font-bold" data-i18n="screenshots.title">Discover the App</h2>
@@ -205,38 +202,64 @@
                 <!-- Screenshot 1 -->
                 <img data-screenshot="01" src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" 
                     alt="Get flawless affirmations every day" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 
                 <!-- Screenshot 2 -->
                 <img data-screenshot="02" src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" 
                     alt="Boost your mood with raw truths" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 
                 <!-- Screenshot 3 -->
                 <img data-screenshot="03" src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" 
                     alt="Pick the vibes that fit your flow" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 
                 <!-- Screenshot 4 -->
                 <img data-screenshot="04" src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" 
                     alt="Block out the bad vibes" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 
                 <!-- Screenshot 5 -->
                 <img data-screenshot="05" src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" 
                     alt="Tailored to your grind" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 
                 <!-- Screenshot 6 -->
                 <img data-screenshot="06" src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" 
                     alt="Write and save your own punchlines" 
-                    class="h-[500px] rounded-2xl shadow-md">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="py-16 px-6 bg-gradient-to-b from-app-blue-light/40 to-white/90 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="cta.title">Télécharge maintenant, choisis ta vibe</h2>
+            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
+                Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center">
+                    <i class="fab fa-apple mr-2 text-xl"></i>
+                    <span data-i18n="cta.appStore">App Store</span>
+                </a>
+                <div class="relative">
+                    <a href="#" class="bg-black/75 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default">
+                        <i class="fab fa-google-play mr-2 text-xl"></i>
+                        <span data-i18n="cta.googlePlay">Google Play</span>
+                    </a>
+                    <div class="absolute -top-3 -right-3 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full text-gray-800 shadow-md" data-i18n="cta.soon">
+                        Bientôt
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-6 font-light" data-i18n="cta.tagline">PS : Spirituel Gangster</p>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-10 px-6 border-t border-gray-200">
+    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>

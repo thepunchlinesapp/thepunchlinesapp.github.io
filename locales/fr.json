@@ -8,14 +8,14 @@
     "support": "Support"
   },
   "hero": {
-    "title": "Des punchlines quotidiennes qui <span>boostent</span> ton mindset",
-    "subtitle": "Reçois des phrases courtes, cash et ultra-motivantes pour traverser ton existence avec un état d'esprit plus positif.",
+    "title": "Marre des affirmations bateau ? Essaies les <span>punchlines</span> positives",
+    "subtitle": "Reçois des phrases courtes, cash et ultra-motivantes pour traverser le fleuve de ton existence avec un état d'esprit plus positif.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt"
   },
   "features": {
-    "title": "Des punchlines qui claquent pour ton quotidien",
+    "title": "C'est quoi le concept ?",
     "cards": [
       {
         "title": "Punchlines quotidiennes",
@@ -53,6 +53,14 @@
       "Calibré pour tes objectifs",
       "Crée & partage tes propres punchlines"
     ]
+  },
+  "cta": {
+    "title": "Télécharge maintenant, choisis ta vibe",
+    "subtitle": "Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "soon": "Bientôt",
+    "tagline": "PS : Spirituel Gangster"
   },
   "footer": {
     "copyright": "© 2023 Punchlines. Tous droits réservés.",
