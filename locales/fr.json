@@ -11,7 +11,8 @@
     "title": "Des affirmations quotidiennes qui <span>élèvent</span> votre esprit",
     "subtitle": "Boostez votre humeur avec des vérités brutes et des punchlines positives adaptées à votre vibe.",
     "appStore": "App Store",
-    "googlePlay": "Google Play"
+    "googlePlay": "Google Play",
+    "soon": "Bientôt"
   },
   "features": {
     "title": "Affirmations personnalisées pour votre quotidien",
@@ -29,7 +30,7 @@
         "description": "Choisissez les vibes qui correspondent à votre flow et à votre état d'esprit actuel."
       },
       {
-        "title": "Filtre anti-négativité",
+        "title": "Bouclier anti-négativité",
         "description": "Bloquez les mauvaises ondes et concentrez-vous sur les pensées positives qui vous font avancer."
       },
       {
