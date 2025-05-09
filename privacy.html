@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Punchlines</title>
+    <title>Privacy Policy - Punchlines</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,13 +14,24 @@
                 extend: {
                     fontFamily: {
                         'marker': ['"Permanent Marker"', 'cursive'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'app-blue': {
+                            light: '#d8e6f0',
+                            DEFAULT: '#b0cfe2',
+                            dark: '#8fb8d4',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
+<body class="bg-gradient-blue min-h-screen text-gray-800 leading-relaxed">
     <header class="py-4 mb-6">
         <div class="max-w-2xl mx-auto px-6">
             <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
@@ -30,82 +41,82 @@
     <div class="max-w-2xl mx-auto px-6 pb-10">
         <div class="bg-white rounded-lg shadow-sm p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                Politique de Confidentialité - <span class="font-marker">Punchlines</span>
+                Privacy Policy - <span class="font-marker">Punchlines</span>
             </h1>
             
             <section class="mb-8">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3">Introduction</h2>
-                <p>Bienvenue dans la politique de confidentialité de l'application <span class="font-marker">Punchlines</span>. Nous accordons une grande importance à la protection de vos données personnelles.</p>
+                <p>Welcome to the privacy policy of the <span class="font-marker">Punchlines</span> application. We place great importance on the protection of your personal data.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Données collectées</h2>
-                <p>Notre application collecte uniquement les informations que vous fournissez lors de l'onboarding initial :</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Data Collected</h2>
+                <p>Our application only collects information that you provide during the initial onboarding:</p>
                 <ul class="list-disc ml-6 mt-2">
-                    <li>Vos préférences de contenu</li>
-                    <li>Vos choix de personnalisation</li>
-                    <li>Vos paramètres d'utilisation</li>
+                    <li>Your content preferences</li>
+                    <li>Your personalization choices</li>
+                    <li>Your usage settings</li>
                 </ul>
-                <p class="mt-2">Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite.</p>
+                <p class="mt-2">No personally identifiable information is collected without your explicit consent.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Utilisation des données</h2>
-                <p>Toutes les données collectées sont anonymisées et utilisées exclusivement pour :</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Use of Data</h2>
+                <p>All collected data is anonymized and used exclusively for:</p>
                 <ul class="list-disc ml-6 mt-2">
-                    <li>Améliorer votre expérience utilisateur</li>
-                    <li>Personnaliser le contenu selon vos préférences</li>
-                    <li>Analyser l'utilisation globale de l'application à des fins d'amélioration</li>
-                </ul>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Stockage et sécurité</h2>
-                <p>Vos données sont stockées de manière sécurisée sur des serveurs Supabase, avec des protocoles de sécurité conformes aux standards de l'industrie. Les données sont anonymisées avant tout traitement analytique.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Partage des données</h2>
-                <p>Nous ne vendons, n'échangeons ni ne transférons vos informations anonymisées à des tiers, sauf dans les cas suivants :</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Lorsque cela est nécessaire pour fournir un service que vous avez demandé</li>
-                    <li>Pour se conformer à des obligations légales</li>
+                    <li>Improving your user experience</li>
+                    <li>Personalizing content according to your preferences</li>
+                    <li>Analyzing overall app usage for improvement purposes</li>
                 </ul>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Achats in-app</h2>
-                <p>Si vous effectuez des achats in-app via RevenueCat, sachez que nous n'avons accès qu'aux données de transaction, et non à vos informations de paiement.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Storage and Security</h2>
+                <p>Your data is securely stored on Supabase servers, with security protocols that comply with industry standards. Data is anonymized before any analytical processing.</p>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Vos droits</h2>
-                <p>Vous avez le droit de :</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Data Sharing</h2>
+                <p>We do not sell, exchange, or transfer your anonymized information to third parties, except in the following cases:</p>
                 <ul class="list-disc ml-6 mt-2">
-                    <li>Accéder aux données que nous détenons vous concernant</li>
-                    <li>Demander la rectification ou la suppression de ces données</li>
-                    <li>Vous opposer au traitement de vos données</li>
-                    <li>Retirer votre consentement à tout moment</li>
+                    <li>When necessary to provide a service you have requested</li>
+                    <li>To comply with legal obligations</li>
                 </ul>
             </section>
             
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Modifications de cette politique</h2>
-                <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications prendront effet dès leur publication dans l'application ou sur notre site web.</p>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">In-App Purchases</h2>
+                <p>If you make in-app purchases via RevenueCat, please note that we only have access to transaction data, not your payment information.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul class="list-disc ml-6 mt-2">
+                    <li>Access the data we hold about you</li>
+                    <li>Request rectification or deletion of this data</li>
+                    <li>Object to the processing of your data</li>
+                    <li>Withdraw your consent at any time</li>
+                </ul>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Changes to This Policy</h2>
+                <p>We reserve the right to modify this privacy policy at any time. The changes will take effect as soon as they are published in the application or on our website.</p>
             </section>
             
             <section class="mb-8">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3">Contact</h2>
-                <p>Pour toute question concernant cette politique de confidentialité ou vos données personnelles, veuillez nous contacter à :</p>
+                <p>For any questions regarding this privacy policy or your personal data, please contact us at:</p>
                 <p class="mt-2 font-medium">support@thepunchlines.app</p>
             </section>
             
             <p class="text-sm text-gray-500 pt-4 border-t border-gray-200">
-                Dernière mise à jour : <script>document.write(new Date().toLocaleDateString())</script>
+                Last updated: <script>document.write(new Date().toLocaleDateString())</script>
             </p>
             
             <div class="mt-6 text-center">
-                <a href="index.html" class="text-blue-600 hover:underline">Retour à l'accueil</a>
+                <a href="index.html" class="text-blue-600 hover:underline">Back to home</a>
             </div>
         </div>
     </div>

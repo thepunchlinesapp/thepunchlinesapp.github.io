@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punchlines - Affirmations positives quotidiennes</title>
+    <title>Punchlines - Daily Positive Affirmations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,6 +40,15 @@
         .feature-card:hover {
             transform: translateY(-5px);
         }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="bg-gradient-blue min-h-screen">
@@ -52,7 +61,7 @@
         </div>
         <div class="flex space-x-6 text-gray-800">
             <a href="privacy.html" class="hover:text-black hover:underline">Privacy</a>
-            <a href="#" class="hover:text-black hover:underline">Terms</a>
+            <a href="terms.html" class="hover:text-black hover:underline">Terms</a>
             <a href="mailto:support@thepunchlines.app" class="hover:text-black hover:underline">Support</a>
         </div>
     </nav>
@@ -86,10 +95,7 @@
             
             <!-- Right side with app logo -->
             <div class="md:w-1/2 flex justify-center md:justify-end">
-                <div class="w-64 h-64 rounded-3xl flex flex-col justify-center items-center bg-gradient-blue shadow-lg">
-                    <div class="text-5xl font-bold text-gray-800">Punch</div>
-                    <div class="text-5xl font-bold text-gray-800">Lines</div>
-                </div>
+                <img src="assets/logo.jpg" alt="Punchlines Logo" class="w-64 h-64 object-contain rounded-3xl shadow-lg">
             </div>
         </div>
     </section>
@@ -97,43 +103,43 @@
     <!-- Features Section -->
     <section class="py-16 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16">Affirmations personnalisées pour votre quotidien</h2>
+            <h2 class="text-3xl font-bold text-center mb-16">Personalized Affirmations for Your Daily Life</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Affirmations quotidiennes</h3>
-                    <p class="text-gray-600">Recevez des affirmations positives tous les jours pour commencer votre journée du bon pied.</p>
+                    <h3 class="text-xl font-semibold mb-3">Daily Affirmations</h3>
+                    <p class="text-gray-600">Get flawless affirmations every day to kickstart your morning with the right mindset.</p>
                 </div>
                 
                 <!-- Feature 2 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Boost de motivation</h3>
-                    <p class="text-gray-600">Des vérités brutes pour vous aider à rester motivé et focalisé sur vos objectifs.</p>
+                    <h3 class="text-xl font-semibold mb-3">Motivation Boost</h3>
+                    <p class="text-gray-600">Boost your mood with raw truths that help you stay motivated and focused on your goals.</p>
                 </div>
                 
                 <!-- Feature 3 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Personnalisation complète</h3>
-                    <p class="text-gray-600">Choisissez les vibes qui correspondent à votre flow et à votre état d'esprit actuel.</p>
+                    <h3 class="text-xl font-semibold mb-3">Complete Personalization</h3>
+                    <p class="text-gray-600">Pick the vibes that fit your flow and match your current state of mind.</p>
                 </div>
                 
                 <!-- Feature 4 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Filtrage de la négativité</h3>
-                    <p class="text-gray-600">Bloquez les mauvaises ondes et concentrez-vous sur les pensées positives qui vous font avancer.</p>
+                    <h3 class="text-xl font-semibold mb-3">Negativity Filter</h3>
+                    <p class="text-gray-600">Block out the bad vibes and focus on positive thoughts that move you forward.</p>
                 </div>
                 
                 <!-- Feature 5 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Adapté à vos besoins</h3>
-                    <p class="text-gray-600">Des contenus sur mesure qui s'adaptent à votre style de vie et à vos objectifs personnels.</p>
+                    <h3 class="text-xl font-semibold mb-3">Tailored to Your Needs</h3>
+                    <p class="text-gray-600">Content customized to your lifestyle and tailored to your grind.</p>
                 </div>
                 
                 <!-- Feature 6 -->
                 <div class="bg-white rounded-xl p-6 shadow-sm feature-card">
-                    <h3 class="text-xl font-semibold mb-3">Créez vos propres punchlines</h3>
-                    <p class="text-gray-600">Écrivez et sauvegardez vos propres affirmations pour les moments où vous en avez besoin.</p>
+                    <h3 class="text-xl font-semibold mb-3">Create Your Own</h3>
+                    <p class="text-gray-600">Write and save your own punchlines for when you need them most.</p>
                 </div>
             </div>
         </div>
@@ -142,43 +148,61 @@
     <!-- Screenshots Section -->
     <section class="py-16 px-6 bg-white bg-opacity-30">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">Découvrez l'application</h2>
+            <h2 class="text-3xl font-bold mb-12">Discover the App</h2>
             
             <div class="flex overflow-x-auto pb-8 gap-4 scrollbar-hide">
-                <!-- We'd normally add actual screenshots here, using the marketing images provided -->
-                <div class="flex-shrink-0 w-64 h-[440px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                <!-- Real screenshots -->
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
                     <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
-                        <div class="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <p class="font-semibold">Get flawless affirmations every day</p>
-                            <p class="text-sm mt-2 text-gray-500">I'm alive and it feels damn good.</p>
-                        </div>
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" alt="Get flawless affirmations" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Get flawless affirmations every day</p>
                     </div>
                 </div>
                 
-                <div class="flex-shrink-0 w-64 h-[440px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
                     <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
-                        <div class="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <p class="font-semibold">Boost your mood with raw truths</p>
-                            <p class="text-sm mt-2 text-gray-500">I cruise through life in first-class vibes.</p>
-                        </div>
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" alt="Boost your mood" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Boost your mood with raw truths</p>
                     </div>
                 </div>
                 
-                <div class="flex-shrink-0 w-64 h-[440px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
                     <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
-                        <div class="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <p class="font-semibold">Pick the vibes that fit your flow</p>
-                            <p class="text-sm mt-2 text-gray-500">What are you looking for?</p>
-                        </div>
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" alt="Pick your vibes" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Pick the vibes that fit your flow</p>
                     </div>
                 </div>
                 
-                <div class="flex-shrink-0 w-64 h-[440px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
                     <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
-                        <div class="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <p class="font-semibold">Block out the bad vibes</p>
-                            <p class="text-sm mt-2 text-gray-500">I ghost negativity on sight.</p>
-                        </div>
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" alt="Block negativity" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Block out the bad vibes</p>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                    <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" alt="Tailored content" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Tailored to your grind</p>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 h-[500px] bg-app-blue rounded-3xl shadow-md flex flex-col">
+                    <div class="m-3 flex-grow rounded-2xl bg-gray-100 relative overflow-hidden">
+                        <img src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" alt="Create your own" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-3 text-center">
+                        <p class="text-sm font-medium">Write and save your own punchlines</p>
                     </div>
                 </div>
             </div>
@@ -190,12 +214,12 @@
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1">© 2023 Punchlines. Tous droits réservés.</p>
+                <p class="text-sm text-gray-600 mt-1">© 2023 Punchlines. All rights reserved.</p>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline">Politique de confidentialité</a>
-                <a href="#" class="text-gray-700 hover:underline">Conditions d'utilisation</a>
+                <a href="privacy.html" class="text-gray-700 hover:underline">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-700 hover:underline">Terms of Use</a>
                 <a href="mailto:support@thepunchlines.app" class="text-gray-700 hover:underline">Support</a>
             </div>
         </div>
