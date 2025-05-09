@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'Utilisation - Punchlines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'marker': ['"Permanent Marker"', 'cursive'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'app-blue': {
+                            light: '#d8e6f0',
+                            DEFAULT: '#b0cfe2',
+                            dark: '#8fb8d4',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-blue min-h-screen text-gray-800 leading-relaxed">
+    <header class="py-4 mb-6">
+        <div class="max-w-2xl mx-auto px-6">
+            <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
+        </div>
+    </header>
+    
+    <div class="max-w-2xl mx-auto px-6 pb-10">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+            <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
+                Conditions d'Utilisation - <span class="font-marker">Punchlines</span>
+            </h1>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Acceptation des Conditions</h2>
+                <p>En utilisant l'application Punchlines, vous acceptez d'être lié par les présentes Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Utilisation de l'Application</h2>
+                <p>Vous vous engagez à utiliser l'application Punchlines uniquement à des fins légales et conformes aux présentes conditions. Il est interdit d'utiliser l'application d'une manière qui pourrait endommager, désactiver ou surcharger l'application.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Contenu de l'Utilisateur</h2>
+                <p>En créant vos propres punchlines ou affirmations, vous conservez tous les droits sur votre contenu, mais vous nous accordez une licence mondiale, non exclusive et libre de redevance pour utiliser, reproduire et afficher ce contenu dans le cadre du service.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Comptes</h2>
+                <p>Si vous créez un compte sur l'application, vous êtes responsable du maintien de la confidentialité de vos informations de compte et de toutes les activités qui se déroulent sous votre compte.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Achats In-App</h2>
+                <p>Tous les achats effectués dans l'application sont traités par les plateformes respectives (Apple App Store ou Google Play Store) et sont soumis à leurs conditions générales.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Limitation de Responsabilité</h2>
+                <p>L'application est fournie "telle quelle", sans garantie d'aucune sorte. Nous ne garantissons pas que l'application sera exempte d'erreurs ou disponible en permanence.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Modifications des Conditions</h2>
+                <p>Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prendront effet dès leur publication dans l'application ou sur notre site web.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Contact</h2>
+                <p>Pour toute question concernant ces conditions d'utilisation, veuillez nous contacter à :</p>
+                <p class="mt-2 font-medium">support@thepunchlines.app</p>
+            </section>
+            
+            <p class="text-sm text-gray-500 pt-4 border-t border-gray-200">
+                Dernière mise à jour : <script>document.write(new Date().toLocaleDateString())</script>
+            </p>
+            
+            <div class="mt-6 text-center">
+                <a href="index.html" class="text-blue-600 hover:underline">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200">
+        <div class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="mb-4 sm:mb-0">
+                <p class="text-sm text-gray-600">© 2023 Punchlines. Tous droits réservés.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="text-gray-600 hover:underline text-sm">Politique de confidentialité</a>
+                <a href="terms.html" class="text-gray-600 hover:underline text-sm">Conditions d'utilisation</a>
+                <a href="mailto:support@thepunchlines.app" class="text-gray-600 hover:underline text-sm">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
