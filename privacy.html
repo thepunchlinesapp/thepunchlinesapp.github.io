@@ -38,7 +38,7 @@
     </script>
     <script src="/js/i18n.js"></script>
 </head>
-<body class="bg-gradient-blue min-h-screen text-gray-800 leading-relaxed">
+<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
     <header class="py-4 mb-6">
         <div class="max-w-2xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
@@ -57,7 +57,7 @@
     </header>
     
     <div class="max-w-2xl mx-auto px-6 pb-10">
-        <div class="bg-white rounded-lg shadow-sm p-8">
+        <div class="bg-white/90 rounded-lg shadow-md p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
                 <span data-i18n="privacyPage.title">Privacy Policy</span> - <span class="font-marker">Punchlines</span>
             </h1>
@@ -138,5 +138,21 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="mb-6 sm:mb-0">
+                <h2 class="text-2xl font-marker">Punchlines</h2>
+                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
+                <a href="privacy.html" class="text-gray-700 hover:underline font-medium" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-700 hover:underline" data-i18n="footer.terms">Terms of Use</a>
+                <a href="support.html" class="text-gray-700 hover:underline" data-i18n="footer.support">Support</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
