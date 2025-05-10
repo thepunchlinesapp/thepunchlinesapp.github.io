@@ -89,22 +89,29 @@
         <div class="flex items-center gap-3 md:gap-6 text-gray-800">
             <!-- Language Switcher -->
             <div class="relative language-switcher">
-                <div class="flex items-center space-x-2 cursor-pointer">
-                    <button data-lang="en" class="flex items-center justify-center w-10 h-10 touch-target rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
-                        <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
+                <div class="flex items-center">
+                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
+                        <span class="current-language">English</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
                     </button>
-                    <button data-lang="fr" class="flex items-center justify-center w-10 h-10 touch-target rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
-                        <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
-                    </button>
+                </div>
+                <!-- Language Dropdown Menu -->
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
+                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
+                    </div>
                 </div>
             </div>
             <div class="hidden sm:flex items-center gap-6">
-                <a href="privacy.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.privacy">Privacy</a>
-                <a href="terms.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.terms">Terms</a>
-                <a href="support.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.support">Support</a>
+                <a href="privacy.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.terms">Terms</a>
+                <a href="support.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
             </div>
             <!-- Mobile menu button -->
-            <button class="sm:hidden text-gray-800 focus:outline-none touch-target p-2" id="mobile-menu-button">
+            <button class="sm:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -115,9 +122,9 @@
     <!-- Mobile menu (hidden by default) -->
     <div class="hidden sm:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.support">Support</a>
+            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
         </div>
     </div>
 
@@ -340,10 +347,53 @@
             
             // Close menu when clicking outside
             document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                if (mobileMenu && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             });
+
+            // Language dropdown functionality
+            const languageDropdownButton = document.getElementById('language-dropdown-button');
+            const languageDropdownMenu = document.getElementById('language-dropdown-menu');
+            const languageOptions = document.querySelectorAll('.language-option');
+            const currentLanguageDisplay = document.querySelector('.current-language');
+            
+            if (languageDropdownButton && languageDropdownMenu) {
+                // Toggle dropdown
+                languageDropdownButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageDropdownMenu.classList.toggle('hidden');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!languageDropdownMenu.contains(event.target) && !languageDropdownButton.contains(event.target)) {
+                        languageDropdownMenu.classList.add('hidden');
+                    }
+                });
+                
+                // Language option selection
+                languageOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        const lang = this.getAttribute('data-lang');
+                        
+                        // Update UI first for immediate feedback
+                        languageOptions.forEach(opt => opt.setAttribute('aria-selected', 'false'));
+                        this.setAttribute('aria-selected', 'true');
+                        
+                        // Update the displayed language
+                        currentLanguageDisplay.textContent = this.textContent;
+                        
+                        // Close dropdown
+                        languageDropdownMenu.classList.add('hidden');
+                        
+                        // Trigger language change
+                        if (window.switchLanguage) {
+                            window.switchLanguage(lang);
+                        }
+                    });
+                });
+            }
 
             // Handle screenshot scroll indicators on mobile
             const screenshotContainer = document.querySelector('.screenshot-container');

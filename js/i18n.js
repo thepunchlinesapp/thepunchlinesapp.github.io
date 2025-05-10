@@ -14,11 +14,37 @@ const languageFolders = {
   'fr': 'French (fr-FR)'
 };
 
+// Language display names
+const languageNames = {
+  'en': 'English',
+  'fr': 'Français'
+};
+
 // Translations storage
 let translations = {};
 
 // DOM elements with data-i18n attribute
 let i18nElements = [];
+
+// Expose language switching function for the new dropdown
+window.switchLanguage = async function(lang) {
+  if (lang && availableLanguages.includes(lang) && lang !== currentLanguage) {
+    currentLanguage = lang;
+    localStorage.setItem('punchlines-language', currentLanguage);
+    
+    // Load new translations
+    await loadTranslations(currentLanguage);
+    
+    // Update UI
+    updateLanguageUI();
+    
+    // Translate page
+    translatePage();
+    
+    // Update screenshots
+    updateScreenshots(currentLanguage);
+  }
+};
 
 // Initialize the internationalization
 async function initI18n() {
@@ -47,9 +73,6 @@ async function initI18n() {
   
   // Update screenshots based on language
   updateScreenshots(currentLanguage);
-  
-  // Set up language switcher event listeners
-  setupLanguageSwitcher();
 }
 
 // Load translations from JSON file
@@ -141,50 +164,19 @@ function updateScreenshots(lang) {
   }
 }
 
-// Set up the language switcher dropdown
-function setupLanguageSwitcher() {
-  const languageSwitchers = document.querySelectorAll('.language-switcher');
-  
-  languageSwitchers.forEach(switcher => {
-    // Get all language option buttons
-    const options = switcher.querySelectorAll('[data-lang]');
-    
-    options.forEach(option => {
-      option.addEventListener('click', async () => {
-        const newLang = option.getAttribute('data-lang');
-        
-        if (newLang !== currentLanguage) {
-          currentLanguage = newLang;
-          localStorage.setItem('punchlines-language', currentLanguage);
-          
-          // Load new translations
-          await loadTranslations(currentLanguage);
-          
-          // Update UI
-          updateLanguageUI();
-          
-          // Translate page
-          translatePage();
-          
-          // Update screenshots
-          updateScreenshots(currentLanguage);
-        }
-      });
-    });
-  });
-}
-
 // Update UI to reflect the selected language
 function updateLanguageUI() {
-  const activeLangClass = 'bg-gray-200';
+  // Update language display in dropdown
+  const currentLanguageEl = document.querySelector('.current-language');
+  if (currentLanguageEl) {
+    currentLanguageEl.textContent = languageNames[currentLanguage] || languageNames['en'];
+  }
   
-  // Update language buttons
-  document.querySelectorAll('[data-lang]').forEach(el => {
+  // Update selected state in dropdown menu
+  document.querySelectorAll('.language-option').forEach(el => {
     if (el.getAttribute('data-lang') === currentLanguage) {
-      el.classList.add(activeLangClass);
       el.setAttribute('aria-selected', 'true');
     } else {
-      el.classList.remove(activeLangClass);
       el.setAttribute('aria-selected', 'false');
     }
   });
