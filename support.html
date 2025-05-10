@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Support - Punchlines, l'application d'affirmations positives.">
     <title>Support - Punchlines</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -38,34 +39,62 @@
         }
     </script>
     <script src="/js/i18n.js"></script>
+    <style>
+        /* Touch optimized styles */
+        @media (max-width: 640px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
     <header class="py-4 mb-6">
-        <div class="max-w-2xl mx-auto px-6 flex justify-between items-center">
+        <div class="max-w-2xl mx-auto px-4 md:px-6 flex justify-between items-center">
             <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
             <!-- Language Switcher -->
-            <div class="relative language-switcher">
-                <div class="flex items-center space-x-2 cursor-pointer">
-                    <button data-lang="en" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
-                        <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
-                    </button>
-                    <button data-lang="fr" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
-                        <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
-                    </button>
+            <div class="flex items-center gap-3 md:gap-6">
+                <div class="relative language-switcher">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        <button data-lang="en" class="flex items-center justify-center w-10 h-10 touch-target rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
+                            <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
+                        </button>
+                        <button data-lang="fr" class="flex items-center justify-center w-10 h-10 touch-target rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
+                            <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
+                        </button>
+                    </div>
                 </div>
+                
+                <!-- Mobile menu button -->
+                <button class="sm:hidden text-gray-800 focus:outline-none touch-target p-2" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
     
-    <div class="max-w-2xl mx-auto px-6 pb-10">
-        <div class="bg-white/90 rounded-lg shadow-md p-8">
+    <!-- Mobile menu (hidden by default) -->
+    <div class="hidden sm:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 mb-4 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+        <div class="flex flex-col py-2">
+            <a href="index.html" class="px-4 py-3 hover:bg-gray-100 touch-target">Accueil</a>
+            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" class="px-4 py-3 bg-gray-100 font-medium touch-target" data-i18n="nav.support">Support</a>
+        </div>
+    </div>
+    
+    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10">
+        <div class="bg-white/90 rounded-lg shadow-md p-6 md:p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
                 <span data-i18n="supportPage.title">Support</span> - <span class="font-marker">Punchlines</span>
             </h1>
             
             <section class="mb-8 text-center">
                 <div class="mb-6 text-center">
-                    <i class="fas fa-headset text-6xl text-app-blue"></i>
+                    <i class="fas fa-headset text-5xl md:text-6xl text-app-blue"></i>
                 </div>
                 
                 <h2 class="text-xl font-semibold text-gray-700 mb-4" data-i18n="supportPage.needHelp.title">Need Help?</h2>
@@ -73,13 +102,13 @@
                     Having trouble with the Punchlines app or have a question? We're here to help!
                 </p>
                 
-                <div class="mt-8 mb-8 p-6 bg-app-blue-light/50 rounded-lg">
+                <div class="mt-8 mb-8 p-4 md:p-6 bg-app-blue-light/50 rounded-lg">
                     <h3 class="text-lg font-medium mb-3" data-i18n="supportPage.contact.title">Contact Us</h3>
                     <p class="mb-4" data-i18n="supportPage.contact.content">
                         Send us an email and we'll get back to you as soon as possible:
                     </p>
                     
-                    <a href="mailto:support@thepunchlines.app" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md">
+                    <a href="mailto:support@thepunchlines.app" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md touch-target">
                         <i class="far fa-envelope mr-2"></i>
                         <span data-i18n="supportPage.contact.button">support@thepunchlines.app</span>
                     </a>
@@ -91,25 +120,47 @@
             </section>
             
             <div class="mt-6 text-center">
-                <a href="index.html" class="text-app-blue-dark hover:underline transition-colors" data-i18n="footer.backToHome">Back to home</a>
+                <a href="index.html" class="text-app-blue-dark hover:underline transition-colors py-2 touch-target" data-i18n="footer.backToHome">Back to home</a>
             </div>
         </div>
     </div>
     
     <!-- Footer -->
-    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200 mt-auto">
+    <footer class="py-8 md:py-10 px-4 md:px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200 mt-auto">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>
                 <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
             </div>
             
-            <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline font-medium" data-i18n="footer.support">Support</a>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+                <a href="privacy.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.terms">Terms of Use</a>
+                <a href="support.html" class="text-gray-700 hover:underline font-medium py-2 touch-target" data-i18n="footer.support">Support</a>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile optimized JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

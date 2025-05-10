@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Punchlines - Des affirmations positives directes et motivantes pour votre quotidien.">
+    <meta name="theme-color" content="#b0cfe2">
     <title>Punchlines - Daily Positive Affirmations</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="theme-color" content="#b0cfe2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,9 +41,13 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .feature-card {
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backface-visibility: hidden;
+            will-change: transform;
         }
         .feature-card:hover {
             transform: translateY(-5px);
@@ -56,53 +61,84 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
+        /* Touch optimized styles */
+        @media (max-width: 640px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            .screenshot-container {
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+            .screenshot-item {
+                scroll-snap-align: center;
+            }
+        }
     </style>
     <script src="/js/i18n.js"></script>
 </head>
 <body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen">
     <!-- Navbar -->
-    <nav class="py-4 px-6 md:px-12 flex justify-between items-center">
+    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
         <div class="flex items-center">
-            <h1 class="text-3xl font-bold">
+            <h1 class="text-2xl md:text-3xl font-bold">
                 <span class="font-marker">Punchlines</span>
             </h1>
         </div>
-        <div class="flex items-center space-x-6 text-gray-800">
+        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
             <!-- Language Switcher -->
             <div class="relative language-switcher">
                 <div class="flex items-center space-x-2 cursor-pointer">
-                    <button data-lang="en" class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
+                    <button data-lang="en" class="flex items-center justify-center w-10 h-10 touch-target rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
                         <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
                     </button>
-                    <button data-lang="fr" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
+                    <button data-lang="fr" class="flex items-center justify-center w-10 h-10 touch-target rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
                         <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
                     </button>
                 </div>
             </div>
-            <a href="privacy.html" class="hover:text-black hover:underline" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" class="hover:text-black hover:underline" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" class="hover:text-black hover:underline" data-i18n="nav.support">Support</a>
+            <div class="hidden sm:flex items-center gap-6">
+                <a href="privacy.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.terms">Terms</a>
+                <a href="support.html" class="hover:text-black hover:underline touch-target py-2" data-i18n="nav.support">Support</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="sm:hidden text-gray-800 focus:outline-none touch-target p-2" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile menu (hidden by default) -->
+    <div class="hidden sm:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+        <div class="flex flex-col py-2">
+            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.support">Support</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="py-12 md:py-20 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section class="py-8 md:py-20 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <!-- Left side with text -->
             <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero.title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight" data-i18n="hero.title">
                     Daily affirmations that <span class="font-marker text-gray-800">elevate</span> your mindset
                 </h2>
-                <p class="text-xl text-gray-700 mb-8" data-i18n="hero.subtitle">
+                <p class="text-lg md:text-xl text-gray-700 mb-6 md:mb-8" data-i18n="hero.subtitle">
                     Boost your mood with raw truths and positive punchlines tailored to your vibe.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center">
+                    <a href="#" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                         <i class="fab fa-apple mr-2 text-xl"></i>
                         <span data-i18n="hero.appStore">App Store</span>
                     </a>
                     <div class="relative">
-                        <a href="#" class="bg-black/75 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default">
+                        <a href="#" class="bg-black/75 text-white px-6 sm:px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default touch-target">
                             <i class="fab fa-google-play mr-2 text-xl"></i>
                             <span data-i18n="hero.googlePlay">Google Play</span>
                         </a>
@@ -115,17 +151,17 @@
             
             <!-- Right side with app logo -->
             <div class="md:w-1/2 flex justify-center md:justify-end">
-                <img src="assets/logo.jpg" alt="Punchlines Logo" class="w-64 h-64 object-contain rounded-3xl shadow-lg">
+                <img src="assets/logo.jpg" alt="Punchlines Logo" class="w-48 h-48 sm:w-64 sm:h-64 object-contain rounded-3xl shadow-lg" loading="eager">
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-6 bg-white bg-opacity-5">
+    <section class="py-12 md:py-16 px-4 md:px-6 bg-white bg-opacity-5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features.title">Personalized Affirmations for Your Daily Life</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 md:mb-16" data-i18n="features.title">Personalized Affirmations for Your Daily Life</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Feature 1 -->
                 <div class="bg-white/90 rounded-xl p-6 shadow-md hover:shadow-lg transition-all feature-card">
                     <div class="flex justify-center mb-4">
@@ -196,62 +232,71 @@
     </section>
 
     <!-- Screenshots Section -->
-    <section class="py-16 px-6 bg-white bg-opacity-10 backdrop-blur-sm">
+    <section class="py-12 md:py-16 px-4 md:px-6 bg-white bg-opacity-10 backdrop-blur-sm">
         <!-- Titre centré -->
-        <div class="max-w-6xl mx-auto text-center mb-12">
-            <h2 class="text-3xl font-bold" data-i18n="screenshots.title">Discover the App</h2>
+        <div class="max-w-6xl mx-auto text-center mb-8 md:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="screenshots.title">Discover the App</h2>
         </div>
         
-        <!-- Captures d'écran sur toute la largeur avec centrage -->
+        <!-- Captures d'écran optimisées mobile -->
         <div class="w-full">
-            <div class="flex overflow-x-auto pb-8 gap-6 scrollbar-hide px-4 justify-center">
-                <!-- Screenshot 1 -->
+            <div class="flex overflow-x-auto pb-8 gap-4 md:gap-6 scrollbar-hide px-4 justify-start md:justify-center screenshot-container">
+                <!-- Screenshot items now have the screenshot-item class for snap scrolling -->
                 <img data-screenshot="01" src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" 
                     alt="Get flawless affirmations every day" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[400px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
                 
                 <!-- Screenshot 2 -->
                 <img data-screenshot="02" src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" 
                     alt="Boost your mood with raw truths" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
                 
                 <!-- Screenshot 3 -->
                 <img data-screenshot="03" src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" 
                     alt="Pick the vibes that fit your flow" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
                 
                 <!-- Screenshot 4 -->
                 <img data-screenshot="04" src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" 
                     alt="Block out the bad vibes" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
                 
                 <!-- Screenshot 5 -->
                 <img data-screenshot="05" src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" 
                     alt="Tailored to your grind" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
                 
                 <!-- Screenshot 6 -->
                 <img data-screenshot="06" src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" 
                     alt="Write and save your own punchlines" 
-                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    class="h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+            </div>
+            <!-- Pagination indicators for mobile -->
+            <div class="flex justify-center gap-2 mt-4 md:hidden">
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-100"></span>
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
+                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 px-6 bg-gradient-to-b from-app-blue-light/40 to-white/90 backdrop-blur-sm">
+    <section class="py-12 md:py-16 px-4 md:px-6 bg-gradient-to-b from-app-blue-light/40 to-white/90 backdrop-blur-sm">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6" data-i18n="cta.title">Télécharge maintenant, choisis ta vibe</h2>
-            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 md:mb-6" data-i18n="cta.title">Télécharge maintenant, choisis ta vibe</h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
                 Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center">
+                <a href="#" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                     <i class="fab fa-apple mr-2 text-xl"></i>
                     <span data-i18n="cta.appStore">App Store</span>
                 </a>
                 <div class="relative">
-                    <a href="#" class="bg-black/75 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default">
+                    <a href="#" class="bg-black/75 text-white px-6 sm:px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default touch-target">
                         <i class="fab fa-google-play mr-2 text-xl"></i>
                         <span data-i18n="cta.googlePlay">Google Play</span>
                     </a>
@@ -265,19 +310,70 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
+    <footer class="py-8 md:py-10 px-4 md:px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>
                 <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
             </div>
             
-            <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline" data-i18n="footer.support">Support</a>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+                <a href="privacy.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.terms">Terms of Use</a>
+                <a href="support.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.support">Support</a>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile optimized JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Handle screenshot scroll indicators on mobile
+            const screenshotContainer = document.querySelector('.screenshot-container');
+            const indicators = document.querySelectorAll('.flex.justify-center.gap-2.mt-4 span');
+            
+            if (screenshotContainer && indicators.length > 0) {
+                screenshotContainer.addEventListener('scroll', function() {
+                    // Calculate which screenshot is most visible
+                    const screenshots = document.querySelectorAll('.screenshot-item');
+                    const containerWidth = screenshotContainer.offsetWidth;
+                    const scrollPosition = screenshotContainer.scrollLeft;
+                    
+                    let activeIndex = 0;
+                    screenshots.forEach((screenshot, index) => {
+                        const rect = screenshot.getBoundingClientRect();
+                        const screenshotCenter = rect.left + rect.width / 2;
+                        const containerCenter = containerWidth / 2;
+                        
+                        if (Math.abs(screenshotCenter - containerCenter) < containerWidth / 2) {
+                            activeIndex = index;
+                        }
+                    });
+                    
+                    // Update indicators
+                    indicators.forEach((indicator, index) => {
+                        indicator.style.opacity = index === activeIndex ? '1' : '0.5';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html> 
