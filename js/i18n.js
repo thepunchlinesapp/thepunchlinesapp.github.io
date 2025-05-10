@@ -172,12 +172,28 @@ function updateLanguageUI() {
     currentLanguageEl.textContent = languageNames[currentLanguage] || languageNames['en'];
   }
   
-  // Update selected state in dropdown menu
+  // Update selected state in desktop dropdown menu
   document.querySelectorAll('.language-option').forEach(el => {
     if (el.getAttribute('data-lang') === currentLanguage) {
       el.setAttribute('aria-selected', 'true');
     } else {
       el.setAttribute('aria-selected', 'false');
+    }
+  });
+  
+  // Update mobile language options
+  document.querySelectorAll('.mobile-language-option').forEach(el => {
+    const isSelected = el.getAttribute('data-lang') === currentLanguage;
+    const checkmark = el.querySelector('.mobile-lang-checkmark');
+    
+    el.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+    
+    if (checkmark) {
+      if (isSelected) {
+        checkmark.classList.remove('hidden');
+      } else {
+        checkmark.classList.add('hidden');
+      }
     }
   });
   

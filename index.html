@@ -87,8 +87,8 @@
             </h1>
         </div>
         <div class="flex items-center gap-3 md:gap-6 text-gray-800">
-            <!-- Language Switcher -->
-            <div class="relative language-switcher">
+            <!-- Language Switcher - Visible only on desktop -->
+            <div class="relative language-switcher hidden sm:block">
                 <div class="flex items-center">
                     <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
                         <span class="current-language">English</span>
@@ -125,6 +125,21 @@
             <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
             <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
             <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
+            <div class="border-t border-gray-200 my-1"></div>
+            <!-- Language options in mobile menu -->
+            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
+            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
+                English
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </button>
+            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
+                Français
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </button>
         </div>
     </div>
 
@@ -352,7 +367,7 @@
                 }
             });
 
-            // Language dropdown functionality
+            // Language dropdown functionality (desktop)
             const languageDropdownButton = document.getElementById('language-dropdown-button');
             const languageDropdownMenu = document.getElementById('language-dropdown-menu');
             const languageOptions = document.querySelectorAll('.language-option');
@@ -372,7 +387,7 @@
                     }
                 });
                 
-                // Language option selection
+                // Language option selection for desktop
                 languageOptions.forEach(option => {
                     option.addEventListener('click', function() {
                         const lang = this.getAttribute('data-lang');
@@ -382,7 +397,9 @@
                         this.setAttribute('aria-selected', 'true');
                         
                         // Update the displayed language
-                        currentLanguageDisplay.textContent = this.textContent;
+                        if (currentLanguageDisplay) {
+                            currentLanguageDisplay.textContent = this.textContent;
+                        }
                         
                         // Close dropdown
                         languageDropdownMenu.classList.add('hidden');
@@ -394,6 +411,35 @@
                     });
                 });
             }
+
+            // Mobile language selection
+            const mobileLangOptions = document.querySelectorAll('.mobile-language-option');
+            mobileLangOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update checkmarks
+                    mobileLangOptions.forEach(opt => {
+                        opt.setAttribute('aria-selected', 'false');
+                        opt.querySelector('.mobile-lang-checkmark').classList.add('hidden');
+                    });
+                    
+                    this.setAttribute('aria-selected', 'true');
+                    this.querySelector('.mobile-lang-checkmark').classList.remove('hidden');
+                    
+                    // Close menu after a small delay for better UX
+                    setTimeout(() => {
+                        if (mobileMenu) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }, 300);
+                    
+                    // Trigger language change
+                    if (window.switchLanguage) {
+                        window.switchLanguage(lang);
+                    }
+                });
+            });
 
             // Handle screenshot scroll indicators on mobile
             const screenshotContainer = document.querySelector('.screenshot-container');

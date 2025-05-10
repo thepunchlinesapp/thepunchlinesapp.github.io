@@ -169,7 +169,8 @@
     "lastUpdated": "Dernière mise à jour :"
   },
   "languageSwitcher": {
-    "label": "Langue"
+    "label": "Langue",
+    "change": "Changer de langue"
   },
   "supportPage": {
     "title": "Support",
