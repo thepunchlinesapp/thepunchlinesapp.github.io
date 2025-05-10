@@ -49,43 +49,72 @@
     </style>
 </head>
 <body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
-    <header class="py-4 mb-6">
-        <div class="max-w-2xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            <a href="index.html" class="inline-block font-marker text-2xl hover:text-gray-600 transition-colors">Punchlines</a>
-            <!-- Language Switcher -->
-            <div class="flex items-center gap-3 md:gap-6">
-                <div class="relative language-switcher">
-                    <div class="flex items-center space-x-2 cursor-pointer">
-                        <button data-lang="en" class="flex items-center justify-center w-10 h-10 touch-target rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" aria-selected="true">
-                            <img src="/assets/flags/en.svg" alt="English" class="w-5 h-5">
-                        </button>
-                        <button data-lang="fr" class="flex items-center justify-center w-10 h-10 touch-target rounded-full hover:bg-gray-300 transition-colors" aria-selected="false">
-                            <img src="/assets/flags/fr.svg" alt="Français" class="w-5 h-5">
-                        </button>
+    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
+        <div class="flex items-center">
+            <h1 class="text-2xl md:text-3xl font-bold">
+                <a href="index.html" class="hover:opacity-80 transition-opacity">
+                    <span class="font-marker">Punchlines</span>
+                </a>
+            </h1>
+        </div>
+        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
+            <!-- Language Switcher - Visible only on desktop -->
+            <div class="relative language-switcher hidden md:block">
+                <div class="flex items-center">
+                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
+                        <span class="current-language">English</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Language Dropdown Menu -->
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
+                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
                     </div>
                 </div>
-                
-                <!-- Mobile menu button -->
-                <button class="sm:hidden text-gray-800 focus:outline-none touch-target p-2" id="mobile-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
             </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="privacy.html" id="nav-privacy" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" id="nav-terms" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i8n="nav.terms">Terms</a>
+                <a href="support.html" id="nav-support" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-    </header>
-    
+    </nav>
+
     <!-- Mobile menu (hidden by default) -->
-    <div class="hidden sm:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 mb-4 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+    <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="index.html" class="px-4 py-3 hover:bg-gray-100 touch-target">Accueil</a>
-            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" class="px-4 py-3 bg-gray-100 font-medium touch-target" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target" data-i18n="nav.support">Support</a>
+            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
+            <div class="border-t border-gray-200 my-1"></div>
+            <!-- Language options in mobile menu -->
+            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
+            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
+                English
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </button>
+            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
+                Français
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </button>
         </div>
     </div>
     
-    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10">
+    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10 mt-8">
         <div class="bg-white/90 rounded-lg shadow-md p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
                 <span data-i18n="termsPage.title">Terms of Use</span> - <span class="font-marker">Punchlines</span>
@@ -178,6 +207,26 @@
                 }
             });
         });
+
+        // Highlight active nav link
+        (function() {
+            const path = window.location.pathname.split('/').pop();
+            const map = {
+                'privacy.html': ['nav-privacy', 'mobile-nav-privacy'],
+                'terms.html': ['nav-terms', 'mobile-nav-terms'],
+                'support.html': ['nav-support', 'mobile-nav-support']
+            };
+            Object.entries(map).forEach(([file, ids]) => {
+                if (path === file) {
+                    ids.forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) {
+                            el.classList.add('font-bold','bg-white/70');
+                        }
+                    });
+                }
+            });
+        })();
     </script>
 </body>
 </html> 
