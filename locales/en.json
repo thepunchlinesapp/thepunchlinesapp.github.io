@@ -13,7 +13,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Soon",
-    "tagline": "Join the spiritual gangstas"
+    "tagline": "Join the spiritual gangstas",
+    "interested": "Interested?"
   },
   "features": {
     "title": "Personalized Affirmations for Your Daily Life",
@@ -60,7 +61,8 @@
     "subtitle": "Tired of fluffy affirmations? Punchlines sends you short, direct, and ultra-motivating phrases to help you navigate life with a more positive mindset.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
-    "soon": "Soon"
+    "soon": "Soon",
+    "interested": "Interested?"
   },
   "footer": {
     "copyright": "© 2023 Punchlines. All rights reserved.",
@@ -91,8 +93,18 @@
       "items": [
         "Improving your user experience",
         "Personalizing content according to your preferences",
-        "Analyzing overall app usage for improvement purposes"
+        "Analyzing overall app usage for improvement purposes",
+        "Marketing and product optimization",
+        "Bug tracking and app performance monitoring"
       ]
+    },
+    "analytics": {
+      "title": "Analytics and Monitoring Tools",
+      "content": "We use the following third-party services to help us improve our application and understand how it is used:",
+      "mixpanel": "Used for product analytics and user behavior tracking. All data is anonymized and helps us understand how our app is used to improve the user experience.",
+      "sentry": "Monitors app performance and collects crash reports to help us identify and fix technical issues. No personal information is included in these reports.",
+      "appsflyer": "Provides marketing analytics and attribution data to help us understand the effectiveness of our marketing campaigns. Data collected is anonymized and used for marketing optimization.",
+      "note": "These services adhere to strict data protection standards and process data in accordance with applicable privacy laws. The data collected is anonymized and used solely for the purposes mentioned above."
     },
     "storage": {
       "title": "Storage and Security",
@@ -184,5 +196,8 @@
       "button": "support@thepunchlines.app"
     },
     "response": "We typically respond within 1-2 business days."
+  },
+  "androidModal": {
+    "title": "Interested in Android?"
   }
 } 

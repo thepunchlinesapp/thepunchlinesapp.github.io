@@ -75,10 +75,73 @@
                 scroll-snap-align: center;
             }
         }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            margin: 40px auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            line-height: 1;
+            color: #666;
+        }
+        .modal-iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 60%;
+            overflow: hidden;
+        }
+        .modal-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
     </style>
     <script src="/js/i18n.js"></script>
 </head>
 <body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen">
+    <!-- Android Interest Modal -->
+    <div id="androidModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAndroidModal()">&times;</button>
+            <h3 class="text-xl font-bold mb-4" data-i18n="androidModal.title">Interested in Android?</h3>
+            <div class="modal-iframe-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1ZwBxbL70B0W4O3IsPjAfkkQglwmQrEr_SZwKHr5iufJKyg/viewform?embedded=true" width="640" height="385" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        </div>
+    </div>
     <!-- Navbar -->
     <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
         <div class="flex items-center">
@@ -162,15 +225,11 @@
                         <i class="fab fa-apple mr-2 text-xl"></i>
                         <span data-i18n="hero.appStore">App Store</span>
                     </a>
-                    <div class="relative">
-                        <a href="#" class="bg-black/75 text-white px-6 sm:px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default touch-target">
-                            <i class="fab fa-google-play mr-2 text-xl"></i>
-                            <span data-i18n="hero.googlePlay">Google Play</span>
-                        </a>
-                        <div class="absolute -top-3 -right-3 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full text-gray-800 shadow-md" data-i18n="hero.soon">
-                            Soon
-                        </div>
-                    </div>
+                    <button onclick="openAndroidModal()" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                        <i class="fab fa-google-play mr-2 text-xl"></i>
+                        <span data-i18n="hero.googlePlay">Google Play</span>
+                        <span class="ml-2 text-xs bg-yellow-400 px-2 py-1 rounded-full text-gray-800" data-i18n="hero.interested">Interested?</span>
+                    </button>
                 </div>
             </div>
             
@@ -320,15 +379,11 @@
                     <i class="fab fa-apple mr-2 text-xl"></i>
                     <span data-i18n="cta.appStore">App Store</span>
                 </a>
-                <div class="relative">
-                    <a href="#" class="bg-black/75 text-white px-6 sm:px-8 py-3 rounded-lg font-medium transition-all shadow-md flex items-center justify-center opacity-90 cursor-default touch-target">
-                        <i class="fab fa-google-play mr-2 text-xl"></i>
-                        <span data-i18n="cta.googlePlay">Google Play</span>
-                    </a>
-                    <div class="absolute -top-3 -right-3 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full text-gray-800 shadow-md" data-i18n="cta.soon">
-                        Bientôt
-                    </div>
-                </div>
+                <button onclick="openAndroidModal()" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                    <i class="fab fa-google-play mr-2 text-xl"></i>
+                    <span data-i18n="cta.googlePlay">Google Play</span>
+                    <span class="ml-2 text-xs bg-yellow-400 px-2 py-1 rounded-full text-gray-800" data-i18n="cta.interested">Interested?</span>
+                </button>
             </div>
         </div>
     </section>
@@ -472,6 +527,25 @@
                 });
             }
         });
+
+        // Add modal functions
+        function openAndroidModal() {
+            document.getElementById('androidModal').style.display = 'block';
+            document.body.classList.add('modal-open');
+        }
+
+        function closeAndroidModal() {
+            document.getElementById('androidModal').style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('androidModal');
+            if (event.target == modal) {
+                closeAndroidModal();
+            }
+        }
     </script>
 </body>
 </html> 

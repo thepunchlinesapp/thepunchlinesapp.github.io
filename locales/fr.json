@@ -13,7 +13,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
-    "tagline": "Rejoins les spiritual gangstas"
+    "tagline": "Rejoins les spiritual gangstas",
+    "interested": "Intéressé ?"
   },
   "features": {
     "title": "C'est quoi le concept ?",
@@ -60,7 +61,8 @@
     "subtitle": "Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
-    "soon": "Bientôt"
+    "soon": "Bientôt",
+    "interested": "Intéressé ?"
   },
   "footer": {
     "copyright": "© 2023 Punchlines. Tous droits réservés.",
@@ -91,8 +93,18 @@
       "items": [
         "Améliorer votre expérience utilisateur",
         "Personnaliser le contenu selon vos préférences",
-        "Analyser l'utilisation globale de l'application à des fins d'amélioration"
+        "Analyser l'utilisation globale de l'application à des fins d'amélioration",
+        "Le marketing et l'optimisation du produit",
+        "Le suivi des bugs et la surveillance des performances de l'application"
       ]
+    },
+    "analytics": {
+      "title": "Outils d'analyse et de surveillance",
+      "content": "Nous utilisons les services tiers suivants pour nous aider à améliorer notre application et comprendre son utilisation :",
+      "mixpanel": "Utilisé pour l'analyse produit et le suivi du comportement utilisateur. Toutes les données sont anonymisées et nous aident à comprendre comment notre application est utilisée pour améliorer l'expérience utilisateur.",
+      "sentry": "Surveille les performances de l'application et collecte les rapports de crash pour nous aider à identifier et corriger les problèmes techniques. Aucune information personnelle n'est incluse dans ces rapports.",
+      "appsflyer": "Fournit des analyses marketing et des données d'attribution pour nous aider à comprendre l'efficacité de nos campagnes marketing. Les données collectées sont anonymisées et utilisées pour l'optimisation marketing.",
+      "note": "Ces services respectent des normes strictes de protection des données et traitent les données conformément aux lois applicables sur la protection de la vie privée. Les données collectées sont anonymisées et utilisées uniquement aux fins mentionnées ci-dessus."
     },
     "storage": {
       "title": "Stockage et sécurité",
@@ -184,5 +196,8 @@
       "button": "support@thepunchlines.app"
     },
     "response": "Nous répondons généralement sous 1 à 2 jours ouvrés."
+  },
+  "androidModal": {
+    "title": "Intéressé par Android ?"
   }
 } 
