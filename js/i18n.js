@@ -26,11 +26,27 @@ let translations = {};
 // DOM elements with data-i18n attribute
 let i18nElements = [];
 
+// Function to get URL parameter
+function getUrlParameter(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Function to update URL with language parameter
+function updateUrlLanguage(lang) {
+  const url = new URL(window.location);
+  url.searchParams.set('lang', lang);
+  window.history.replaceState({}, '', url);
+}
+
 // Expose language switching function for the new dropdown
 window.switchLanguage = async function(lang) {
   if (lang && availableLanguages.includes(lang) && lang !== currentLanguage) {
     currentLanguage = lang;
     localStorage.setItem('punchlines-language', currentLanguage);
+    
+    // Update URL with new language
+    updateUrlLanguage(currentLanguage);
     
     // Load new translations
     await loadTranslations(currentLanguage);
@@ -48,19 +64,31 @@ window.switchLanguage = async function(lang) {
 
 // Initialize the internationalization
 async function initI18n() {
-  // Try to get language from localStorage
-  const savedLanguage = localStorage.getItem('punchlines-language');
-  
-  // Set language from saved preference, or browser preference, or default to English
-  if (savedLanguage && availableLanguages.includes(savedLanguage)) {
-    currentLanguage = savedLanguage;
+  // First priority: Check URL parameter
+  const urlLang = getUrlParameter('lang');
+  if (urlLang && availableLanguages.includes(urlLang)) {
+    currentLanguage = urlLang;
   } else {
-    // Check browser language
-    const browserLang = navigator.language.split('-')[0];
-    if (availableLanguages.includes(browserLang)) {
-      currentLanguage = browserLang;
+    // Second priority: Try to get language from localStorage
+    const savedLanguage = localStorage.getItem('punchlines-language');
+    
+    // Set language from saved preference, or browser preference, or default to English
+    if (savedLanguage && availableLanguages.includes(savedLanguage)) {
+      currentLanguage = savedLanguage;
+    } else {
+      // Check browser language
+      const browserLang = navigator.language.split('-')[0];
+      if (availableLanguages.includes(browserLang)) {
+        currentLanguage = browserLang;
+      }
     }
   }
+  
+  // Update URL to reflect current language
+  updateUrlLanguage(currentLanguage);
+  
+  // Save to localStorage for future visits
+  localStorage.setItem('punchlines-language', currentLanguage);
   
   // Load translations for the current language
   await loadTranslations(currentLanguage);
