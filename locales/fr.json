@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Punchlines - Des affirmations qui claquent"
+    "title": "Punchlines - Des affirmations positives pour ton quotidien"
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -8,57 +8,57 @@
     "support": "Support"
   },
   "hero": {
-    "title": "Marre des affirmations bateau ? Essaies les <span>punchlines</span> positives",
-    "subtitle": "Reçois des phrases courtes, cash et ultra-motivantes pour traverser le fleuve de ton existence avec un état d'esprit plus positif.",
+    "title": "Choisis ton état d'esprit, choisis ta vie.",
+    "subtitle": "Les affirmations positives t'aident à penser positivement, à être aligné sur tes rêves et à te concentrer sur ton évolution.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
-    "tagline": "Rejoins les spiritual gangstas",
+    "tagline": "tes pensées déterminent ta vie",
     "interested": "Intéressé ?"
   },
   "features": {
-    "title": "C'est quoi le concept ?",
+    "title": "Des affirmations positives pour ton quotidien",
     "cards": [
       {
-        "title": "Punchlines quotidiennes",
-        "description": "Des rappels quotidiens avec des punchlines fraîches pour démarrer ta journée du bon pied."
+        "title": "Affirmations quotidiennes",
+        "description": "Des rappels quotidiens avec des affirmations positives pour démarrer ta journée du bon pied."
       },
       {
         "title": "Boost de motivation",
-        "description": "Des phrases cash et motivantes qui t'aident à rester focus sur tes objectifs."
+        "description": "Des phrases inspirantes qui t'aident à rester focus sur tes objectifs."
       },
       {
-        "title": "Choisis ta sauce",
-        "description": "\"Gangsta vibes\", \"Calmer le mental\", \"Attirer la money\"... ou compose ta propre sauce."
+        "title": "Personnalisation complète",
+        "description": "Choisis les thèmes qui résonnent avec toi : confiance, calme, abondance, et plus encore."
       },
       {
-        "title": "Pare-feu à négativité",
-        "description": "Entoure-toi d'un bouclier de mots et de pensées pour rester au top."
+        "title": "État d'esprit positif",
+        "description": "Cultive un mental fort et positif pour avancer sereinement vers tes objectifs."
       },
       {
         "title": "Objectifs sur-mesure",
-        "description": "Dis-nous ton but, et on calibre les punchlines pour t'y propulser."
+        "description": "Des affirmations adaptées à tes objectifs personnels pour maximiser ton potentiel."
       },
       {
         "title": "Crée & partage",
-        "description": "Écris, sauvegarde et affiche tes propres punchlines quand tu en as besoin."
+        "description": "Écris et sauvegarde tes propres affirmations pour les avoir toujours avec toi."
       }
     ]
   },
   "screenshots": {
     "title": "Découvre l'application",
     "captions": [
-      "Des punchlines qui claquent chaque jour",
-      "Boost ton humeur avec des phrases cash",
-      "Choisis ta sauce et tes vibes",
-      "Pare-feu à négativité activé",
-      "Calibré pour tes objectifs",
-      "Crée & partage tes propres punchlines"
+      "Des affirmations positives chaque jour",
+      "Boost ton mindset quotidiennement",
+      "Choisis les thèmes qui te correspondent",
+      "Cultive un état d'esprit positif",
+      "Des affirmations adaptées à tes objectifs",
+      "Crée tes propres affirmations"
     ]
   },
   "cta": {
-    "title": "Télécharge maintenant, choisis ta vibe",
-    "subtitle": "Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.",
+    "title": "Télécharge maintenant gratuitement",
+    "subtitle": "Transforme ton état d'esprit et dirige toi vers tes rêves dès aujourd'hui grâce au pouvoir des affirmations positives.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
@@ -155,7 +155,7 @@
     },
     "content": {
       "title": "Contenu de l'Utilisateur",
-      "content": "En créant vos propres punchlines ou affirmations, vous conservez tous les droits sur votre contenu, mais vous nous accordez une licence mondiale, non exclusive et libre de redevance pour utiliser, reproduire et afficher ce contenu dans le cadre du service."
+      "content": "En créant vos propres affirmations ou affirmations, vous conservez tous les droits sur votre contenu, mais vous nous accordez une licence mondiale, non exclusive et libre de redevance pour utiliser, reproduire et afficher ce contenu dans le cadre du service."
     },
     "accounts": {
       "title": "Comptes",
