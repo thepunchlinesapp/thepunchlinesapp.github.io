@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Punchlines — Te reparler avec amour"
+    "title": "Punchlines - Transforme ta vie avec des affirmations qui claquent"
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -8,57 +8,57 @@
     "support": "Support"
   },
   "hero": {
-    "title": "Une voix <span class='font-marker'>douce</span><br>dans ta tête.",
-    "subtitle": "Punchlines t'aide à te reconnecter à toi-même. Sans te prendre la tête.",
+    "title": "Prêt à <span class='font-marker'>transformer</span> ton mindset ?",
+    "subtitle": "Des affirmations courtes, cash et puissantes. Personnalisées pour toi.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
-    "tagline": "respire. tout va bien se passer.",
+    "tagline": "transforme ta vie, une punchline à la fois",
     "interested": "Intéressé ?"
   },
   "features": {
-    "title": "Ce que Punchlines t'apporte",
+    "title": "Pourquoi Punchlines va changer ta vie",
     "cards": [
       {
-        "title": "Un rendez-vous avec toi",
-        "description": "Chaque jour, une phrase qui tombe juste. Au bon moment."
+        "title": "Ta dose quotidienne",
+        "description": "Chaque jour, reçois des punchlines qui te boostent dès le réveil."
       },
       {
-        "title": "Des mots qui te parlent",
-        "description": "Pas de phrases toutes faites. Juste ce dont t'as besoin."
+        "title": "Du vrai, pas du blabla",
+        "description": "Des phrases directes qui te parlent vraiment. Pas de guimauve."
       },
       {
-        "title": "Ça te ressemble",
-        "description": "Choisis ce qui te parle : confiance, calme, lâcher-prise..."
+        "title": "100% toi",
+        "description": "Choisis tes thèmes : confiance, calme, abondance... On s'adapte à ton flow."
       },
       {
-        "title": "Un peu de calme",
-        "description": "Un espace pour souffler. Loin du bruit."
+        "title": "Chasse le négatif",
+        "description": "Reprogramme ton mental et vire les pensées qui te freinent."
       },
       {
-        "title": "Ça tombe juste",
-        "description": "Des phrases qui arrivent pile quand t'en as besoin."
+        "title": "Sur-mesure",
+        "description": "Plus tu utilises l'app, plus les punchlines te correspondent."
       },
       {
-        "title": "Tes propres mots",
-        "description": "Écris ce qui te fait du bien. Garde-le près de toi."
+        "title": "Crée les tiennes",
+        "description": "Écris tes propres affirmations et garde-les toujours avec toi."
       }
     ]
   },
   "screenshots": {
-    "title": "Un aperçu",
+    "title": "Découvre l'app",
     "captions": [
-      "Une phrase qui tombe juste, chaque jour",
-      "Un moment pour toi",
-      "Choisis ce qui te parle",
-      "Un espace de calme",
-      "Des mots qui évoluent avec toi",
-      "Écris tes propres phrases"
+      "Des punchlines qui claquent chaque jour",
+      "Boost ton mindset en quelques secondes",
+      "Choisis les vibes qui te correspondent",
+      "Cultive un mental de champion",
+      "Des affirmations qui évoluent avec toi",
+      "Crée tes propres punchlines"
     ]
   },
   "cta": {
-    "title": "Essaie. Tu verras bien.",
-    "subtitle": "Ça fait du bien de se parler avec amour. Tu mérites ça.",
+    "title": "C'est parti !",
+    "subtitle": "Rejoins des milliers de personnes qui transforment leur quotidien grâce aux punchlines.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",

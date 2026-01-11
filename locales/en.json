@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Punchlines — Talk to yourself with love"
+    "title": "Punchlines - Transform your life with affirmations that hit"
   },
   "nav": {
     "privacy": "Privacy",
@@ -8,57 +8,57 @@
     "support": "Support"
   },
   "hero": {
-    "title": "A <span class='font-marker'>gentle</span> voice<br>in your head.",
-    "subtitle": "Punchlines helps you reconnect with yourself. No pressure.",
+    "title": "Ready to <span class='font-marker'>transform</span> your mindset?",
+    "subtitle": "Short, real, and powerful affirmations. Personalized for you.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Soon",
-    "tagline": "breathe. everything's going to be okay.",
+    "tagline": "transform your life, one punchline at a time",
     "interested": "Interested?"
   },
   "features": {
-    "title": "What Punchlines brings you",
+    "title": "Why Punchlines will change your life",
     "cards": [
       {
-        "title": "A moment with yourself",
-        "description": "Every day, a phrase that lands right. At the right time."
+        "title": "Your daily dose",
+        "description": "Every day, get punchlines that boost you from the moment you wake up."
       },
       {
-        "title": "Words that speak to you",
-        "description": "No cookie-cutter phrases. Just what you need."
+        "title": "Real talk, no fluff",
+        "description": "Direct phrases that actually speak to you. No cheesy stuff."
       },
       {
-        "title": "It feels like you",
-        "description": "Pick what speaks to you: confidence, calm, letting go..."
+        "title": "100% you",
+        "description": "Pick your themes: confidence, calm, abundance... We adapt to your flow."
       },
       {
-        "title": "A little calm",
-        "description": "A space to breathe. Away from the noise."
+        "title": "Kill the negative",
+        "description": "Reprogram your mind and ditch the thoughts holding you back."
       },
       {
-        "title": "It lands right",
-        "description": "Phrases that arrive exactly when you need them."
+        "title": "Made for you",
+        "description": "The more you use the app, the more the punchlines fit you."
       },
       {
-        "title": "Your own words",
-        "description": "Write what feels good. Keep it close."
+        "title": "Create your own",
+        "description": "Write your own affirmations and keep them with you always."
       }
     ]
   },
   "screenshots": {
-    "title": "A glimpse",
+    "title": "Discover the app",
     "captions": [
-      "A phrase that lands right, every day",
-      "A moment for yourself",
-      "Pick what speaks to you",
-      "A space of calm",
-      "Words that evolve with you",
-      "Write your own phrases"
+      "Punchlines that hit, every day",
+      "Boost your mindset in seconds",
+      "Pick the vibes that match you",
+      "Build a champion's mindset",
+      "Affirmations that evolve with you",
+      "Create your own punchlines"
     ]
   },
   "cta": {
-    "title": "Give it a try.",
-    "subtitle": "It feels good to talk to yourself with love. You deserve that.",
+    "title": "Let's go!",
+    "subtitle": "Join thousands of people transforming their daily life with punchlines.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Soon",
