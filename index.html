@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Punchlines - Des affirmations positives directes et motivantes pour votre quotidien.">
-    <meta name="theme-color" content="#b0cfe2">
-    <title>Punchlines - Daily Positive Affirmations</title>
+    <meta name="description" content="Punchlines — Un compagnon quotidien pour te reconnecter à toi-même.">
+    <meta name="theme-color" content="#EEEBE6">
+    <title>Punchlines — Te reparler avec amour</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -25,14 +25,21 @@
                         'sans': ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'app-blue': {
-                            light: '#d8e6f0',
-                            DEFAULT: '#b0cfe2',
-                            dark: '#8fb8d4',
+                        'app-beige': {
+                            light: '#F7F7F2',
+                            DEFAULT: '#EEEBE6',
+                            dark: '#E5E0D8',
+                        },
+                        'app-warm': {
+                            peach: '#ffd8ac',
+                            coral: '#FFB79D',
+                            text: '#333',
+                            'text-secondary': '#666',
                         }
                     },
                     backgroundImage: {
-                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
+                        'gradient-warm': 'linear-gradient(180deg, #EEEBE6 0%, #F7F7F2 100%)',
+                        'gradient-accent': 'linear-gradient(135deg, #FFB79D 0%, #9FB6C4 50%, #6798C0 100%)',
                     }
                 }
             }
@@ -168,7 +175,7 @@
     <!-- End Meta Pixel Code -->
      
 </head>
-<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen">
+<body class="bg-app-beige min-h-screen">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZLPRC5B"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -179,14 +186,14 @@
     <div id="androidModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeAndroidModal()">&times;</button>
-            <h3 class="text-xl font-bold mb-4" data-i18n="androidModal.title">Interested in Android?</h3>
+            <h3 class="text-xl font-bold mb-4" data-i18n="androidModal.title">Intéressé par Android ?</h3>
             <div class="modal-iframe-container">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1ZwBxbL70B0W4O3IsPjAfkkQglwmQrEr_SZwKHr5iufJKyg/viewform?embedded=true" width="640" height="385" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
             </div>
         </div>
     </div>
     <!-- Navbar -->
-    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
+    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-beige-light/90 backdrop-blur-sm shadow-sm">
         <div class="flex items-center">
             <h1 class="text-2xl md:text-3xl font-bold">
                 <a href="index.html" class="hover:opacity-80 transition-opacity">
@@ -256,29 +263,29 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <!-- Left side with text -->
             <div class="md:w-1/2 text-center md:text-left">
-                <p class="text-sm md:text-base text-gray-700 font-bold my-8 md:mb-3 tracking-wider uppercase" data-i18n="hero.tagline">Join the spiritual gangstas</p>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold my-8 md:mb-6 leading-tight" data-i18n="hero.title">
-                    Daily affirmations that <span class="font-marker text-gray-800">elevate</span> your mindset
+                <p class="text-sm md:text-base text-app-warm-text-secondary font-bold my-8 md:mb-3 tracking-wider uppercase" data-i18n="hero.tagline">respire. tout va bien se passer.</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold my-8 md:mb-6 leading-tight text-app-warm-text" data-i18n="hero.title">
+                    Une voix <span class="font-marker text-app-warm-text">douce</span><br>dans ta tête.
                 </h2>
-                <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-8" data-i18n="hero.subtitle">
-                    Boost your mood with raw truths and positive punchlines tailored to your vibe.
+                <p class="text-lg md:text-xl text-app-warm-text-secondary mb-8 md:mb-8" data-i18n="hero.subtitle">
+                    Punchlines t'aide à te reconnecter à toi-même. Sans te prendre la tête.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-6 md:mb-0">
-                    <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                    <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                         <i class="fab fa-apple mr-2 text-xl"></i>
                         <span data-i18n="hero.appStore">App Store</span>
                     </a>
-                    <button onclick="openAndroidModal()" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                    <button onclick="openAndroidModal()" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                         <i class="fab fa-google-play mr-2 text-xl"></i>
                         <span data-i18n="hero.googlePlay">Google Play</span>
-                        <span class="ml-2 text-xs bg-yellow-400 px-2 py-1 rounded-full text-gray-800" data-i18n="hero.interested">Interested?</span>
+                        <span class="ml-2 text-xs bg-app-warm-peach px-2 py-1 rounded-full text-gray-800" data-i18n="hero.interested">Interested?</span>
                     </button>
                 </div>
             </div>
             
             <!-- Right side with app logo -->
             <div class="md:w-1/2 flex justify-center md:justify-end">
-                <img src="assets/logo.jpg" alt="Punchlines Logo" class="w-40 h-40 sm:w-64 sm:h-64 object-contain rounded-3xl shadow-lg" loading="eager">
+                <img src="assets/logo.png" alt="Punchlines Logo" class="w-40 h-40 sm:w-64 sm:h-64 object-contain rounded-3xl shadow-lg" loading="eager">
             </div>
         </div>
     </section>
@@ -286,73 +293,73 @@
     <!-- Features Section -->
     <section class="pt-8 pb-16 md:py-16 px-4 md:px-6 bg-white bg-opacity-5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-16" data-i18n="features.title">Personalized Affirmations for Your Daily Life</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-16 text-app-warm-text" data-i18n="features.title">Ce que Punchlines t'apporte</h2>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.0.title">Daily Affirmations</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.0.description">Get flawless affirmations every day to kickstart your morning with the right mindset.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.0.title">Un rendez-vous avec toi</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.0.description">Chaque jour, une phrase qui tombe juste. Au bon moment.</p>
                 </div>
-                
+
                 <!-- Feature 2 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.1.title">Motivation Boost</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.1.description">Boost your mood with raw truths that help you stay motivated and focused on your goals.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.1.title">Des mots qui te parlent</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.1.description">Pas de phrases toutes faites. Juste ce dont t'as besoin.</p>
                 </div>
-                
+
                 <!-- Feature 3 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.2.title">Complete Personalization</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.2.description">Pick the vibes that fit your flow and match your current state of mind.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.2.title">Ça te ressemble</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.2.description">Choisis ce qui te parle : confiance, calme, lâcher-prise...</p>
                 </div>
-                
+
                 <!-- Feature 4 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.3.title">Negativity Filter</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.3.description">Block out the bad vibes and focus on positive thoughts that move you forward.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.3.title">Un peu de calme</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.3.description">Un espace pour souffler. Loin du bruit.</p>
                 </div>
-                
+
                 <!-- Feature 5 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.4.title">Tailored to Your Needs</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.4.description">Content customized to your lifestyle and tailored to your grind.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.4.title">Ça tombe juste</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.4.description">Des phrases qui arrivent pile quand t'en as besoin.</p>
                 </div>
-                
+
                 <!-- Feature 6 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card">
+                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
                     <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center" data-i18n="features.cards.5.title">Create Your Own</h3>
-                    <p class="text-gray-600 text-center text-sm md:text-base" data-i18n="features.cards.5.description">Write and save your own punchlines for when you need them most.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.5.title">Tes propres mots</h3>
+                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.5.description">Écris ce qui te fait du bien. Garde-le près de toi.</p>
                 </div>
             </div>
         </div>
@@ -362,7 +369,7 @@
     <section class="py-10 md:py-16 px-4 md:px-6 bg-white bg-opacity-10 backdrop-blur-sm">
         <!-- Titre centré -->
         <div class="max-w-6xl mx-auto text-center mb-6 md:mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="screenshots.title">Discover the App</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-app-warm-text" data-i18n="screenshots.title">Un aperçu</h2>
         </div>
         
         <!-- Captures d'écran optimisées mobile -->
@@ -411,21 +418,21 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-10 md:py-16 px-4 md:px-6 bg-gradient-to-b from-app-blue-light/40 to-white/90 backdrop-blur-sm">
+    <section class="py-10 md:py-16 px-4 md:px-6 bg-gradient-to-b from-app-beige-dark/40 to-white/90 backdrop-blur-sm">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-3 md:mb-6" data-i18n="cta.title">Télécharge maintenant, choisis ta vibe</h2>
-            <p class="text-lg md:text-xl text-gray-700 mb-6 md:mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
-                Marre des affirmations guimauve ? Punchlines t'envoie des phrases courtes, cash et ultra-motivantes pour t'aider à traverser ton existence avec un état d'esprit plus positif.
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3 md:mb-6 text-app-warm-text" data-i18n="cta.title">Essaie. Tu verras bien.</h2>
+            <p class="text-lg md:text-xl text-app-warm-text-secondary mb-6 md:mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
+                Ça fait du bien de se parler avec amour. Tu mérites ça.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                     <i class="fab fa-apple mr-2 text-xl"></i>
                     <span data-i18n="cta.appStore">App Store</span>
                 </a>
-                <button onclick="openAndroidModal()" class="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
+                <button onclick="openAndroidModal()" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
                     <i class="fab fa-google-play mr-2 text-xl"></i>
                     <span data-i18n="cta.googlePlay">Google Play</span>
-                    <span class="ml-2 text-xs bg-yellow-400 px-2 py-1 rounded-full text-gray-800" data-i18n="cta.interested">Interested?</span>
+                    <span class="ml-2 text-xs bg-app-warm-peach px-2 py-1 rounded-full text-gray-800" data-i18n="cta.interested">Interested?</span>
                 </button>
             </div>
         </div>

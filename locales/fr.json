@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Punchlines - Des affirmations positives pour ton quotidien"
+    "title": "Punchlines — Te reparler avec amour"
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -8,64 +8,64 @@
     "support": "Support"
   },
   "hero": {
-    "title": "Choisis ton état d'esprit, choisis ta vie.",
-    "subtitle": "Les affirmations positives t'aident à penser positivement, à être aligné sur tes rêves et à te concentrer sur ton évolution.",
+    "title": "Une voix <span class='font-marker'>douce</span><br>dans ta tête.",
+    "subtitle": "Punchlines t'aide à te reconnecter à toi-même. Sans te prendre la tête.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
-    "tagline": "tes pensées déterminent ta vie",
+    "tagline": "respire. tout va bien se passer.",
     "interested": "Intéressé ?"
   },
   "features": {
-    "title": "Des affirmations positives pour ton quotidien",
+    "title": "Ce que Punchlines t'apporte",
     "cards": [
       {
-        "title": "Affirmations quotidiennes",
-        "description": "Des rappels quotidiens avec des affirmations positives pour démarrer ta journée du bon pied."
+        "title": "Un rendez-vous avec toi",
+        "description": "Chaque jour, une phrase qui tombe juste. Au bon moment."
       },
       {
-        "title": "Boost de motivation",
-        "description": "Des phrases inspirantes qui t'aident à rester focus sur tes objectifs."
+        "title": "Des mots qui te parlent",
+        "description": "Pas de phrases toutes faites. Juste ce dont t'as besoin."
       },
       {
-        "title": "Personnalisation complète",
-        "description": "Choisis les thèmes qui résonnent avec toi : confiance, calme, abondance, et plus encore."
+        "title": "Ça te ressemble",
+        "description": "Choisis ce qui te parle : confiance, calme, lâcher-prise..."
       },
       {
-        "title": "État d'esprit positif",
-        "description": "Cultive un mental fort et positif pour avancer sereinement vers tes objectifs."
+        "title": "Un peu de calme",
+        "description": "Un espace pour souffler. Loin du bruit."
       },
       {
-        "title": "Objectifs sur-mesure",
-        "description": "Des affirmations adaptées à tes objectifs personnels pour maximiser ton potentiel."
+        "title": "Ça tombe juste",
+        "description": "Des phrases qui arrivent pile quand t'en as besoin."
       },
       {
-        "title": "Crée & partage",
-        "description": "Écris et sauvegarde tes propres affirmations pour les avoir toujours avec toi."
+        "title": "Tes propres mots",
+        "description": "Écris ce qui te fait du bien. Garde-le près de toi."
       }
     ]
   },
   "screenshots": {
-    "title": "Découvre l'application",
+    "title": "Un aperçu",
     "captions": [
-      "Des affirmations positives chaque jour",
-      "Boost ton mindset quotidiennement",
-      "Choisis les thèmes qui te correspondent",
-      "Cultive un état d'esprit positif",
-      "Des affirmations adaptées à tes objectifs",
-      "Crée tes propres affirmations"
+      "Une phrase qui tombe juste, chaque jour",
+      "Un moment pour toi",
+      "Choisis ce qui te parle",
+      "Un espace de calme",
+      "Des mots qui évoluent avec toi",
+      "Écris tes propres phrases"
     ]
   },
   "cta": {
-    "title": "Télécharge maintenant gratuitement",
-    "subtitle": "Transforme ton état d'esprit et dirige toi vers tes rêves dès aujourd'hui grâce au pouvoir des affirmations positives.",
+    "title": "Essaie. Tu verras bien.",
+    "subtitle": "Ça fait du bien de se parler avec amour. Tu mérites ça.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "soon": "Bientôt",
     "interested": "Intéressé ?"
   },
   "footer": {
-    "copyright": "© 2023 Punchlines. Tous droits réservés.",
+    "copyright": "© 2025 Punchlines. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "support": "Support",
