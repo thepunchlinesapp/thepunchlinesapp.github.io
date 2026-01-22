@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["G9QFPT7E23.fr.harryjmg.punchlines"],
+        "paths": ["*"]
+      }
+    ]
+  }
+}
