@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#EEEBE6">
+  <title>Ouvrir Punchlines</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #EEEBE6;
+      text-align: center;
+    }
+    .container { padding: 20px; }
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 { color: #343434; margin-bottom: 10px; }
+    p { color: #666; margin-bottom: 24px; }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      background: #323232;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #444;
+    }
+  </style>
+  <script>
+    // Tente d'ouvrir l'app, sinon redirige vers l'App Store après 1.5s
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    var isAndroid = /Android/.test(navigator.userAgent);
+
+    var appStoreUrl = 'https://apps.apple.com/fr/app/punchlines-affirmations/id6744821000';
+    var playStoreUrl = 'https://play.google.com/store/apps/details?id=fr.harryjmg.punchlines';
+
+    // Si sur mobile, tente l'ouverture de l'app via Universal Links
+    // Si l'app n'est pas installée, redirige vers le store après 1.5s
+    if (isIOS || isAndroid) {
+      setTimeout(function() {
+        window.location.href = isIOS ? appStoreUrl : playStoreUrl;
+      }, 1500);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="/assets/logo.png" alt="Punchlines" class="logo">
+    <h1>Punchlines</h1>
+    <p>Télécharge l'app pour recevoir ta dose quotidienne de motivation !</p>
+    <a href="https://apps.apple.com/fr/app/punchlines-affirmations/id6744821000" class="btn">App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=fr.harryjmg.punchlines" class="btn">Google Play</a>
+  </div>
+</body>
+</html>
