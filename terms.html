@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Conditions d'utilisation - Punchlines, l'application d'affirmations positives.">
-    <title>Terms of Use - Punchlines</title>
+    <meta name="description" content="Conditions d'utilisation - Punchlines">
+    <title>Conditions - Punchlines</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="theme-color" content="#b0cfe2">
+    <meta name="theme-color" content="#F7F7F2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Shantell+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Epilogue:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/punchlines.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
+                        'display': ['"Madimi One"', 'Inter', 'sans-serif'],
+                        'handwritten': ['"Shantell Sans"', 'Inter', 'sans-serif'],
                         'marker': ['"Permanent Marker"', 'cursive'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'sans-serif'],
                     },
                     colors: {
-                        'app-blue': {
-                            light: '#d8e6f0',
-                            DEFAULT: '#b0cfe2',
-                            dark: '#8fb8d4',
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
+                        'pl-bg': '#F7F7F2',
+                        'pl-cream': '#F5EDE6',
+                        'pl-beige': '#EEEBE6',
+                        'pl-text': '#323232',
+                        'pl-text-2': '#666666',
+                        'pl-text-3': '#999999',
                     }
                 }
             }
@@ -39,177 +41,151 @@
     </script>
     <script src="/js/i18n.js"></script>
     <style>
-        /* Touch optimized styles */
-        @media (max-width: 640px) {
-            .touch-target {
-                min-height: 44px;
-                min-width: 44px;
-            }
-        }
+        .legal-section h2 { font-family: 'Madimi One', sans-serif; font-size: 1.25rem; color: #323232; margin-bottom: 0.75rem; }
+        .legal-section p { color: #555; margin-bottom: 0.5rem; }
+        .legal-section { padding-bottom: 1.75rem; margin-bottom: 1.75rem; border-bottom: 1px solid #EEEBE6; }
+        .legal-section:last-of-type { border-bottom: none; }
     </style>
 </head>
-<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
-    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
-        <div class="flex items-center">
-            <h1 class="text-2xl md:text-3xl font-bold">
-                <a href="index.html" class="hover:opacity-80 transition-opacity">
-                    <span class="font-marker">Punchlines</span>
-                </a>
-            </h1>
-        </div>
-        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
-            <!-- Language Switcher - Visible only on desktop -->
+<body class="bg-pl-bg min-h-screen text-pl-text flex flex-col">
+    <nav class="py-4 px-4 md:px-10 flex justify-between items-center sticky top-0 z-50 bg-pl-bg/85 backdrop-blur border-b border-pl-beige">
+        <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-9 h-9 rounded-lg">
+            <span class="font-display text-2xl hidden sm:inline">Punchlines<span class="text-pl-text-2">.</span></span>
+        </a>
+        <div class="flex items-center gap-3 md:gap-5">
             <div class="relative language-switcher hidden md:block">
-                <div class="flex items-center">
-                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
-                        <span class="current-language">English</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Language Dropdown Menu -->
-                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
-                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
-                    </div>
+                <button id="language-dropdown-button" class="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-full bg-white/70 hover:bg-white border border-pl-beige transition-all">
+                    <i class="fas fa-globe text-pl-text-2 text-xs"></i>
+                    <span class="current-language">English</span>
+                    <i class="fas fa-chevron-down text-xs text-pl-text-2"></i>
+                </button>
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-xl shadow-lg bg-white border border-pl-beige hidden overflow-hidden">
+                    <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="true">English</button>
+                    <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="false">Français</button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="privacy.html" id="nav-privacy" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
-                <a href="terms.html" id="nav-terms" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i8n="nav.terms">Terms</a>
-                <a href="support.html" id="nav-support" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
+            <div class="hidden md:flex items-center gap-5">
+                <a href="privacy.html" id="nav-privacy" class="text-pl-text hover:underline" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" id="nav-terms" class="text-pl-text hover:underline" data-i18n="nav.terms">Terms</a>
+                <a href="support.html" id="nav-support" class="text-pl-text hover:underline" data-i18n="nav.support">Support</a>
             </div>
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+            <button class="md:hidden touch-target p-2 rounded-lg hover:bg-white/60" id="mobile-menu-button" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
             </button>
         </div>
     </nav>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+    <div class="hidden md:hidden bg-white shadow-lg rounded-b-2xl mx-4 mt-1 overflow-hidden" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
-            <div class="border-t border-gray-200 my-1"></div>
-            <!-- Language options in mobile menu -->
-            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
-            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
-                English
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
-            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
-                Français
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
-        </div>
-    </div>
-    
-    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10 mt-8">
-        <div class="bg-white/90 rounded-lg shadow-md p-8">
-            <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                <span data-i18n="termsPage.title">Terms of Use</span> - <span class="font-marker">Punchlines</span>
-            </h1>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.acceptance.title">Acceptance of Terms</h2>
-                <p data-i18n="termsPage.acceptance.content">By using the Punchlines application, you agree to be bound by these Terms of Use. If you do not accept these terms, please do not use the application.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.use.title">Use of the Application</h2>
-                <p data-i18n="termsPage.use.content">You agree to use the Punchlines application only for lawful purposes and in accordance with these terms. It is prohibited to use the application in a way that could damage, disable, or overload the application.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.content.title">User Content</h2>
-                <p data-i18n="termsPage.content.content">By creating your own punchlines or affirmations, you retain all rights to your content, but you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display this content as part of the service.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.accounts.title">Accounts</h2>
-                <p data-i18n="termsPage.accounts.content">If you create an account on the application, you are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.purchases.title">In-App Purchases</h2>
-                <p data-i18n="termsPage.purchases.content">All purchases made in the application are processed by the respective platforms (Apple App Store or Google Play Store) and are subject to their terms and conditions.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.liability.title">Limitation of Liability</h2>
-                <p data-i18n="termsPage.liability.content">The application is provided "as is," without warranty of any kind. We do not guarantee that the application will be error-free or continuously available.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.changes.title">Changes to Terms</h2>
-                <p data-i18n="termsPage.changes.content">We reserve the right to modify these terms at any time. The changes will take effect as soon as they are published in the application or on our website.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="termsPage.contact.title">Contact</h2>
-                <p data-i18n="termsPage.contact.content">For any questions regarding these terms of use, please contact us at:</p>
-                <p class="mt-2 font-medium" data-i18n="termsPage.contact.email">support@thepunchlines.app</p>
-            </section>
-            
-            <p class="text-sm text-gray-500 pt-4 border-t border-gray-200">
-                <span data-i18n="termsPage.lastUpdated">Last updated:</span> <script>document.write(new Date().toLocaleDateString())</script>
-            </p>
-            
-            <div class="mt-6 text-center">
-                <a href="index.html" class="text-blue-600 hover:underline" data-i18n="footer.backToHome">Back to home</a>
-            </div>
+            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.support">Support</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="mb-6 sm:mb-0">
-                <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
+    <main class="flex-1 max-w-3xl w-full mx-auto px-4 md:px-6 pb-12 pt-8 md:pt-12">
+        <div class="text-center mb-10">
+            <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2">Punchlines</p>
+            <h1 class="font-display text-4xl md:text-5xl" data-i18n="termsPage.title">Conditions d'Utilisation</h1>
+        </div>
+
+        <div class="pl-card bg-white border-pl-beige" style="padding: 2rem 1.75rem;">
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.acceptance.title">Acceptation des Conditions</h2>
+                <p data-i18n="termsPage.acceptance.content">En utilisant l'application Punchlines, vous acceptez d'être lié par les présentes Conditions d'Utilisation.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.use.title">Utilisation de l'Application</h2>
+                <p data-i18n="termsPage.use.content">Vous vous engagez à utiliser l'application Punchlines uniquement à des fins légales et conformes aux présentes conditions.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.content.title">Contenu de l'Utilisateur</h2>
+                <p data-i18n="termsPage.content.content">En créant vos propres affirmations, vous conservez tous les droits sur votre contenu, mais vous nous accordez une licence mondiale, non exclusive et libre de redevance pour utiliser, reproduire et afficher ce contenu dans le cadre du service.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.accounts.title">Comptes</h2>
+                <p data-i18n="termsPage.accounts.content">Si vous créez un compte sur l'application, vous êtes responsable du maintien de la confidentialité de vos informations de compte.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.purchases.title">Achats In-App</h2>
+                <p data-i18n="termsPage.purchases.content">Tous les achats effectués dans l'application sont traités par les plateformes respectives (Apple App Store ou Google Play Store) et sont soumis à leurs conditions générales.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.liability.title">Limitation de Responsabilité</h2>
+                <p data-i18n="termsPage.liability.content">L'application est fournie "telle quelle", sans garantie d'aucune sorte.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.changes.title">Modifications des Conditions</h2>
+                <p data-i18n="termsPage.changes.content">Nous nous réservons le droit de modifier ces conditions à tout moment.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="termsPage.contact.title">Contact</h2>
+                <p data-i18n="termsPage.contact.content">Pour toute question concernant ces conditions d'utilisation, contacte-nous à :</p>
+                <p><a href="mailto:support@thepunchlines.app" class="text-pl-text font-medium hover:underline" data-i18n="termsPage.contact.email">support@thepunchlines.app</a></p>
+            </section>
+
+            <p class="text-sm text-pl-text-3 pt-4">
+                <span data-i18n="termsPage.lastUpdated">Dernière mise à jour :</span> <script>document.write(new Date().toLocaleDateString())</script>
+            </p>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-pl-text-2 hover:underline" data-i18n="footer.backToHome">Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 md:px-10 bg-white border-t border-pl-beige">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-7 h-7 rounded-md">
+                <span class="font-display text-lg">Punchlines<span class="text-pl-text-2">.</span></span>
             </div>
-            
-            <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline font-medium" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline" data-i18n="footer.support">Support</a>
-                <a href="delete-data.html" class="text-gray-700 hover:underline" data-i18n="footer.deleteData">Delete my data</a>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="privacy.html" class="text-pl-text hover:underline" data-i18n="footer.privacy">Politique de confidentialité</a>
+                <a href="terms.html" class="text-pl-text font-medium hover:underline" data-i18n="footer.terms">Conditions</a>
+                <a href="support.html" class="text-pl-text hover:underline" data-i18n="footer.support">Support</a>
+                <a href="delete-data.html" class="text-pl-text hover:underline" data-i18n="footer.deleteData">Supprimer mes données</a>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile optimized JavaScript -->
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             }
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+            const langBtn = document.getElementById('language-dropdown-button');
+            const langMenu = document.getElementById('language-dropdown-menu');
+            const langOptions = document.querySelectorAll('.language-option');
+            const currentLangEl = document.querySelector('.current-language');
+            if (langBtn && langMenu) {
+                langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+                document.addEventListener('click', (e) => { if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) langMenu.classList.add('hidden'); });
+                langOptions.forEach(opt => opt.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    langOptions.forEach(o => o.setAttribute('aria-selected', 'false'));
+                    this.setAttribute('aria-selected', 'true');
+                    if (currentLangEl) currentLangEl.textContent = this.textContent;
+                    langMenu.classList.add('hidden');
+                    if (window.switchLanguage) window.switchLanguage(lang);
+                }));
+            }
         });
-
-        // Highlight active nav link
         (function() {
             const path = window.location.pathname.split('/').pop();
             const map = {
@@ -218,16 +194,9 @@
                 'support.html': ['nav-support', 'mobile-nav-support']
             };
             Object.entries(map).forEach(([file, ids]) => {
-                if (path === file) {
-                    ids.forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) {
-                            el.classList.add('font-bold','bg-white/70');
-                        }
-                    });
-                }
+                if (path === file) ids.forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('font-medium','underline'); });
             });
         })();
     </script>
 </body>
-</html> 
+</html>

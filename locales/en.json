@@ -246,6 +246,7 @@
   },
   "supportPage": {
     "title": "Support",
+    "eyebrow": "We're here",
     "needHelp": {
       "title": "Need Help?",
       "content": "Having trouble with the Punchlines app or have a question? We're here to help!"
@@ -262,6 +263,7 @@
   },
   "deleteDataPage": {
     "title": "Delete my data",
+    "eyebrow": "Your data, your call",
     "intro": "You can request the deletion of your personal data collected by the Punchlines app. Fill out the form below and we will process your request within 30 days.",
     "whatDeleted": {
       "title": "What will be deleted",

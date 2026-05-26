@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Politique de confidentialité - Punchlines, l'application d'affirmations positives.">
-    <title>Privacy Policy - Punchlines</title>
+    <meta name="description" content="Politique de confidentialité - Punchlines">
+    <title>Confidentialité - Punchlines</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="theme-color" content="#b0cfe2">
+    <meta name="theme-color" content="#F7F7F2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Shantell+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Epilogue:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/punchlines.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
+                        'display': ['"Madimi One"', 'Inter', 'sans-serif'],
+                        'handwritten': ['"Shantell Sans"', 'Inter', 'sans-serif'],
                         'marker': ['"Permanent Marker"', 'cursive'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'sans-serif'],
                     },
                     colors: {
-                        'app-blue': {
-                            light: '#d8e6f0',
-                            DEFAULT: '#b0cfe2',
-                            dark: '#8fb8d4',
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
+                        'pl-bg': '#F7F7F2',
+                        'pl-cream': '#F5EDE6',
+                        'pl-beige': '#EEEBE6',
+                        'pl-text': '#323232',
+                        'pl-text-2': '#666666',
+                        'pl-text-3': '#999999',
                     }
                 }
             }
@@ -39,225 +41,193 @@
     </script>
     <script src="/js/i18n.js"></script>
     <style>
-        /* Touch optimized styles */
-        @media (max-width: 640px) {
-            .touch-target {
-                min-height: 44px;
-                min-width: 44px;
-            }
-        }
+        .legal-section h2 { font-family: 'Madimi One', sans-serif; font-size: 1.25rem; color: #323232; margin-bottom: 0.75rem; }
+        .legal-section p { color: #555; margin-bottom: 0.5rem; }
+        .legal-section ul { list-style: disc; padding-left: 1.5rem; margin: 0.5rem 0; color: #555; }
+        .legal-section li { margin-bottom: 0.25rem; }
+        .legal-section { padding-bottom: 1.75rem; margin-bottom: 1.75rem; border-bottom: 1px solid #EEEBE6; }
+        .legal-section:last-of-type { border-bottom: none; }
     </style>
 </head>
-<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
-    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
-        <div class="flex items-center">
-            <h1 class="text-2xl md:text-3xl font-bold">
-                <a href="index.html" class="hover:opacity-80 transition-opacity">
-                    <span class="font-marker">Punchlines</span>
-                </a>
-            </h1>
-        </div>
-        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
-            <!-- Language Switcher - Visible only on desktop -->
+<body class="bg-pl-bg min-h-screen text-pl-text flex flex-col">
+    <nav class="py-4 px-4 md:px-10 flex justify-between items-center sticky top-0 z-50 bg-pl-bg/85 backdrop-blur border-b border-pl-beige">
+        <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-9 h-9 rounded-lg">
+            <span class="font-display text-2xl hidden sm:inline">Punchlines<span class="text-pl-text-2">.</span></span>
+        </a>
+        <div class="flex items-center gap-3 md:gap-5">
             <div class="relative language-switcher hidden md:block">
-                <div class="flex items-center">
-                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
-                        <span class="current-language">English</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Language Dropdown Menu -->
-                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
-                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
-                    </div>
+                <button id="language-dropdown-button" class="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-full bg-white/70 hover:bg-white border border-pl-beige transition-all">
+                    <i class="fas fa-globe text-pl-text-2 text-xs"></i>
+                    <span class="current-language">English</span>
+                    <i class="fas fa-chevron-down text-xs text-pl-text-2"></i>
+                </button>
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-xl shadow-lg bg-white border border-pl-beige hidden overflow-hidden">
+                    <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="true">English</button>
+                    <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="false">Français</button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="privacy.html" id="nav-privacy" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
-                <a href="terms.html" id="nav-terms" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i8n="nav.terms">Terms</a>
-                <a href="support.html" id="nav-support" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
+            <div class="hidden md:flex items-center gap-5">
+                <a href="privacy.html" id="nav-privacy" class="text-pl-text hover:underline" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" id="nav-terms" class="text-pl-text hover:underline" data-i18n="nav.terms">Terms</a>
+                <a href="support.html" id="nav-support" class="text-pl-text hover:underline" data-i18n="nav.support">Support</a>
             </div>
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+            <button class="md:hidden touch-target p-2 rounded-lg hover:bg-white/60" id="mobile-menu-button" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
             </button>
         </div>
     </nav>
-    
-    <!-- Mobile menu (hidden by default) -->
-    <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+
+    <div class="hidden md:hidden bg-white shadow-lg rounded-b-2xl mx-4 mt-1 overflow-hidden" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
-            <div class="border-t border-gray-200 my-1"></div>
-            <!-- Language options in mobile menu -->
-            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
-            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
-                English
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
-            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
-                Français
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
-        </div>
-    </div>
-    
-    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10 mt-8">
-        <div class="bg-white/90 rounded-lg shadow-md p-8">
-            <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                <span data-i18n="privacyPage.title">Privacy Policy</span> - <span class="font-marker">Punchlines</span>
-            </h1>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.intro.title">Introduction</h2>
-                <p data-i18n="privacyPage.intro.content">Welcome to the privacy policy of the <span class="font-marker">Punchlines</span> application. We place great importance on the protection of your personal data.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.dataCollected.title">Data Collected</h2>
-                <p data-i18n="privacyPage.dataCollected.content">Our application only collects information that you provide during the initial onboarding:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li data-i18n="privacyPage.dataCollected.items.0">Your content preferences</li>
-                    <li data-i18n="privacyPage.dataCollected.items.1">Your personalization choices</li>
-                    <li data-i18n="privacyPage.dataCollected.items.2">Your usage settings</li>
-                </ul>
-                <p class="mt-2" data-i18n="privacyPage.dataCollected.note">No personally identifiable information is collected without your explicit consent.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.dataUse.title">Use of Data</h2>
-                <p data-i18n="privacyPage.dataUse.content">All collected data is anonymized and used exclusively for:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li data-i18n="privacyPage.dataUse.items.0">Improving your user experience</li>
-                    <li data-i18n="privacyPage.dataUse.items.1">Personalizing content according to your preferences</li>
-                    <li data-i18n="privacyPage.dataUse.items.2">Analyzing overall app usage for improvement purposes</li>
-                    <li data-i18n="privacyPage.dataUse.items.3">Marketing and product optimization</li>
-                    <li data-i18n="privacyPage.dataUse.items.4">Bug tracking and app performance monitoring</li>
-                </ul>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.analytics.title">Analytics and Monitoring Tools</h2>
-                <p data-i18n="privacyPage.analytics.content">We use the following third-party services to help us improve our application and understand how it is used:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li class="mb-2">
-                        <span class="font-medium">Mixpanel:</span>
-                        <span data-i18n="privacyPage.analytics.mixpanel">Used for product analytics and user behavior tracking. All data is anonymized and helps us understand how our app is used to improve the user experience.</span>
-                    </li>
-                    <li class="mb-2">
-                        <span class="font-medium">Sentry:</span>
-                        <span data-i18n="privacyPage.analytics.sentry">Monitors app performance and collects crash reports to help us identify and fix technical issues. No personal information is included in these reports.</span>
-                    </li>
-                    <li class="mb-2">
-                        <span class="font-medium">AppsFlyer:</span>
-                        <span data-i18n="privacyPage.analytics.appsflyer">Provides marketing analytics and attribution data to help us understand the effectiveness of our marketing campaigns. Data collected is anonymized and used for marketing optimization.</span>
-                    </li>
-                </ul>
-                <p class="mt-4" data-i18n="privacyPage.analytics.note">These services adhere to strict data protection standards and process data in accordance with applicable privacy laws. The data collected is anonymized and used solely for the purposes mentioned above.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.storage.title">Storage and Security</h2>
-                <p data-i18n="privacyPage.storage.content">Your data is securely stored on Supabase servers, with security protocols that comply with industry standards. Data is anonymized before any analytical processing.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.sharing.title">Data Sharing</h2>
-                <p data-i18n="privacyPage.sharing.content">We do not sell, exchange, or transfer your anonymized information to third parties, except in the following cases:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li data-i18n="privacyPage.sharing.items.0">When necessary to provide a service you have requested</li>
-                    <li data-i18n="privacyPage.sharing.items.1">To comply with legal obligations</li>
-                </ul>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.purchases.title">In-App Purchases</h2>
-                <p data-i18n="privacyPage.purchases.content">If you make in-app purchases via RevenueCat, please note that we only have access to transaction data, not your payment information.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.rights.title">Your Rights</h2>
-                <p data-i18n="privacyPage.rights.content">You have the right to:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li data-i18n="privacyPage.rights.items.0">Access the data we hold about you</li>
-                    <li data-i18n="privacyPage.rights.items.1">Request rectification or deletion of this data</li>
-                    <li data-i18n="privacyPage.rights.items.2">Object to the processing of your data</li>
-                    <li data-i18n="privacyPage.rights.items.3">Withdraw your consent at any time</li>
-                </ul>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.changes.title">Changes to This Policy</h2>
-                <p data-i18n="privacyPage.changes.content">We reserve the right to modify this privacy policy at any time. The changes will take effect as soon as they are published in the application or on our website.</p>
-            </section>
-            
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3" data-i18n="privacyPage.contact.title">Contact</h2>
-                <p data-i18n="privacyPage.contact.content">For any questions regarding this privacy policy or your personal data, please contact us at:</p>
-                <p class="mt-2 font-medium" data-i18n="privacyPage.contact.email">support@thepunchlines.app</p>
-            </section>
-            
-            <p class="text-sm text-gray-500 pt-4 border-t border-gray-200">
-                <span data-i18n="privacyPage.lastUpdated">Last updated:</span> <script>document.write(new Date().toLocaleDateString())</script>
-            </p>
-            
-            <div class="mt-6 text-center">
-                <a href="index.html" class="text-blue-600 hover:underline" data-i18n="footer.backToHome">Back to home</a>
-            </div>
+            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.support">Support</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="py-10 px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="mb-6 sm:mb-0">
-                <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
+    <main class="flex-1 max-w-3xl w-full mx-auto px-4 md:px-6 pb-12 pt-8 md:pt-12">
+        <div class="text-center mb-10">
+            <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2">Punchlines</p>
+            <h1 class="font-display text-4xl md:text-5xl" data-i18n="privacyPage.title">Politique de Confidentialité</h1>
+        </div>
+
+        <div class="pl-card bg-white border-pl-beige" style="padding: 2rem 1.75rem;">
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.intro.title">Introduction</h2>
+                <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de l'application Punchlines.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.dataCollected.title">Données collectées</h2>
+                <p data-i18n="privacyPage.dataCollected.content">Notre application collecte uniquement les informations que vous fournissez lors de l'onboarding initial :</p>
+                <ul>
+                    <li data-i18n="privacyPage.dataCollected.items.0">Vos préférences de contenu</li>
+                    <li data-i18n="privacyPage.dataCollected.items.1">Vos choix de personnalisation</li>
+                    <li data-i18n="privacyPage.dataCollected.items.2">Vos paramètres d'utilisation</li>
+                </ul>
+                <p data-i18n="privacyPage.dataCollected.note">Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.dataUse.title">Utilisation des données</h2>
+                <p data-i18n="privacyPage.dataUse.content">Toutes les données collectées sont anonymisées et utilisées exclusivement pour :</p>
+                <ul>
+                    <li data-i18n="privacyPage.dataUse.items.0">Améliorer votre expérience utilisateur</li>
+                    <li data-i18n="privacyPage.dataUse.items.1">Personnaliser le contenu selon vos préférences</li>
+                    <li data-i18n="privacyPage.dataUse.items.2">Analyser l'utilisation globale de l'application à des fins d'amélioration</li>
+                    <li data-i18n="privacyPage.dataUse.items.3">Le marketing et l'optimisation du produit</li>
+                    <li data-i18n="privacyPage.dataUse.items.4">Le suivi des bugs et la surveillance des performances de l'application</li>
+                </ul>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.analytics.title">Outils d'analyse et de surveillance</h2>
+                <p data-i18n="privacyPage.analytics.content">Nous utilisons les services tiers suivants pour nous aider à améliorer notre application et comprendre son utilisation :</p>
+                <ul>
+                    <li><span class="font-medium text-pl-text">Mixpanel :</span> <span data-i18n="privacyPage.analytics.mixpanel">Utilisé pour l'analyse produit et le suivi du comportement utilisateur.</span></li>
+                    <li><span class="font-medium text-pl-text">Sentry :</span> <span data-i18n="privacyPage.analytics.sentry">Surveille les performances de l'application et collecte les rapports de crash.</span></li>
+                    <li><span class="font-medium text-pl-text">AppsFlyer :</span> <span data-i18n="privacyPage.analytics.appsflyer">Fournit des analyses marketing et des données d'attribution.</span></li>
+                </ul>
+                <p data-i18n="privacyPage.analytics.note">Ces services respectent des normes strictes de protection des données et traitent les données conformément aux lois applicables.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.storage.title">Stockage et sécurité</h2>
+                <p data-i18n="privacyPage.storage.content">Vos données sont stockées de manière sécurisée sur des serveurs Supabase.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.sharing.title">Partage des données</h2>
+                <p data-i18n="privacyPage.sharing.content">Nous ne vendons, n'échangeons ni ne transférons vos informations anonymisées à des tiers, sauf dans les cas suivants :</p>
+                <ul>
+                    <li data-i18n="privacyPage.sharing.items.0">Lorsque cela est nécessaire pour fournir un service que vous avez demandé</li>
+                    <li data-i18n="privacyPage.sharing.items.1">Pour se conformer à des obligations légales</li>
+                </ul>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.purchases.title">Achats in-app</h2>
+                <p data-i18n="privacyPage.purchases.content">Si vous effectuez des achats in-app via RevenueCat, sachez que nous n'avons accès qu'aux données de transaction.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.rights.title">Vos droits</h2>
+                <p data-i18n="privacyPage.rights.content">Vous avez le droit de :</p>
+                <ul>
+                    <li data-i18n="privacyPage.rights.items.0">Accéder aux données que nous détenons vous concernant</li>
+                    <li data-i18n="privacyPage.rights.items.1">Demander la rectification ou la suppression de ces données</li>
+                    <li data-i18n="privacyPage.rights.items.2">Vous opposer au traitement de vos données</li>
+                    <li data-i18n="privacyPage.rights.items.3">Retirer votre consentement à tout moment</li>
+                </ul>
+                <p class="mt-3"><a href="delete-data.html" class="text-pl-text font-medium hover:underline" data-i18n="footer.deleteData">Supprimer mes données →</a></p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.changes.title">Modifications de cette politique</h2>
+                <p data-i18n="privacyPage.changes.content">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2 data-i18n="privacyPage.contact.title">Contact</h2>
+                <p data-i18n="privacyPage.contact.content">Pour toute question concernant cette politique de confidentialité ou vos données personnelles, contacte-nous à :</p>
+                <p><a href="mailto:support@thepunchlines.app" class="text-pl-text font-medium hover:underline" data-i18n="privacyPage.contact.email">support@thepunchlines.app</a></p>
+            </section>
+
+            <p class="text-sm text-pl-text-3 pt-4">
+                <span data-i18n="privacyPage.lastUpdated">Dernière mise à jour :</span> <script>document.write(new Date().toLocaleDateString())</script>
+            </p>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-pl-text-2 hover:underline" data-i18n="footer.backToHome">Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 md:px-10 bg-white border-t border-pl-beige">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-7 h-7 rounded-md">
+                <span class="font-display text-lg">Punchlines<span class="text-pl-text-2">.</span></span>
             </div>
-            
-            <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline font-medium" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline" data-i18n="footer.support">Support</a>
-                <a href="delete-data.html" class="text-gray-700 hover:underline" data-i18n="footer.deleteData">Delete my data</a>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="privacy.html" class="text-pl-text font-medium hover:underline" data-i18n="footer.privacy">Politique de confidentialité</a>
+                <a href="terms.html" class="text-pl-text hover:underline" data-i18n="footer.terms">Conditions</a>
+                <a href="support.html" class="text-pl-text hover:underline" data-i18n="footer.support">Support</a>
+                <a href="delete-data.html" class="text-pl-text hover:underline" data-i18n="footer.deleteData">Supprimer mes données</a>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile optimized JavaScript -->
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             }
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+            const langBtn = document.getElementById('language-dropdown-button');
+            const langMenu = document.getElementById('language-dropdown-menu');
+            const langOptions = document.querySelectorAll('.language-option');
+            const currentLangEl = document.querySelector('.current-language');
+            if (langBtn && langMenu) {
+                langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+                document.addEventListener('click', (e) => { if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) langMenu.classList.add('hidden'); });
+                langOptions.forEach(opt => opt.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    langOptions.forEach(o => o.setAttribute('aria-selected', 'false'));
+                    this.setAttribute('aria-selected', 'true');
+                    if (currentLangEl) currentLangEl.textContent = this.textContent;
+                    langMenu.classList.add('hidden');
+                    if (window.switchLanguage) window.switchLanguage(lang);
+                }));
+            }
         });
-
-        // Highlight active nav link
         (function() {
             const path = window.location.pathname.split('/').pop();
             const map = {
@@ -266,16 +236,9 @@
                 'support.html': ['nav-support', 'mobile-nav-support']
             };
             Object.entries(map).forEach(([file, ids]) => {
-                if (path === file) {
-                    ids.forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) {
-                            el.classList.add('font-bold','bg-white/70');
-                        }
-                    });
-                }
+                if (path === file) ids.forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('font-medium','underline'); });
             });
         })();
     </script>
 </body>
-</html> 
+</html>

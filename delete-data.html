@@ -10,76 +10,64 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-    <meta name="theme-color" content="#b0cfe2">
+    <meta name="theme-color" content="#F7F7F2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Shantell+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Epilogue:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/punchlines.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
+                        'display': ['"Madimi One"', 'Inter', 'sans-serif'],
+                        'handwritten': ['"Shantell Sans"', 'Inter', 'sans-serif'],
                         'marker': ['"Permanent Marker"', 'cursive'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'cta': ['Epilogue', 'Inter', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'sans-serif'],
                     },
                     colors: {
-                        'app-blue': {
-                            light: '#d8e6f0',
-                            DEFAULT: '#b0cfe2',
-                            dark: '#8fb8d4',
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-blue': 'linear-gradient(180deg, #d8e6f0 0%, #8fb8d4 100%)',
+                        'pl-bg': '#F7F7F2',
+                        'pl-bg-alt': '#FFFFFF',
+                        'pl-cream': '#F5EDE6',
+                        'pl-beige': '#EEEBE6',
+                        'pl-text': '#323232',
+                        'pl-text-2': '#666666',
+                        'pl-text-3': '#999999',
                     }
                 }
             }
         }
     </script>
     <script src="/js/i18n.js"></script>
-    <style>
-        @media (max-width: 640px) {
-            .touch-target {
-                min-height: 44px;
-                min-width: 44px;
-            }
-        }
-    </style>
 </head>
-<body class="bg-gradient-to-b from-app-blue-light via-app-blue to-app-blue-dark min-h-screen text-gray-800 leading-relaxed">
-    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-blue-light/80 backdrop-blur-sm shadow-sm">
-        <div class="flex items-center">
-            <h1 class="text-2xl md:text-3xl font-bold">
-                <a href="index.html" class="hover:opacity-80 transition-opacity">
-                    <span class="font-marker">Punchlines</span>
-                </a>
-            </h1>
-        </div>
-        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
+<body class="bg-pl-bg min-h-screen text-pl-text flex flex-col">
+    <!-- Navbar -->
+    <nav class="py-4 px-4 md:px-10 flex justify-between items-center sticky top-0 z-50 bg-pl-bg/85 backdrop-blur border-b border-pl-beige">
+        <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-9 h-9 rounded-lg">
+            <span class="font-display text-2xl hidden sm:inline">Punchlines<span class="text-pl-text-2">.</span></span>
+        </a>
+        <div class="flex items-center gap-3 md:gap-5">
             <div class="relative language-switcher hidden md:block">
-                <div class="flex items-center">
-                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
-                        <span class="current-language">English</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div>
-                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
-                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
-                    </div>
+                <button id="language-dropdown-button" class="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-full bg-white/70 hover:bg-white border border-pl-beige transition-all">
+                    <i class="fas fa-globe text-pl-text-2 text-xs"></i>
+                    <span class="current-language">English</span>
+                    <i class="fas fa-chevron-down text-xs text-pl-text-2"></i>
+                </button>
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-xl shadow-lg bg-white border border-pl-beige hidden overflow-hidden">
+                    <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="true">English</button>
+                    <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="false">Français</button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="privacy.html" id="nav-privacy" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
-                <a href="terms.html" id="nav-terms" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.terms">Terms</a>
-                <a href="support.html" id="nav-support" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
+            <div class="hidden md:flex items-center gap-5">
+                <a href="privacy.html" id="nav-privacy" class="text-pl-text hover:underline" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" id="nav-terms" class="text-pl-text hover:underline" data-i18n="nav.terms">Terms</a>
+                <a href="support.html" id="nav-support" class="text-pl-text hover:underline" data-i18n="nav.support">Support</a>
             </div>
-            <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
+            <button class="md:hidden touch-target p-2 rounded-lg hover:bg-white/60" id="mobile-menu-button" aria-label="Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -87,144 +75,136 @@
         </div>
     </nav>
 
-    <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+    <div class="hidden md:hidden bg-white shadow-lg rounded-b-2xl mx-4 mt-1 overflow-hidden" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
-            <div class="border-t border-gray-200 my-1"></div>
-            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
-            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
-                English
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
-            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
-                Français
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </button>
+            <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.support">Support</a>
         </div>
     </div>
 
-    <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10 mt-8">
-        <div class="bg-white/90 rounded-lg shadow-md p-6 md:p-8">
-            <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                <span data-i18n="deleteDataPage.title">Delete my data</span> - <span class="font-marker">Punchlines</span>
+    <main class="flex-1 max-w-2xl w-full mx-auto px-4 md:px-6 pb-12 pt-10 md:pt-16">
+        <div class="text-center mb-8">
+            <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2" data-i18n="deleteDataPage.eyebrow">Tes données, ton choix</p>
+            <h1 class="font-display text-4xl md:text-5xl mb-4">
+                <span data-i18n="deleteDataPage.title">Supprimer mes données</span>
             </h1>
+            <p class="text-pl-text-2 max-w-md mx-auto" data-i18n="deleteDataPage.intro">
+                Tu peux demander la suppression des données personnelles collectées par Punchlines. On traite ta demande sous 30 jours.
+            </p>
+        </div>
 
-            <section class="mb-6 text-center">
-                <div class="mb-4">
-                    <i class="fas fa-user-shield text-5xl md:text-6xl text-app-blue"></i>
-                </div>
-                <p class="text-gray-700" data-i18n="deleteDataPage.intro">
-                    You can request the deletion of your personal data collected by the Punchlines app. Fill out the form below and we will process your request within 30 days.
-                </p>
-            </section>
-
-            <section class="mb-6 p-4 bg-app-blue-light/50 rounded-lg">
-                <h2 class="text-lg font-semibold mb-2" data-i18n="deleteDataPage.whatDeleted.title">What will be deleted</h2>
-                <ul class="list-disc pl-5 space-y-1 text-sm text-gray-700">
-                    <li data-i18n="deleteDataPage.whatDeleted.item1">Your account data and identifiers</li>
-                    <li data-i18n="deleteDataPage.whatDeleted.item2">Your preferences, themes and custom affirmations</li>
-                    <li data-i18n="deleteDataPage.whatDeleted.item3">Your usage data linked to your account</li>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="pl-card bg-pl-cream border-pl-beige">
+                <h2 class="font-display text-lg mb-3 flex items-center gap-2">
+                    <i class="fas fa-trash-can text-pl-text-2"></i>
+                    <span data-i18n="deleteDataPage.whatDeleted.title">Ce qui sera supprimé</span>
+                </h2>
+                <ul class="space-y-2 text-sm text-pl-text-2">
+                    <li class="flex gap-2"><span class="text-pl-text-3">·</span><span data-i18n="deleteDataPage.whatDeleted.item1">Tes données de compte et identifiants</span></li>
+                    <li class="flex gap-2"><span class="text-pl-text-3">·</span><span data-i18n="deleteDataPage.whatDeleted.item2">Tes préférences, thèmes et affirmations personnalisées</span></li>
+                    <li class="flex gap-2"><span class="text-pl-text-3">·</span><span data-i18n="deleteDataPage.whatDeleted.item3">Tes données d'utilisation liées à ton compte</span></li>
                 </ul>
-                <h3 class="text-sm font-semibold mt-4 mb-1" data-i18n="deleteDataPage.whatRetained.title">What may be retained</h3>
-                <p class="text-xs text-gray-600" data-i18n="deleteDataPage.whatRetained.content">
-                    Anonymized analytics data and transaction records required for legal and accounting obligations may be kept for the period required by law.
-                </p>
-            </section>
-
-            <form id="delete-form" class="space-y-5">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-                        <span data-i18n="deleteDataPage.form.emailLabel">Email used in the app</span>
-                        <span class="text-red-500">*</span>
-                    </label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-app-blue-dark focus:border-transparent bg-white touch-target"
-                        placeholder="you@example.com">
-                </div>
-
-                <div>
-                    <span class="block text-sm font-medium text-gray-700 mb-2" data-i18n="deleteDataPage.form.scopeLabel">What do you want to delete?</span>
-                    <div class="space-y-2">
-                        <label class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:bg-app-blue-light/30 cursor-pointer touch-target">
-                            <input type="radio" name="scope" value="all" checked class="mt-1">
-                            <span class="text-sm text-gray-700" data-i18n="deleteDataPage.form.scopeAll">All my data and my account</span>
-                        </label>
-                        <label class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:bg-app-blue-light/30 cursor-pointer touch-target">
-                            <input type="radio" name="scope" value="partial" class="mt-1">
-                            <span class="text-sm text-gray-700" data-i18n="deleteDataPage.form.scopePartial">Only some specific data (specify below)</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <label for="details" class="block text-sm font-medium text-gray-700 mb-1">
-                        <span data-i18n="deleteDataPage.form.detailsLabel">Additional details (optional)</span>
-                    </label>
-                    <textarea id="details" name="details" rows="4"
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-app-blue-dark focus:border-transparent bg-white"
-                        data-i18n-placeholder="deleteDataPage.form.detailsPlaceholder"
-                        placeholder="If partial deletion, specify what data, or add any context that may help us identify your account."></textarea>
-                </div>
-
-                <div class="flex items-start gap-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <input type="checkbox" id="confirm" name="confirm" required class="mt-1">
-                    <label for="confirm" class="text-sm text-gray-700" data-i18n="deleteDataPage.form.confirmLabel">
-                        I understand that this action is irreversible and that I will lose access to my data and my account.
-                    </label>
-                </div>
-
-                <button type="submit"
-                    class="w-full inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-[1.02] transition-all shadow-md touch-target">
-                    <i class="far fa-paper-plane mr-2"></i>
-                    <span data-i18n="deleteDataPage.form.submit">Send my deletion request</span>
-                </button>
-
-                <p class="text-xs text-gray-500 text-center" data-i18n="deleteDataPage.form.mailNote">
-                    The button will open your email client with a pre-filled message to support@thepunchlines.app.
-                </p>
-            </form>
-
-            <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
-                <i class="fas fa-check-circle text-green-600 text-3xl mb-2"></i>
-                <p class="text-sm text-gray-700" data-i18n="deleteDataPage.success">
-                    Your email client just opened. Send the message to finalize your request — we will reply within 1-2 business days and process the deletion within 30 days.
-                </p>
             </div>
-
-            <div class="mt-8 pt-6 border-t border-gray-200 text-center">
-                <p class="text-sm text-gray-600 mb-2" data-i18n="deleteDataPage.alt">
-                    Prefer to write us directly?
+            <div class="pl-card bg-white border-pl-beige">
+                <h2 class="font-display text-lg mb-3 flex items-center gap-2">
+                    <i class="fas fa-shield-halved text-pl-text-2"></i>
+                    <span data-i18n="deleteDataPage.whatRetained.title">Ce qui peut être conservé</span>
+                </h2>
+                <p class="text-sm text-pl-text-2" data-i18n="deleteDataPage.whatRetained.content">
+                    Les données analytiques anonymisées et les enregistrements de transactions requis pour nos obligations légales peuvent être conservés pendant la durée prévue par la loi.
                 </p>
-                <a href="mailto:support@thepunchlines.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es"
-                    class="text-app-blue-dark hover:underline font-medium">
-                    support@thepunchlines.app
-                </a>
-            </div>
-
-            <div class="mt-6 text-center">
-                <a href="index.html" class="text-app-blue-dark hover:underline transition-colors py-2 touch-target" data-i18n="footer.backToHome">Back to home</a>
             </div>
         </div>
-    </div>
 
-    <footer class="py-8 md:py-10 px-4 md:px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200 mt-auto">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="mb-6 sm:mb-0">
-                <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
+        <form id="delete-form" class="pl-card bg-white border-pl-beige space-y-5">
+            <div>
+                <label for="email" class="block text-sm font-medium text-pl-text mb-1">
+                    <span data-i18n="deleteDataPage.form.emailLabel">Email utilisé dans l'application</span>
+                    <span class="text-pl-text-3">*</span>
+                </label>
+                <input type="email" id="email" name="email" required
+                    class="w-full px-4 py-3 border border-pl-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-pl-cream focus:border-pl-text-3 bg-white"
+                    placeholder="toi@exemple.com">
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.support">Support</a>
-                <a href="delete-data.html" class="text-gray-700 hover:underline font-medium py-2 touch-target" data-i18n="footer.deleteData">Delete my data</a>
+            <div>
+                <span class="block text-sm font-medium text-pl-text mb-2" data-i18n="deleteDataPage.form.scopeLabel">Que souhaites-tu supprimer ?</span>
+                <div class="space-y-2">
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-pl-beige hover:bg-pl-cream cursor-pointer touch-target">
+                        <input type="radio" name="scope" value="all" checked class="mt-1">
+                        <span class="text-sm" data-i18n="deleteDataPage.form.scopeAll">Toutes mes données et mon compte</span>
+                    </label>
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-pl-beige hover:bg-pl-cream cursor-pointer touch-target">
+                        <input type="radio" name="scope" value="partial" class="mt-1">
+                        <span class="text-sm" data-i18n="deleteDataPage.form.scopePartial">Uniquement certaines données (précise ci-dessous)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label for="details" class="block text-sm font-medium text-pl-text mb-1" data-i18n="deleteDataPage.form.detailsLabel">
+                    Détails complémentaires (optionnel)
+                </label>
+                <textarea id="details" name="details" rows="4"
+                    class="w-full px-4 py-3 border border-pl-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-pl-cream focus:border-pl-text-3 bg-white"
+                    data-i18n="deleteDataPage.form.detailsPlaceholder" data-i18n-attr="placeholder"
+                    placeholder="En cas de suppression partielle, précise les données concernées."></textarea>
+            </div>
+
+            <label class="flex items-start gap-3 p-3 bg-pl-cream rounded-xl cursor-pointer">
+                <input type="checkbox" id="confirm" name="confirm" required class="mt-1">
+                <span class="text-sm text-pl-text" data-i18n="deleteDataPage.form.confirmLabel">
+                    Je comprends que cette action est irréversible et que je perdrai l'accès à mes données et à mon compte.
+                </span>
+            </label>
+
+            <button type="submit" class="cta-clay cta-clay--lg w-full">
+                <i class="far fa-paper-plane"></i>
+                <span data-i18n="deleteDataPage.form.submit">Envoyer ma demande</span>
+            </button>
+
+            <p class="text-xs text-pl-text-3 text-center" data-i18n="deleteDataPage.form.mailNote">
+                Le bouton ouvre ton client mail avec un message pré-rempli à destination de support@thepunchlines.app.
+            </p>
+        </form>
+
+        <div id="form-success" class="hidden mt-6 pl-card border-pl-beige" style="background: #DFF1DF;">
+            <div class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-2xl" style="color: #6C966D;"></i>
+                <p class="text-sm text-pl-text" data-i18n="deleteDataPage.success">
+                    Ton client mail vient de s'ouvrir. Envoie le message pour finaliser ta demande — on te répondra sous 1 à 2 jours ouvrés et la suppression sera effective sous 30 jours.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-pl-beige text-center">
+            <p class="text-sm text-pl-text-2 mb-2" data-i18n="deleteDataPage.alt">
+                Tu préfères nous écrire directement ?
+            </p>
+            <a href="mailto:support@thepunchlines.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es"
+                class="text-pl-text font-medium hover:underline">
+                support@thepunchlines.app
+            </a>
+        </div>
+
+        <div class="mt-6 text-center">
+            <a href="index.html" class="text-pl-text-2 hover:underline" data-i18n="footer.backToHome">Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 md:px-10 bg-white border-t border-pl-beige">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-7 h-7 rounded-md">
+                <span class="font-display text-lg">Punchlines<span class="text-pl-text-2">.</span></span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="privacy.html" class="text-pl-text hover:underline" data-i18n="footer.privacy">Politique de confidentialité</a>
+                <a href="terms.html" class="text-pl-text hover:underline" data-i18n="footer.terms">Conditions</a>
+                <a href="support.html" class="text-pl-text hover:underline" data-i18n="footer.support">Support</a>
+                <a href="delete-data.html" class="text-pl-text font-medium hover:underline" data-i18n="footer.deleteData">Supprimer mes données</a>
             </div>
         </div>
     </footer>
@@ -233,30 +213,39 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             }
-
-            document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+            const langBtn = document.getElementById('language-dropdown-button');
+            const langMenu = document.getElementById('language-dropdown-menu');
+            const langOptions = document.querySelectorAll('.language-option');
+            const currentLangEl = document.querySelector('.current-language');
+            if (langBtn && langMenu) {
+                langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+                document.addEventListener('click', (e) => { if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) langMenu.classList.add('hidden'); });
+                langOptions.forEach(opt => opt.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    langOptions.forEach(o => o.setAttribute('aria-selected', 'false'));
+                    this.setAttribute('aria-selected', 'true');
+                    if (currentLangEl) currentLangEl.textContent = this.textContent;
+                    langMenu.classList.add('hidden');
+                    if (window.switchLanguage) window.switchLanguage(lang);
+                }));
+            }
 
             const form = document.getElementById('delete-form');
             const success = document.getElementById('form-success');
-
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const email = document.getElementById('email').value.trim();
                 const scope = document.querySelector('input[name="scope"]:checked').value;
                 const details = document.getElementById('details').value.trim();
-
                 const lang = (document.documentElement.lang || 'en').toLowerCase().startsWith('fr') ? 'fr' : 'en';
-
                 const subjects = {
                     fr: 'Demande de suppression de données',
                     en: 'Data deletion request'
@@ -269,34 +258,11 @@
                     fr: `Bonjour,\n\nJe demande la suppression de mes données personnelles associées à l'application Punchlines.\n\nEmail utilisé dans l'app : ${email}\nPortée de la demande : ${scopeLabels.fr[scope]}\n\nDétails complémentaires :\n${details || '(aucun)'}\n\nJe comprends que cette action est irréversible.\n\nMerci de me confirmer la prise en compte de ma demande.`,
                     en: `Hello,\n\nI request the deletion of my personal data associated with the Punchlines app.\n\nEmail used in the app: ${email}\nScope of the request: ${scopeLabels.en[scope]}\n\nAdditional details:\n${details || '(none)'}\n\nI understand that this action is irreversible.\n\nPlease confirm receipt of my request.`
                 };
-
-                const subject = encodeURIComponent(subjects[lang]);
-                const body = encodeURIComponent(bodies[lang]);
-                window.location.href = `mailto:support@thepunchlines.app?subject=${subject}&body=${body}`;
-
+                window.location.href = `mailto:support@thepunchlines.app?subject=${encodeURIComponent(subjects[lang])}&body=${encodeURIComponent(bodies[lang])}`;
                 success.classList.remove('hidden');
                 success.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
-
-        (function() {
-            const path = window.location.pathname.split('/').pop();
-            const map = {
-                'privacy.html': ['nav-privacy', 'mobile-nav-privacy'],
-                'terms.html': ['nav-terms', 'mobile-nav-terms'],
-                'support.html': ['nav-support', 'mobile-nav-support']
-            };
-            Object.entries(map).forEach(([file, ids]) => {
-                if (path === file) {
-                    ids.forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) {
-                            el.classList.add('font-bold','bg-white/70');
-                        }
-                    });
-                }
-            });
-        })();
     </script>
 </body>
 </html>

@@ -246,6 +246,7 @@
   },
   "supportPage": {
     "title": "Support",
+    "eyebrow": "On est là",
     "needHelp": {
       "title": "Besoin d'aide ?",
       "content": "Tu rencontres un problème avec l'application Punchlines ou tu as une question ? On est là pour t'aider !"
@@ -262,6 +263,7 @@
   },
   "deleteDataPage": {
     "title": "Supprimer mes données",
+    "eyebrow": "Tes données, ton choix",
     "intro": "Tu peux demander la suppression des données personnelles collectées par l'application Punchlines. Remplis le formulaire ci-dessous et nous traiterons ta demande sous 30 jours.",
     "whatDeleted": {
       "title": "Ce qui sera supprimé",
