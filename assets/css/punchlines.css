@@ -1,0 +1,203 @@
+:root {
+    --pl-bg: #F7F7F2;
+    --pl-bg-alt: #FFFFFF;
+    --pl-bg-modal: #F5EDE6;
+    --pl-bg-onboarding: #EEEBE6;
+    --pl-bg-menu: #CFDAE2;
+    --pl-text: #323232;
+    --pl-text-feed: #343434;
+    --pl-text-2: #666666;
+    --pl-text-3: #999999;
+    --pl-border: #F0F0F0;
+    --pl-border-strong: #E5E0D8;
+
+    --pl-cta-blue: #7AB1BC;
+    --pl-cta-blue-shadow: #6C8596;
+    --pl-cta-green: #7ABC7C;
+    --pl-cta-green-shadow: #6C966D;
+    --pl-cta-red: #C47A7A;
+    --pl-cta-red-shadow: #A06464;
+    --pl-cta-dark: #323232;
+    --pl-cta-dark-shadow: #1a1a1a;
+
+    --pl-peach: #FFD8AC;
+    --pl-coral: #FFB79D;
+
+    --pl-radius-button: 22px;
+    --pl-radius-choice: 28px;
+    --pl-radius-card: 14px;
+    --pl-radius-pill: 999px;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--pl-text);
+    background: var(--pl-bg);
+}
+
+.font-display { font-family: 'Madimi One', 'Inter', sans-serif; font-weight: 400; }
+.font-handwritten { font-family: 'Shantell Sans', 'Inter', sans-serif; font-weight: 500; }
+.font-marker { font-family: 'Permanent Marker', cursive; }
+.font-cta { font-family: 'Epilogue', 'Inter', sans-serif; font-weight: 600; }
+.font-body { font-family: 'Poppins', 'Inter', sans-serif; }
+
+/* Claymorphic CTA buttons — signature de la marque
+   shadowOffset y:6, opacity:1, radius:0 → press: translateY(6) + shadow disparaît */
+.cta-clay {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: 'Epilogue', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #FFFFFF;
+    background-color: var(--pl-cta-blue);
+    box-shadow: 0 6px 0 0 var(--pl-cta-blue-shadow);
+    border-radius: var(--pl-radius-button);
+    padding: 1rem 1.75rem;
+    min-height: 54px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 200ms ease;
+    will-change: transform;
+}
+.cta-clay:hover { transform: translateY(-2px); box-shadow: 0 8px 0 0 var(--pl-cta-blue-shadow); }
+.cta-clay:active,
+.cta-clay.is-pressed { transform: translateY(6px); box-shadow: 0 0 0 0 var(--pl-cta-blue-shadow); }
+
+.cta-clay--green { background-color: var(--pl-cta-green); box-shadow: 0 6px 0 0 var(--pl-cta-green-shadow); }
+.cta-clay--green:hover { box-shadow: 0 8px 0 0 var(--pl-cta-green-shadow); }
+.cta-clay--green:active { box-shadow: 0 0 0 0 var(--pl-cta-green-shadow); }
+
+.cta-clay--dark { background-color: var(--pl-cta-dark); box-shadow: 0 6px 0 0 var(--pl-cta-dark-shadow); }
+.cta-clay--dark:hover { box-shadow: 0 8px 0 0 var(--pl-cta-dark-shadow); }
+.cta-clay--dark:active { box-shadow: 0 0 0 0 var(--pl-cta-dark-shadow); }
+
+.cta-clay--red { background-color: var(--pl-cta-red); box-shadow: 0 6px 0 0 var(--pl-cta-red-shadow); }
+.cta-clay--red:hover { box-shadow: 0 8px 0 0 var(--pl-cta-red-shadow); }
+.cta-clay--red:active { box-shadow: 0 0 0 0 var(--pl-cta-red-shadow); }
+
+.cta-clay--lg { padding: 1.1rem 2.25rem; font-size: 1.05rem; min-height: 60px; }
+.cta-clay[disabled] { background-color: #CCCCCC; color: #999999; box-shadow: none; cursor: not-allowed; transform: none; }
+
+/* Soft chip / pill */
+.pl-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--pl-radius-pill);
+    font-family: 'Shantell Sans', 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--pl-text);
+    border: 1px solid var(--pl-border-strong);
+}
+
+/* Card flat */
+.pl-card {
+    background: var(--pl-bg-alt);
+    border-radius: var(--pl-radius-card);
+    padding: 1.5rem;
+    border: 1px solid var(--pl-border);
+}
+
+/* Punchline display card (showcase) */
+.pl-quote {
+    font-family: 'Madimi One', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.55;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Theme variants for punchline cards */
+.pl-theme-default { background: #EEEBE6; color: #343434; }
+.pl-theme-dark    { background: #343434; color: #FFFFFF; }
+.pl-theme-peach   { background: linear-gradient(135deg, #FFD8AC 0%, #FFB79D 100%); color: #343434; }
+.pl-theme-blue    { background: linear-gradient(135deg, #9FB6C4 0%, #6798C0 100%); color: #FFFFFF; }
+.pl-theme-cream   { background: #F5EDE6; color: #343434; }
+.pl-theme-watercolor {
+    background: #F5EDE8 url('/assets/illustrations/watercolor.svg') center/cover no-repeat;
+    color: #343434;
+}
+
+/* Hero gradient (signature) */
+.pl-gradient-hero {
+    background: linear-gradient(135deg, #FFB79D 0%, #9FB6C4 50%, #6798C0 100%);
+}
+
+/* Smooth focus ring for keyboard users */
+.cta-clay:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(122, 177, 188, 0.5);
+    outline-offset: 2px;
+}
+
+/* Subtle decorative star — used in onboarding screens */
+.pl-star { color: #444444; }
+
+/* Mobile snap scroll utility */
+.pl-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.pl-snap-x::-webkit-scrollbar { display: none; }
+.pl-snap-x > * { scroll-snap-align: center; }
+
+@media (max-width: 640px) {
+    .touch-target { min-height: 44px; min-width: 44px; }
+}
+
+/* Modal */
+.pl-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(50, 50, 50, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    padding: 1.25rem;
+    overflow-y: auto;
+}
+.pl-modal[data-open="true"] { display: flex; align-items: flex-start; justify-content: center; }
+.pl-modal__panel {
+    background: var(--pl-bg-modal);
+    border-radius: var(--pl-radius-card);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 640px;
+    margin: 2.5rem auto;
+    position: relative;
+}
+.pl-modal__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--pl-text-2);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+body.pl-modal-open { overflow: hidden; }

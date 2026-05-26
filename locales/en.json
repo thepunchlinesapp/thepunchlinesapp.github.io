@@ -1,20 +1,73 @@
 {
   "meta": {
-    "title": "Punchlines - Transform your life with affirmations that hit"
+    "title": "Punchlines — You can still change."
   },
   "nav": {
     "privacy": "Privacy",
     "terms": "Terms",
-    "support": "Support"
+    "support": "Support",
+    "download": "Download"
   },
   "hero": {
+    "eyebrow": "The manifesto",
+    "titleLine1": "You can still",
+    "titleLine2": "change.",
+    "lead": "Loneliness, anxiety, loss of meaning… Hard to climb out when your thoughts are working against you.",
+    "lead2": "Punchlines gives you back control. Short, sharp affirmations that rewire how you think.",
+    "appStore": "Download on the App Store",
+    "googlePlay": "Google Play",
+    "interested": "soon",
+    "note": "7-day free trial, no strings attached.",
     "title": "Ready to <span class='font-marker'>transform</span> your mindset?",
     "subtitle": "Short, real, and powerful affirmations. Personalized for you.",
+    "soon": "Soon",
+    "tagline": "transform your life, one punchline at a time"
+  },
+  "samples": {
+    "eyebrow": "A taste of it",
+    "title": "Sentences that hit. No fluff.",
+    "q1": "I fear neither failure nor success.",
+    "q2": "What I touch turns to gold.",
+    "q3": "I attract success like a magnet.",
+    "q4": "I create my reality.",
+    "q5": "I succeed naturally."
+  },
+  "manifesto": {
+    "eyebrow": "Why we do this",
+    "title": "Change starts<br>from within.",
+    "p1": "People try to change what they do. The real subject is who they are.",
+    "p2": "The less fear you carry, the less weak or stressed you feel, the bigger your power over your life."
+  },
+  "promises": {
+    "eyebrow": "What we promise",
+    "title": "Not your boring self-help app.",
+    "c1": {
+      "title": "Direct, never cheesy.",
+      "desc": "Casual, slightly cheeky, second-degree tone. Affirmations that actually land."
+    },
+    "c2": {
+      "title": "Truly personalized.",
+      "desc": "Pick your themes (confidence, calm, abundance…). The app adapts to your flow."
+    },
+    "c3": {
+      "title": "A habit that sticks.",
+      "desc": "A daily dose. Not a book to read, not a course to follow. Just 2 minutes a day."
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Three steps, that's it.",
+    "s1": { "title": "Tell us who you are.", "desc": "A short onboarding to spot what's holding you back and what you want to grow." },
+    "s2": { "title": "Get your punchlines.", "desc": "Every day, affirmations crafted for you. You read them, you feel them." },
+    "s3": { "title": "Rewire your mind.", "desc": "Bit by bit, your thoughts change. Your beliefs too. You're not the same person anymore." }
+  },
+  "finalCta": {
+    "eyebrow": "Your move",
+    "title": "Plant the seeds<br>of change.",
+    "subtitle": "Seven days on the house. No commitment. No fluff.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
-    "soon": "Soon",
-    "tagline": "transform your life, one punchline at a time",
-    "interested": "Interested?"
+    "interested": "soon"
   },
   "features": {
     "title": "Why Punchlines will change your life",
@@ -46,7 +99,8 @@
     ]
   },
   "screenshots": {
-    "title": "Discover the app",
+    "eyebrow": "The app in pictures",
+    "title": "Discover Punchlines.",
     "captions": [
       "Punchlines that hit, every day",
       "Boost your mindset in seconds",
@@ -65,7 +119,12 @@
     "interested": "Interested?"
   },
   "footer": {
-    "copyright": "© 2025 Punchlines. All rights reserved.",
+    "copyright": "© 2026 Punchlines. All rights reserved.",
+    "tagline": "You can still change.",
+    "endline": "Change starts from within.",
+    "col1": "The app",
+    "col2": "Legal",
+    "appStore": "App Store",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "support": "Support",

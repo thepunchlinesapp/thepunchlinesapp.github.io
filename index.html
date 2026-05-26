@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Punchlines - Des affirmations positives directes et motivantes pour votre quotidien.">
-    <meta name="theme-color" content="#EEEBE6">
-    <title>Punchlines - Transforme ta vie avec des affirmations qui claquent</title>
+    <meta name="description" content="Punchlines — des affirmations positives qui claquent. Reprends le contrôle de tes pensées et change vraiment.">
+    <meta name="theme-color" content="#F7F7F2">
+    <title>Punchlines — Tu peux encore changer.</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -13,220 +13,200 @@
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Shantell+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Epilogue:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/punchlines.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
+                        'display': ['"Madimi One"', 'Inter', 'sans-serif'],
+                        'handwritten': ['"Shantell Sans"', 'Inter', 'sans-serif'],
                         'marker': ['"Permanent Marker"', 'cursive'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'cta': ['Epilogue', 'Inter', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'sans-serif'],
                     },
                     colors: {
-                        'app-beige': {
-                            light: '#F7F7F2',
-                            DEFAULT: '#EEEBE6',
-                            dark: '#E5E0D8',
-                        },
-                        'app-warm': {
-                            peach: '#ffd8ac',
-                            coral: '#FFB79D',
-                            text: '#333',
-                            'text-secondary': '#666',
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-warm': 'linear-gradient(180deg, #EEEBE6 0%, #F7F7F2 100%)',
-                        'gradient-accent': 'linear-gradient(135deg, #FFB79D 0%, #9FB6C4 50%, #6798C0 100%)',
+                        'pl-bg': '#F7F7F2',
+                        'pl-bg-alt': '#FFFFFF',
+                        'pl-cream': '#F5EDE6',
+                        'pl-beige': '#EEEBE6',
+                        'pl-menu': '#CFDAE2',
+                        'pl-text': '#323232',
+                        'pl-text-2': '#666666',
+                        'pl-text-3': '#999999',
+                        'pl-peach': '#FFD8AC',
+                        'pl-coral': '#FFB79D',
+                        'pl-blue': '#7AB1BC',
+                        'pl-blue-shadow': '#6C8596',
+                        'pl-green': '#7ABC7C',
+                        'pl-green-shadow': '#6C966D',
                     }
                 }
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backface-visibility: hidden;
-            will-change: transform;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .scrollbar-hide {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        /* Touch optimized styles */
-        @media (max-width: 640px) {
-            .touch-target {
-                min-height: 44px;
-                min-width: 44px;
-            }
-            .screenshot-container {
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-            }
-            .screenshot-item {
-                scroll-snap-align: center;
-            }
-        }
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            position: relative;
-            width: 100%;
-            max-width: 640px;
-            margin: 40px auto;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            font-size: 24px;
-            line-height: 1;
-            color: #666;
-        }
-        .modal-iframe-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 60%;
-            overflow: hidden;
-        }
-        .modal-iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        body.modal-open {
-            overflow: hidden;
-        }
-    </style>
     <script src="/js/i18n.js"></script>
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBPSYKCB7E"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-NBPSYKCB7E');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NBPSYKCB7E');
     </script>
-    <!-- Plausible -->
     <script defer data-domain="thepunchlines.app" src="https://plausible.io/js/script.js"></script>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PZLPRC5B');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '597114786828376');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '597114786828376');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=597114786828376&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-     
+        src="https://www.facebook.com/tr?id=597114786828376&ev=PageView&noscript=1"
+        alt=""/></noscript>
+
+    <style>
+        /* Page-specific bits */
+        .hero-mockup-stack {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            aspect-ratio: 1 / 1.1;
+            margin: 0 auto;
+        }
+        .hero-mockup-stack img {
+            position: absolute;
+            width: 54%;
+            border-radius: 28px;
+            box-shadow: 0 24px 48px -16px rgba(50, 50, 50, 0.28), 0 6px 12px -4px rgba(50, 50, 50, 0.1);
+            background: #EEEBE6;
+        }
+        .hero-mockup-stack img:nth-child(1) { top: 10%; left: 4%; transform: rotate(-8deg); }
+        .hero-mockup-stack img:nth-child(2) { top: 0; left: 50%; transform: translateX(-50%) rotate(1deg); z-index: 2; }
+        .hero-mockup-stack img:nth-child(3) { top: 10%; right: 4%; transform: rotate(8deg); }
+
+        /* Decorative sparkle */
+        .pl-sparkle {
+            position: absolute;
+            color: #323232;
+            font-size: 18px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* Marquee for punchlines samples */
+        .punchline-row {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem 1.5rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .punchline-row::-webkit-scrollbar { display: none; }
+        .punchline-row > * { scroll-snap-align: center; flex-shrink: 0; }
+
+        .punchline-card {
+            width: 240px;
+            height: 280px;
+            border-radius: 22px;
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Madimi One', 'Inter', sans-serif;
+            font-size: 1.35rem;
+            line-height: 1.5;
+            letter-spacing: 0.3px;
+            box-shadow: 0 12px 32px -16px rgba(50, 50, 50, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .punchline-row { justify-content: center; flex-wrap: wrap; }
+            .punchline-card { width: 220px; height: 260px; }
+        }
+
+        /* Step number badge */
+        .step-num {
+            width: 40px; height: 40px;
+            border-radius: 999px;
+            background: #323232;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Madimi One', sans-serif;
+            font-size: 1.05rem;
+        }
+
+        /* Screenshots scroll */
+        .screenshot-container {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshot-item { scroll-snap-align: center; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body class="bg-app-beige min-h-screen">
-    <!-- Google Tag Manager (noscript) -->
+<body class="bg-pl-bg min-h-screen text-pl-text">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZLPRC5B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    
+        height="0" width="0" style="display:none;visibility:hidden" title="gtm"></iframe></noscript>
+
     <!-- Android Interest Modal -->
-    <div id="androidModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeAndroidModal()">&times;</button>
-            <h3 class="text-xl font-bold mb-4" data-i18n="androidModal.title">Intéressé par Android ?</h3>
-            <div class="modal-iframe-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1ZwBxbL70B0W4O3IsPjAfkkQglwmQrEr_SZwKHr5iufJKyg/viewform?embedded=true" width="640" height="385" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <div id="androidModal" class="pl-modal" role="dialog" aria-modal="true" aria-labelledby="androidModalTitle">
+        <div class="pl-modal__panel">
+            <button class="pl-modal__close" onclick="closeAndroidModal()" aria-label="Close">&times;</button>
+            <h3 id="androidModalTitle" class="font-handwritten text-xl mb-4" data-i18n="androidModal.title">Intéressé par Android ?</h3>
+            <div style="position:relative;width:100%;padding-bottom:60%;height:0;overflow:hidden;border-radius:10px;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1ZwBxbL70B0W4O3IsPjAfkkQglwmQrEr_SZwKHr5iufJKyg/viewform?embedded=true"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" title="Android form">Loading…</iframe>
             </div>
         </div>
     </div>
+
     <!-- Navbar -->
-    <nav class="py-4 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-app-beige-light/90 backdrop-blur-sm shadow-sm">
+    <nav class="py-4 px-4 md:px-10 flex justify-between items-center sticky top-0 z-50 bg-pl-bg/85 backdrop-blur border-b border-pl-beige">
         <div class="flex items-center">
-            <h1 class="text-2xl md:text-3xl font-bold">
-                <a href="index.html" class="hover:opacity-80 transition-opacity">
-                    <span class="font-marker">Punchlines</span>
-                </a>
-            </h1>
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-9 h-9 rounded-lg">
+                <span class="font-display text-2xl hidden sm:inline">Punchlines<span class="text-pl-text-2">.</span></span>
+            </a>
         </div>
-        <div class="flex items-center gap-3 md:gap-6 text-gray-800">
-            <!-- Language Switcher - Visible only on desktop -->
+        <div class="flex items-center gap-3 md:gap-5">
             <div class="relative language-switcher hidden md:block">
-                <div class="flex items-center">
-                    <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
-                        <span class="current-language">English</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Language Dropdown Menu -->
-                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
-                        <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="false">Français</button>
-                    </div>
+                <button id="language-dropdown-button" class="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-full bg-white/70 hover:bg-white border border-pl-beige transition-all">
+                    <i class="fas fa-globe text-pl-text-2 text-xs"></i>
+                    <span class="current-language">English</span>
+                    <i class="fas fa-chevron-down text-xs text-pl-text-2"></i>
+                </button>
+                <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-xl shadow-lg bg-white border border-pl-beige hidden overflow-hidden">
+                    <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="true">English</button>
+                    <button data-lang="fr" class="language-option w-full text-left px-4 py-2 text-sm hover:bg-pl-cream" aria-selected="false">Français</button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="privacy.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.privacy">Privacy</a>
-                <a href="terms.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.terms">Terms</a>
-                <a href="support.html" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
-            </div>
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
+            <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8"
+                class="hidden md:inline-flex cta-clay cta-clay--dark text-sm" style="min-height:44px; padding: 0.55rem 1.1rem;">
+                <i class="fab fa-apple"></i>
+                <span data-i18n="nav.download">Download</span>
+            </a>
+            <button class="md:hidden touch-target p-2 rounded-lg hover:bg-white/60" id="mobile-menu-button" aria-label="Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -234,369 +214,355 @@
         </div>
     </nav>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden bg-white shadow-lg rounded-b-2xl mx-4 mt-1 overflow-hidden" id="mobile-menu">
         <div class="flex flex-col py-2">
-            <a href="privacy.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
-            <a href="terms.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
-            <a href="support.html" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
-            <div class="border-t border-gray-200 my-1"></div>
-            <!-- Language options in mobile menu -->
-            <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
-            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
+            <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="px-4 py-3 hover:bg-pl-cream touch-target font-medium flex items-center gap-2">
+                <i class="fab fa-apple"></i> <span data-i18n="nav.download">Download</span>
+            </a>
+            <a href="privacy.html" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.privacy">Privacy</a>
+            <a href="terms.html" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.terms">Terms</a>
+            <a href="support.html" class="px-4 py-3 hover:bg-pl-cream touch-target" data-i18n="nav.support">Support</a>
+            <div class="border-t border-pl-beige my-1"></div>
+            <div class="px-4 py-2 text-xs font-medium text-pl-text-2" data-i18n="languageSwitcher.change">Changer de langue</div>
+            <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm hover:bg-pl-cream touch-target flex items-center justify-between" aria-selected="true">
                 English
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-pl-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
             </button>
-            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="false">
+            <button data-lang="fr" class="mobile-language-option w-full text-left px-4 py-3 text-sm hover:bg-pl-cream touch-target flex items-center justify-between" aria-selected="false">
                 Français
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark h-5 w-5 text-pl-blue hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
             </button>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="py-6 md:py-20 px-4 md:px-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <!-- Left side with text -->
-            <div class="md:w-1/2 text-center md:text-left">
-                <p class="text-sm md:text-base text-app-warm-text-secondary font-bold my-8 md:mb-3 tracking-wider uppercase" data-i18n="hero.tagline">transforme ta vie, une punchline à la fois</p>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold my-8 md:mb-6 leading-tight text-app-warm-text" data-i18n="hero.title">
-                    Prêt à <span class="font-marker text-app-warm-text">transformer</span> ton mindset ?
-                </h2>
-                <p class="text-lg md:text-xl text-app-warm-text-secondary mb-8 md:mb-8" data-i18n="hero.subtitle">
-                    Des affirmations courtes, cash et puissantes. Personnalisées pour toi.
+    <!-- Hero -->
+    <section class="relative px-4 md:px-10 pt-10 md:pt-16 pb-10 md:pb-20 overflow-hidden">
+        <svg class="pl-sparkle" style="top: 12%; left: 6%; width: 24px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z"/></svg>
+        <svg class="pl-sparkle" style="top: 22%; right: 12%; width: 14px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z"/></svg>
+        <svg class="pl-sparkle" style="bottom: 18%; left: 14%; width: 18px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z"/></svg>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <!-- Left -->
+            <div class="text-center md:text-left min-w-0">
+                <span class="pl-chip mb-5" data-i18n="hero.eyebrow">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pl-green"></span>
+                    <span>Le manifeste</span>
+                </span>
+                <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight mb-6">
+                    <span data-i18n="hero.titleLine1">Tu peux encore</span><br>
+                    <span class="italic font-handwritten font-semibold" data-i18n="hero.titleLine2">changer.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-pl-text-2 mb-3 max-w-xl mx-auto md:mx-0" data-i18n="hero.lead">
+                    Solitude, anxiété, perte de sens… Difficile d'en sortir quand tes pensées jouent contre toi.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-6 md:mb-0">
-                    <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
-                        <i class="fab fa-apple mr-2 text-xl"></i>
-                        <span data-i18n="hero.appStore">App Store</span>
+                <p class="text-lg md:text-xl text-pl-text mb-8 max-w-xl mx-auto md:mx-0" data-i18n="hero.lead2">
+                    Punchlines te rend le contrôle. Des affirmations courtes, cash, qui te recâblent.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="cta-clay cta-clay--lg">
+                        <i class="fab fa-apple"></i>
+                        <span data-i18n="hero.appStore">Télécharger sur l'App Store</span>
                     </a>
-                    <button onclick="openAndroidModal()" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
-                        <i class="fab fa-google-play mr-2 text-xl"></i>
+                    <button onclick="openAndroidModal()" class="cta-clay cta-clay--lg cta-clay--green">
+                        <i class="fab fa-google-play"></i>
                         <span data-i18n="hero.googlePlay">Google Play</span>
-                        <span class="ml-2 text-xs bg-app-warm-peach px-2 py-1 rounded-full text-gray-800" data-i18n="hero.interested">Interested?</span>
+                        <span class="ml-1 text-xs bg-white/30 px-2 py-0.5 rounded-full" data-i18n="hero.interested">bientôt</span>
                     </button>
                 </div>
+                <p class="text-xs text-pl-text-3 mt-5" data-i18n="hero.note">7 jours gratuits, sans engagement.</p>
             </div>
-            
-            <!-- Right side with app logo -->
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-                <img src="assets/logo.png" alt="Punchlines Logo" class="w-40 h-40 sm:w-64 sm:h-64 object-contain rounded-3xl shadow-lg" loading="eager">
+
+            <!-- Right -->
+            <div class="relative min-w-0">
+                <div class="hero-mockup-stack">
+                    <img src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" alt="Punchline screen" loading="eager">
+                    <img src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" alt="Punchline screen" loading="eager">
+                    <img src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" alt="Punchline screen" loading="eager">
+                </div>
+                <svg class="pl-sparkle" style="top: -4%; right: 10%; width: 32px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z"/></svg>
+                <svg class="pl-sparkle" style="bottom: 8%; left: -2%; width: 22px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z"/></svg>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="pt-8 pb-16 md:py-16 px-4 md:px-6 bg-white bg-opacity-5">
+    <!-- Punchlines showcase -->
+    <section class="py-12 md:py-20 bg-pl-cream">
+        <div class="max-w-6xl mx-auto px-4 md:px-10">
+            <div class="text-center mb-8 md:mb-12">
+                <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2" data-i18n="samples.eyebrow">Un avant-goût</p>
+                <h2 class="font-display text-3xl md:text-4xl" data-i18n="samples.title">Des phrases qui claquent. Pas du blabla.</h2>
+            </div>
+        </div>
+        <div class="punchline-row">
+            <div class="punchline-card pl-theme-default">
+                <span data-i18n="samples.q1">Je n'ai peur ni de l'échec, ni du succès.</span>
+            </div>
+            <div class="punchline-card pl-theme-dark">
+                <span data-i18n="samples.q2">Ce que je touche se transforme en or.</span>
+            </div>
+            <div class="punchline-card pl-theme-peach">
+                <span data-i18n="samples.q3">J'attire le succès comme un aimant.</span>
+            </div>
+            <div class="punchline-card pl-theme-blue">
+                <span data-i18n="samples.q4">Je crée ma réalité.</span>
+            </div>
+            <div class="punchline-card pl-theme-cream">
+                <span data-i18n="samples.q5">Je réussis naturellement.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="py-16 md:py-24 px-4 md:px-10">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center">
+            <div class="text-center md:text-right order-2 md:order-1">
+                <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-3" data-i18n="manifesto.eyebrow">Pourquoi on fait ça</p>
+                <h2 class="font-display text-3xl md:text-4xl leading-tight mb-4" data-i18n="manifesto.title">Le changement<br>commence à l'intérieur.</h2>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <img src="/assets/logos/logo_zen.png" alt="" class="w-32 md:w-40 h-32 md:h-40 rounded-2xl bg-pl-beige p-2">
+            </div>
+            <div class="order-3 text-pl-text-2 leading-relaxed">
+                <p class="mb-3" data-i18n="manifesto.p1">Les gens essaient de changer ce qu'ils font. Le vrai sujet, c'est ce qu'ils sont.</p>
+                <p data-i18n="manifesto.p2">Moins tu auras peur, moins tu te sentiras faible ou stressé·e, et plus grand sera ton pouvoir sur ta vie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 promesses -->
+    <section class="py-16 md:py-20 px-4 md:px-10 bg-pl-beige">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-16 text-app-warm-text" data-i18n="features.title">Pourquoi Punchlines va changer ta vie</h2>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+            <div class="text-center mb-10 md:mb-14">
+                <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2" data-i18n="promises.eyebrow">Ce qu'on te promet</p>
+                <h2 class="font-display text-3xl md:text-4xl" data-i18n="promises.title">Pas du dev perso ennuyeux.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-5 md:gap-8">
+                <div class="pl-card bg-white">
+                    <div class="w-12 h-12 rounded-full bg-pl-peach flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-pl-text"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.0.title">Ta dose quotidienne</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.0.description">Chaque jour, reçois des punchlines qui te boostent dès le réveil.</p>
+                    <h3 class="font-display text-xl mb-2" data-i18n="promises.c1.title">Direct, jamais guimauve.</h3>
+                    <p class="text-pl-text-2" data-i18n="promises.c1.desc">Tutoiement, ton un peu cash, second degré. Les affirmations qui te parlent vraiment.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                <div class="pl-card bg-white">
+                    <div class="w-12 h-12 rounded-full bg-pl-blue/30 flex items-center justify-center mb-4">
+                        <i class="fas fa-fingerprint text-pl-text"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.1.title">Du vrai, pas du blabla</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.1.description">Des phrases directes qui te parlent vraiment. Pas de guimauve.</p>
+                    <h3 class="font-display text-xl mb-2" data-i18n="promises.c2.title">Sur-mesure, vraiment.</h3>
+                    <p class="text-pl-text-2" data-i18n="promises.c2.desc">Tu choisis tes thèmes (confiance, calme, abondance…). L'app s'adapte à ton flow.</p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                        </svg>
+                <div class="pl-card bg-white">
+                    <div class="w-12 h-12 rounded-full bg-pl-green/30 flex items-center justify-center mb-4">
+                        <i class="fas fa-seedling text-pl-text"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.2.title">100% toi</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.2.description">Choisis tes thèmes : confiance, calme, abondance... On s'adapte à ton flow.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.3.title">Chasse le négatif</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.3.description">Reprogramme ton mental et vire les pensées qui te freinent.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.4.title">Sur-mesure</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.4.description">Plus tu utilises l'app, plus les punchlines te correspondent.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-white/90 rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all feature-card border border-app-beige-dark/30">
-                    <div class="flex justify-center mb-3">
-                        <svg class="w-10 h-10 md:w-12 md:h-12 text-app-warm-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-center text-app-warm-text" data-i18n="features.cards.5.title">Crée les tiennes</h3>
-                    <p class="text-app-warm-text-secondary text-center text-sm md:text-base" data-i18n="features.cards.5.description">Écris tes propres affirmations et garde-les toujours avec toi.</p>
+                    <h3 class="font-display text-xl mb-2" data-i18n="promises.c3.title">Une habitude qui tient.</h3>
+                    <p class="text-pl-text-2" data-i18n="promises.c3.desc">Une dose quotidienne. Pas un livre à lire, pas un cours à suivre. Juste 2 minutes par jour.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Screenshots Section -->
-    <section class="py-10 md:py-16 px-4 md:px-6 bg-white bg-opacity-10 backdrop-blur-sm">
-        <!-- Titre centré -->
-        <div class="max-w-6xl mx-auto text-center mb-6 md:mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-app-warm-text" data-i18n="screenshots.title">Découvre l'app</h2>
+    <!-- How it works -->
+    <section class="py-16 md:py-24 px-4 md:px-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10 md:mb-14">
+                <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2" data-i18n="how.eyebrow">Comment ça marche</p>
+                <h2 class="font-display text-3xl md:text-4xl" data-i18n="how.title">Trois étapes, c'est tout.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+                <div class="text-center md:text-left">
+                    <div class="step-num mb-4">1</div>
+                    <h3 class="font-display text-xl mb-2" data-i18n="how.s1.title">Dis-nous qui tu es.</h3>
+                    <p class="text-pl-text-2" data-i18n="how.s1.desc">Un onboarding court pour cerner ce qui te freine et ce que tu veux nourrir.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="step-num mb-4">2</div>
+                    <h3 class="font-display text-xl mb-2" data-i18n="how.s2.title">Reçois tes punchlines.</h3>
+                    <p class="text-pl-text-2" data-i18n="how.s2.desc">Chaque jour, des affirmations conçues pour toi. Tu les lis, tu les ressens.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="step-num mb-4">3</div>
+                    <h3 class="font-display text-xl mb-2" data-i18n="how.s3.title">Recâble ton mental.</h3>
+                    <p class="text-pl-text-2" data-i18n="how.s3.desc">Petit à petit, tes pensées changent. Tes croyances aussi. Tu n'es plus la même personne.</p>
+                </div>
+            </div>
         </div>
-        
-        <!-- Captures d'écran optimisées mobile -->
+    </section>
+
+    <!-- Screenshots -->
+    <section class="py-12 md:py-20 bg-gradient-to-b from-pl-cream to-pl-bg">
+        <div class="max-w-6xl mx-auto text-center px-4 md:px-10 mb-8 md:mb-12">
+            <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-2" data-i18n="screenshots.eyebrow">L'app en images</p>
+            <h2 class="font-display text-3xl md:text-4xl" data-i18n="screenshots.title">Découvre Punchlines.</h2>
+        </div>
         <div class="w-full">
             <div class="flex overflow-x-auto pb-6 gap-4 md:gap-6 scrollbar-hide px-4 justify-start md:justify-center screenshot-container">
-                <!-- Screenshot items now have the screenshot-item class for snap scrolling -->
-                <img data-screenshot="01" src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" 
-                    alt="Get flawless affirmations every day" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
-                
-                <!-- Screenshot 2 -->
-                <img data-screenshot="02" src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" 
-                    alt="Boost your mood with raw truths" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
-                
-                <!-- Screenshot 3 -->
-                <img data-screenshot="03" src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" 
-                    alt="Pick the vibes that fit your flow" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
-                
-                <!-- Screenshot 4 -->
-                <img data-screenshot="04" src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" 
-                    alt="Block out the bad vibes" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
-                
-                <!-- Screenshot 5 -->
-                <img data-screenshot="05" src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" 
-                    alt="Tailored to your grind" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
-                
-                <!-- Screenshot 6 -->
-                <img data-screenshot="06" src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" 
-                    alt="Write and save your own punchlines" 
-                    class="h-[350px] md:h-[500px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="01" src="assets/screens/English (en-US)/iOS Phones  6.9/01.png" alt="Get flawless affirmations every day" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="02" src="assets/screens/English (en-US)/iOS Phones  6.9/02.png" alt="Boost your mood with raw truths" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="03" src="assets/screens/English (en-US)/iOS Phones  6.9/03.png" alt="Pick the vibes that fit your flow" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="04" src="assets/screens/English (en-US)/iOS Phones  6.9/04.png" alt="Block out the bad vibes" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="05" src="assets/screens/English (en-US)/iOS Phones  6.9/05.png" alt="Tailored to your grind" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
+                <img data-screenshot="06" src="assets/screens/English (en-US)/iOS Phones  6.9/06.png" alt="Write and save your own punchlines" class="h-[420px] md:h-[560px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 screenshot-item" loading="lazy">
             </div>
-            <!-- Pagination indicators for mobile -->
             <div class="flex justify-center gap-2 mt-3 md:hidden">
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-100"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-800 opacity-50"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text opacity-30"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text opacity-30"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text opacity-30"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text opacity-30"></span>
+                <span class="w-2 h-2 rounded-full bg-pl-text opacity-30"></span>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-10 md:py-16 px-4 md:px-6 bg-gradient-to-b from-app-beige-dark/40 to-white/90 backdrop-blur-sm">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-3 md:mb-6 text-app-warm-text" data-i18n="cta.title">C'est parti !</h2>
-            <p class="text-lg md:text-xl text-app-warm-text-secondary mb-6 md:mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
-                Rejoins des milliers de personnes qui transforment leur quotidien grâce aux punchlines.
+    <!-- Final CTA -->
+    <section class="py-16 md:py-24 px-4 md:px-10">
+        <div class="max-w-3xl mx-auto text-center pl-card bg-pl-cream border-pl-beige" style="padding: 3rem 1.75rem;">
+            <p class="font-handwritten text-pl-text-2 text-sm tracking-wider uppercase mb-3" data-i18n="finalCta.eyebrow">À toi de jouer</p>
+            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">
+                <span data-i18n="finalCta.title">Plante les graines<br>du changement.</span>
+            </h2>
+            <p class="text-lg text-pl-text-2 mb-8 max-w-xl mx-auto" data-i18n="finalCta.subtitle">
+                Sept jours offerts. Sans engagement. Sans guimauve.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
-                    <i class="fab fa-apple mr-2 text-xl"></i>
-                    <span data-i18n="cta.appStore">App Store</span>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="cta-clay cta-clay--lg">
+                    <i class="fab fa-apple"></i>
+                    <span data-i18n="finalCta.appStore">App Store</span>
                 </a>
-                <button onclick="openAndroidModal()" class="bg-[#323232] text-white px-6 sm:px-8 py-3 rounded-xl font-medium hover:bg-[#444] hover:scale-105 transition-all shadow-md flex items-center justify-center touch-target">
-                    <i class="fab fa-google-play mr-2 text-xl"></i>
-                    <span data-i18n="cta.googlePlay">Google Play</span>
-                    <span class="ml-2 text-xs bg-app-warm-peach px-2 py-1 rounded-full text-gray-800" data-i18n="cta.interested">Interested?</span>
+                <button onclick="openAndroidModal()" class="cta-clay cta-clay--lg cta-clay--green">
+                    <i class="fab fa-google-play"></i>
+                    <span data-i18n="finalCta.googlePlay">Google Play</span>
+                    <span class="ml-1 text-xs bg-white/30 px-2 py-0.5 rounded-full" data-i18n="finalCta.interested">bientôt</span>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 md:py-10 px-4 md:px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="mb-6 sm:mb-0">
-                <h2 class="text-2xl font-marker">Punchlines</h2>
-                <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
+    <footer class="py-10 md:py-12 px-4 md:px-10 bg-white border-t border-pl-beige">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-start">
+            <div>
+                <a href="index.html" class="flex items-center gap-2 mb-3">
+                    <img src="/assets/logos/logo_p.png" alt="Punchlines" class="w-9 h-9 rounded-lg">
+                    <span class="font-display text-2xl">Punchlines<span class="text-pl-text-2">.</span></span>
+                </a>
+                <p class="font-handwritten text-pl-text-2" data-i18n="footer.tagline">Tu peux encore changer.</p>
             </div>
-            
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
-                <a href="privacy.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.support">Support</a>
-                <a href="delete-data.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.deleteData">Delete my data</a>
+            <div>
+                <p class="text-xs font-handwritten text-pl-text-2 tracking-wider uppercase mb-3" data-i18n="footer.col1">Sur l'app</p>
+                <ul class="space-y-2">
+                    <li><a href="support.html" class="text-pl-text hover:underline" data-i18n="footer.support">Support</a></li>
+                    <li><a href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8" class="text-pl-text hover:underline" data-i18n="footer.appStore">App Store</a></li>
+                </ul>
             </div>
+            <div>
+                <p class="text-xs font-handwritten text-pl-text-2 tracking-wider uppercase mb-3" data-i18n="footer.col2">Légal</p>
+                <ul class="space-y-2">
+                    <li><a href="privacy.html" class="text-pl-text hover:underline" data-i18n="footer.privacy">Politique de confidentialité</a></li>
+                    <li><a href="terms.html" class="text-pl-text hover:underline" data-i18n="footer.terms">Conditions d'utilisation</a></li>
+                    <li><a href="delete-data.html" class="text-pl-text hover:underline" data-i18n="footer.deleteData">Supprimer mes données</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-pl-beige flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-pl-text-3">
+            <p data-i18n="footer.copyright">© 2026 Punchlines. Tous droits réservés.</p>
+            <p data-i18n="footer.endline">Le changement commence à l'intérieur.</p>
         </div>
     </footer>
 
-    <!-- Mobile optimized JavaScript -->
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (mobileMenu && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            // Language dropdown functionality (desktop)
-            const languageDropdownButton = document.getElementById('language-dropdown-button');
-            const languageDropdownMenu = document.getElementById('language-dropdown-menu');
-            const languageOptions = document.querySelectorAll('.language-option');
-            const currentLanguageDisplay = document.querySelector('.current-language');
-            
-            if (languageDropdownButton && languageDropdownMenu) {
-                // Toggle dropdown
-                languageDropdownButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    languageDropdownMenu.classList.toggle('hidden');
-                });
-                
-                // Close dropdown when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!languageDropdownMenu.contains(event.target) && !languageDropdownButton.contains(event.target)) {
-                        languageDropdownMenu.classList.add('hidden');
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
                     }
                 });
-                
-                // Language option selection for desktop
-                languageOptions.forEach(option => {
-                    option.addEventListener('click', function() {
+            }
+
+            // Language dropdown
+            const langBtn = document.getElementById('language-dropdown-button');
+            const langMenu = document.getElementById('language-dropdown-menu');
+            const langOptions = document.querySelectorAll('.language-option');
+            const currentLangEl = document.querySelector('.current-language');
+            if (langBtn && langMenu) {
+                langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+                document.addEventListener('click', (e) => {
+                    if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) langMenu.classList.add('hidden');
+                });
+                langOptions.forEach(opt => {
+                    opt.addEventListener('click', function() {
                         const lang = this.getAttribute('data-lang');
-                        
-                        // Update UI first for immediate feedback
-                        languageOptions.forEach(opt => opt.setAttribute('aria-selected', 'false'));
+                        langOptions.forEach(o => o.setAttribute('aria-selected', 'false'));
                         this.setAttribute('aria-selected', 'true');
-                        
-                        // Update the displayed language
-                        if (currentLanguageDisplay) {
-                            currentLanguageDisplay.textContent = this.textContent;
-                        }
-                        
-                        // Close dropdown
-                        languageDropdownMenu.classList.add('hidden');
-                        
-                        // Trigger language change
-                        if (window.switchLanguage) {
-                            window.switchLanguage(lang);
-                        }
+                        if (currentLangEl) currentLangEl.textContent = this.textContent;
+                        langMenu.classList.add('hidden');
+                        if (window.switchLanguage) window.switchLanguage(lang);
                     });
                 });
             }
 
-            // Mobile language selection
+            // Mobile language
             const mobileLangOptions = document.querySelectorAll('.mobile-language-option');
-            mobileLangOptions.forEach(option => {
-                option.addEventListener('click', function() {
+            mobileLangOptions.forEach(opt => {
+                opt.addEventListener('click', function() {
                     const lang = this.getAttribute('data-lang');
-                    
-                    // Update checkmarks
-                    mobileLangOptions.forEach(opt => {
-                        opt.setAttribute('aria-selected', 'false');
-                        opt.querySelector('.mobile-lang-checkmark').classList.add('hidden');
+                    mobileLangOptions.forEach(o => {
+                        o.setAttribute('aria-selected', 'false');
+                        o.querySelector('.mobile-lang-checkmark').classList.add('hidden');
                     });
-                    
                     this.setAttribute('aria-selected', 'true');
                     this.querySelector('.mobile-lang-checkmark').classList.remove('hidden');
-                    
-                    // Close menu after a small delay for better UX
-                    setTimeout(() => {
-                        if (mobileMenu) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                    }, 300);
-                    
-                    // Trigger language change
-                    if (window.switchLanguage) {
-                        window.switchLanguage(lang);
-                    }
+                    setTimeout(() => { if (mobileMenu) mobileMenu.classList.add('hidden'); }, 300);
+                    if (window.switchLanguage) window.switchLanguage(lang);
                 });
             });
 
-            // Handle screenshot scroll indicators on mobile
-            const screenshotContainer = document.querySelector('.screenshot-container');
+            // Screenshot indicators
+            const sc = document.querySelector('.screenshot-container');
             const indicators = document.querySelectorAll('.flex.justify-center.gap-2.mt-3 span');
-            
-            if (screenshotContainer && indicators.length > 0) {
-                screenshotContainer.addEventListener('scroll', function() {
-                    // Calculate which screenshot is most visible
-                    const screenshots = document.querySelectorAll('.screenshot-item');
-                    const containerWidth = screenshotContainer.offsetWidth;
-                    const scrollPosition = screenshotContainer.scrollLeft;
-                    
-                    let activeIndex = 0;
-                    screenshots.forEach((screenshot, index) => {
-                        const rect = screenshot.getBoundingClientRect();
-                        const screenshotCenter = rect.left + rect.width / 2;
-                        const containerCenter = containerWidth / 2;
-                        
-                        if (Math.abs(screenshotCenter - containerCenter) < containerWidth / 2) {
-                            activeIndex = index;
-                        }
+            if (sc && indicators.length) {
+                sc.addEventListener('scroll', () => {
+                    const items = document.querySelectorAll('.screenshot-item');
+                    const cw = sc.offsetWidth;
+                    let active = 0;
+                    items.forEach((it, i) => {
+                        const r = it.getBoundingClientRect();
+                        const cx = r.left + r.width / 2;
+                        if (Math.abs(cx - cw / 2) < cw / 2) active = i;
                     });
-                    
-                    // Update indicators
-                    indicators.forEach((indicator, index) => {
-                        indicator.style.opacity = index === activeIndex ? '1' : '0.5';
+                    indicators.forEach((ind, i) => {
+                        ind.style.opacity = i === active ? '1' : '0.3';
                     });
                 });
             }
         });
 
-        // Add modal functions
         function openAndroidModal() {
-            document.getElementById('androidModal').style.display = 'block';
-            document.body.classList.add('modal-open');
+            const m = document.getElementById('androidModal');
+            m.setAttribute('data-open', 'true');
+            document.body.classList.add('pl-modal-open');
         }
-
         function closeAndroidModal() {
-            document.getElementById('androidModal').style.display = 'none';
-            document.body.classList.remove('modal-open');
+            const m = document.getElementById('androidModal');
+            m.removeAttribute('data-open');
+            document.body.classList.remove('pl-modal-open');
         }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('androidModal');
-            if (event.target == modal) {
-                closeAndroidModal();
-            }
-        }
+        window.addEventListener('click', (e) => {
+            const m = document.getElementById('androidModal');
+            if (e.target === m) closeAndroidModal();
+        });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAndroidModal(); });
     </script>
 </body>
-</html> 
+</html>

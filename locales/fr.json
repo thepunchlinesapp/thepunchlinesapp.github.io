@@ -1,20 +1,73 @@
 {
   "meta": {
-    "title": "Punchlines - Transforme ta vie avec des affirmations qui claquent"
+    "title": "Punchlines — Tu peux encore changer."
   },
   "nav": {
     "privacy": "Confidentialité",
     "terms": "Conditions",
-    "support": "Support"
+    "support": "Support",
+    "download": "Télécharger"
   },
   "hero": {
+    "eyebrow": "Le manifeste",
+    "titleLine1": "Tu peux encore",
+    "titleLine2": "changer.",
+    "lead": "Solitude, anxiété, perte de sens… Difficile d'en sortir quand tes pensées jouent contre toi.",
+    "lead2": "Punchlines te rend le contrôle. Des affirmations courtes, cash, qui te recâblent.",
+    "appStore": "Télécharger sur l'App Store",
+    "googlePlay": "Google Play",
+    "interested": "bientôt",
+    "note": "7 jours gratuits, sans engagement.",
     "title": "Prêt à <span class='font-marker'>transformer</span> ton mindset ?",
     "subtitle": "Des affirmations courtes, cash et puissantes. Personnalisées pour toi.",
+    "soon": "Bientôt",
+    "tagline": "transforme ta vie, une punchline à la fois"
+  },
+  "samples": {
+    "eyebrow": "Un avant-goût",
+    "title": "Des phrases qui claquent. Pas du blabla.",
+    "q1": "Je n'ai peur ni de l'échec, ni du succès.",
+    "q2": "Ce que je touche se transforme en or.",
+    "q3": "J'attire le succès comme un aimant.",
+    "q4": "Je crée ma réalité.",
+    "q5": "Je réussis naturellement."
+  },
+  "manifesto": {
+    "eyebrow": "Pourquoi on fait ça",
+    "title": "Le changement<br>commence à l'intérieur.",
+    "p1": "Les gens essaient de changer ce qu'ils font. Le vrai sujet, c'est ce qu'ils sont.",
+    "p2": "Moins tu auras peur, moins tu te sentiras faible ou stressé·e, et plus grand sera ton pouvoir sur ta vie."
+  },
+  "promises": {
+    "eyebrow": "Ce qu'on te promet",
+    "title": "Pas du dev perso ennuyeux.",
+    "c1": {
+      "title": "Direct, jamais guimauve.",
+      "desc": "Tutoiement, ton un peu cash, second degré. Les affirmations qui te parlent vraiment."
+    },
+    "c2": {
+      "title": "Sur-mesure, vraiment.",
+      "desc": "Tu choisis tes thèmes (confiance, calme, abondance…). L'app s'adapte à ton flow."
+    },
+    "c3": {
+      "title": "Une habitude qui tient.",
+      "desc": "Une dose quotidienne. Pas un livre à lire, pas un cours à suivre. Juste 2 minutes par jour."
+    }
+  },
+  "how": {
+    "eyebrow": "Comment ça marche",
+    "title": "Trois étapes, c'est tout.",
+    "s1": { "title": "Dis-nous qui tu es.", "desc": "Un onboarding court pour cerner ce qui te freine et ce que tu veux nourrir." },
+    "s2": { "title": "Reçois tes punchlines.", "desc": "Chaque jour, des affirmations conçues pour toi. Tu les lis, tu les ressens." },
+    "s3": { "title": "Recâble ton mental.", "desc": "Petit à petit, tes pensées changent. Tes croyances aussi. Tu n'es plus la même personne." }
+  },
+  "finalCta": {
+    "eyebrow": "À toi de jouer",
+    "title": "Plante les graines<br>du changement.",
+    "subtitle": "Sept jours offerts. Sans engagement. Sans guimauve.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
-    "soon": "Bientôt",
-    "tagline": "transforme ta vie, une punchline à la fois",
-    "interested": "Intéressé ?"
+    "interested": "bientôt"
   },
   "features": {
     "title": "Pourquoi Punchlines va changer ta vie",
@@ -46,7 +99,8 @@
     ]
   },
   "screenshots": {
-    "title": "Découvre l'app",
+    "eyebrow": "L'app en images",
+    "title": "Découvre Punchlines.",
     "captions": [
       "Des punchlines qui claquent chaque jour",
       "Boost ton mindset en quelques secondes",
@@ -65,7 +119,12 @@
     "interested": "Intéressé ?"
   },
   "footer": {
-    "copyright": "© 2025 Punchlines. Tous droits réservés.",
+    "copyright": "© 2026 Punchlines. Tous droits réservés.",
+    "tagline": "Tu peux encore changer.",
+    "endline": "Le changement commence à l'intérieur.",
+    "col1": "Sur l'app",
+    "col2": "Légal",
+    "appStore": "App Store",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "support": "Support",
