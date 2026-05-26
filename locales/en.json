@@ -69,6 +69,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "support": "Support",
+    "deleteData": "Delete my data",
     "backToHome": "Back to home"
   },
   "privacyPage": {
@@ -199,5 +200,32 @@
   },
   "androidModal": {
     "title": "Interested in Android?"
+  },
+  "deleteDataPage": {
+    "title": "Delete my data",
+    "intro": "You can request the deletion of your personal data collected by the Punchlines app. Fill out the form below and we will process your request within 30 days.",
+    "whatDeleted": {
+      "title": "What will be deleted",
+      "item1": "Your account data and identifiers",
+      "item2": "Your preferences, themes and custom affirmations",
+      "item3": "Your usage data linked to your account"
+    },
+    "whatRetained": {
+      "title": "What may be retained",
+      "content": "Anonymized analytics data and transaction records required for our legal and accounting obligations may be kept for the period required by law."
+    },
+    "form": {
+      "emailLabel": "Email used in the app",
+      "scopeLabel": "What do you want to delete?",
+      "scopeAll": "All my data and my account",
+      "scopePartial": "Only some specific data (specify below)",
+      "detailsLabel": "Additional details (optional)",
+      "detailsPlaceholder": "If partial deletion, specify what data, or add any context that may help us identify your account.",
+      "confirmLabel": "I understand that this action is irreversible and that I will lose access to my data and my account.",
+      "submit": "Send my deletion request",
+      "mailNote": "The button will open your email client with a pre-filled message to support@thepunchlines.app."
+    },
+    "success": "Your email client just opened. Send the message to finalize your request — we will reply within 1-2 business days and process the deletion within 30 days.",
+    "alt": "Prefer to write us directly?"
   }
 } 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Support - Punchlines, l'application d'affirmations positives.">
-    <title>Support - Punchlines</title>
+    <meta name="description" content="Demande de suppression des données - Punchlines">
+    <title>Suppression des données - Punchlines</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -40,7 +40,6 @@
     </script>
     <script src="/js/i18n.js"></script>
     <style>
-        /* Touch optimized styles */
         @media (max-width: 640px) {
             .touch-target {
                 min-height: 44px;
@@ -59,7 +58,6 @@
             </h1>
         </div>
         <div class="flex items-center gap-3 md:gap-6 text-gray-800">
-            <!-- Language Switcher - Visible only on desktop -->
             <div class="relative language-switcher hidden md:block">
                 <div class="flex items-center">
                     <button id="language-dropdown-button" class="flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-md bg-white/50 hover:bg-white/70 transition-all shadow-sm">
@@ -69,7 +67,6 @@
                         </svg>
                     </button>
                 </div>
-                <!-- Language Dropdown Menu -->
                 <div id="language-dropdown-menu" class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
                     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <button data-lang="en" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" aria-selected="true">English</button>
@@ -82,7 +79,6 @@
                 <a href="terms.html" id="nav-terms" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.terms">Terms</a>
                 <a href="support.html" id="nav-support" class="font-medium text-gray-700 hover:text-black transition-colors py-2 px-3 rounded-md hover:bg-white/50" data-i18n="nav.support">Support</a>
             </div>
-            <!-- Mobile menu button -->
             <button class="md:hidden text-gray-800 focus:outline-none touch-target p-2 rounded-md hover:bg-white/50" id="mobile-menu-button">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -90,15 +86,13 @@
             </button>
         </div>
     </nav>
-    
-    <!-- Mobile menu (hidden by default) -->
+
     <div class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden transition-all duration-300 ease-in-out" id="mobile-menu">
         <div class="flex flex-col py-2">
             <a href="privacy.html" id="mobile-nav-privacy" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.privacy">Privacy</a>
             <a href="terms.html" id="mobile-nav-terms" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.terms">Terms</a>
             <a href="support.html" id="mobile-nav-support" class="px-4 py-3 hover:bg-gray-100 touch-target font-medium" data-i18n="nav.support">Support</a>
             <div class="border-t border-gray-200 my-1"></div>
-            <!-- Language options in mobile menu -->
             <div class="px-4 py-2 text-xs font-medium text-gray-500" data-i18n="languageSwitcher.change">Changer de langue</div>
             <button data-lang="en" class="mobile-language-option w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 touch-target font-medium flex items-center justify-between" aria-selected="true">
                 English
@@ -114,85 +108,177 @@
             </button>
         </div>
     </div>
-    
+
     <div class="max-w-2xl mx-auto px-4 md:px-6 pb-10 mt-8">
-        <div class="bg-white/90 rounded-lg shadow-md p-8">
+        <div class="bg-white/90 rounded-lg shadow-md p-6 md:p-8">
             <h1 class="text-2xl sm:text-3xl pb-4 border-b border-gray-200 mb-6">
-                <span data-i18n="supportPage.title">Support</span> - <span class="font-marker">Punchlines</span>
+                <span data-i18n="deleteDataPage.title">Delete my data</span> - <span class="font-marker">Punchlines</span>
             </h1>
-            
-            <section class="mb-8 text-center">
-                <div class="mb-6 text-center">
-                    <i class="fas fa-headset text-5xl md:text-6xl text-app-blue"></i>
+
+            <section class="mb-6 text-center">
+                <div class="mb-4">
+                    <i class="fas fa-user-shield text-5xl md:text-6xl text-app-blue"></i>
                 </div>
-                
-                <h2 class="text-xl font-semibold text-gray-700 mb-4" data-i18n="supportPage.needHelp.title">Need Help?</h2>
-                <p class="mb-4" data-i18n="supportPage.needHelp.content">
-                    Having trouble with the Punchlines app or have a question? We're here to help!
-                </p>
-                
-                <div class="mt-8 mb-8 p-4 md:p-6 bg-app-blue-light/50 rounded-lg">
-                    <h3 class="text-lg font-medium mb-3" data-i18n="supportPage.contact.title">Contact Us</h3>
-                    <p class="mb-4" data-i18n="supportPage.contact.content">
-                        Send us an email and we'll get back to you as soon as possible:
-                    </p>
-                    
-                    <a href="mailto:support@thepunchlines.app" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-105 transition-all shadow-md touch-target">
-                        <i class="far fa-envelope mr-2"></i>
-                        <span data-i18n="supportPage.contact.button">support@thepunchlines.app</span>
-                    </a>
-                </div>
-                
-                <p class="text-sm text-gray-600 mt-8" data-i18n="supportPage.response">
-                    We typically respond within 1-2 business days.
+                <p class="text-gray-700" data-i18n="deleteDataPage.intro">
+                    You can request the deletion of your personal data collected by the Punchlines app. Fill out the form below and we will process your request within 30 days.
                 </p>
             </section>
-            
+
+            <section class="mb-6 p-4 bg-app-blue-light/50 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2" data-i18n="deleteDataPage.whatDeleted.title">What will be deleted</h2>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                    <li data-i18n="deleteDataPage.whatDeleted.item1">Your account data and identifiers</li>
+                    <li data-i18n="deleteDataPage.whatDeleted.item2">Your preferences, themes and custom affirmations</li>
+                    <li data-i18n="deleteDataPage.whatDeleted.item3">Your usage data linked to your account</li>
+                </ul>
+                <h3 class="text-sm font-semibold mt-4 mb-1" data-i18n="deleteDataPage.whatRetained.title">What may be retained</h3>
+                <p class="text-xs text-gray-600" data-i18n="deleteDataPage.whatRetained.content">
+                    Anonymized analytics data and transaction records required for legal and accounting obligations may be kept for the period required by law.
+                </p>
+            </section>
+
+            <form id="delete-form" class="space-y-5">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                        <span data-i18n="deleteDataPage.form.emailLabel">Email used in the app</span>
+                        <span class="text-red-500">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-app-blue-dark focus:border-transparent bg-white touch-target"
+                        placeholder="you@example.com">
+                </div>
+
+                <div>
+                    <span class="block text-sm font-medium text-gray-700 mb-2" data-i18n="deleteDataPage.form.scopeLabel">What do you want to delete?</span>
+                    <div class="space-y-2">
+                        <label class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:bg-app-blue-light/30 cursor-pointer touch-target">
+                            <input type="radio" name="scope" value="all" checked class="mt-1">
+                            <span class="text-sm text-gray-700" data-i18n="deleteDataPage.form.scopeAll">All my data and my account</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:bg-app-blue-light/30 cursor-pointer touch-target">
+                            <input type="radio" name="scope" value="partial" class="mt-1">
+                            <span class="text-sm text-gray-700" data-i18n="deleteDataPage.form.scopePartial">Only some specific data (specify below)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="details" class="block text-sm font-medium text-gray-700 mb-1">
+                        <span data-i18n="deleteDataPage.form.detailsLabel">Additional details (optional)</span>
+                    </label>
+                    <textarea id="details" name="details" rows="4"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-app-blue-dark focus:border-transparent bg-white"
+                        data-i18n-placeholder="deleteDataPage.form.detailsPlaceholder"
+                        placeholder="If partial deletion, specify what data, or add any context that may help us identify your account."></textarea>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <input type="checkbox" id="confirm" name="confirm" required class="mt-1">
+                    <label for="confirm" class="text-sm text-gray-700" data-i18n="deleteDataPage.form.confirmLabel">
+                        I understand that this action is irreversible and that I will lose access to my data and my account.
+                    </label>
+                </div>
+
+                <button type="submit"
+                    class="w-full inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 hover:scale-[1.02] transition-all shadow-md touch-target">
+                    <i class="far fa-paper-plane mr-2"></i>
+                    <span data-i18n="deleteDataPage.form.submit">Send my deletion request</span>
+                </button>
+
+                <p class="text-xs text-gray-500 text-center" data-i18n="deleteDataPage.form.mailNote">
+                    The button will open your email client with a pre-filled message to support@thepunchlines.app.
+                </p>
+            </form>
+
+            <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
+                <i class="fas fa-check-circle text-green-600 text-3xl mb-2"></i>
+                <p class="text-sm text-gray-700" data-i18n="deleteDataPage.success">
+                    Your email client just opened. Send the message to finalize your request — we will reply within 1-2 business days and process the deletion within 30 days.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                <p class="text-sm text-gray-600 mb-2" data-i18n="deleteDataPage.alt">
+                    Prefer to write us directly?
+                </p>
+                <a href="mailto:support@thepunchlines.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es"
+                    class="text-app-blue-dark hover:underline font-medium">
+                    support@thepunchlines.app
+                </a>
+            </div>
+
             <div class="mt-6 text-center">
                 <a href="index.html" class="text-app-blue-dark hover:underline transition-colors py-2 touch-target" data-i18n="footer.backToHome">Back to home</a>
             </div>
         </div>
     </div>
-    
-    <!-- Footer -->
+
     <footer class="py-8 md:py-10 px-4 md:px-6 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200 mt-auto">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div class="mb-6 sm:mb-0">
                 <h2 class="text-2xl font-marker">Punchlines</h2>
                 <p class="text-sm text-gray-600 mt-1" data-i18n="footer.copyright">© 2023 Punchlines. All rights reserved.</p>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
                 <a href="privacy.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.privacy">Privacy Policy</a>
                 <a href="terms.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.terms">Terms of Use</a>
-                <a href="support.html" class="text-gray-700 hover:underline font-medium py-2 touch-target" data-i18n="footer.support">Support</a>
-                <a href="delete-data.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.deleteData">Delete my data</a>
+                <a href="support.html" class="text-gray-700 hover:underline py-2 touch-target" data-i18n="footer.support">Support</a>
+                <a href="delete-data.html" class="text-gray-700 hover:underline font-medium py-2 touch-target" data-i18n="footer.deleteData">Delete my data</a>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile optimized JavaScript -->
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', function() {
                     mobileMenu.classList.toggle('hidden');
                 });
             }
-            
-            // Close menu when clicking outside
+
             document.addEventListener('click', function(event) {
                 if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             });
+
+            const form = document.getElementById('delete-form');
+            const success = document.getElementById('form-success');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value.trim();
+                const scope = document.querySelector('input[name="scope"]:checked').value;
+                const details = document.getElementById('details').value.trim();
+
+                const lang = (document.documentElement.lang || 'en').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+
+                const subjects = {
+                    fr: 'Demande de suppression de données',
+                    en: 'Data deletion request'
+                };
+                const scopeLabels = {
+                    fr: { all: 'Toutes mes données et mon compte', partial: 'Une partie de mes données uniquement' },
+                    en: { all: 'All my data and my account', partial: 'Only some specific data' }
+                };
+                const bodies = {
+                    fr: `Bonjour,\n\nJe demande la suppression de mes données personnelles associées à l'application Punchlines.\n\nEmail utilisé dans l'app : ${email}\nPortée de la demande : ${scopeLabels.fr[scope]}\n\nDétails complémentaires :\n${details || '(aucun)'}\n\nJe comprends que cette action est irréversible.\n\nMerci de me confirmer la prise en compte de ma demande.`,
+                    en: `Hello,\n\nI request the deletion of my personal data associated with the Punchlines app.\n\nEmail used in the app: ${email}\nScope of the request: ${scopeLabels.en[scope]}\n\nAdditional details:\n${details || '(none)'}\n\nI understand that this action is irreversible.\n\nPlease confirm receipt of my request.`
+                };
+
+                const subject = encodeURIComponent(subjects[lang]);
+                const body = encodeURIComponent(bodies[lang]);
+                window.location.href = `mailto:support@thepunchlines.app?subject=${subject}&body=${body}`;
+
+                success.classList.remove('hidden');
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
         });
 
-        // Highlight active nav link
         (function() {
             const path = window.location.pathname.split('/').pop();
             const map = {
@@ -213,4 +299,4 @@
         })();
     </script>
 </body>
-</html> 
+</html>

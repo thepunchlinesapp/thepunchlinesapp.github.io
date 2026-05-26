@@ -69,6 +69,7 @@
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "support": "Support",
+    "deleteData": "Supprimer mes données",
     "backToHome": "Retour à l'accueil"
   },
   "privacyPage": {
@@ -199,5 +200,32 @@
   },
   "androidModal": {
     "title": "Intéressé par Android ?"
+  },
+  "deleteDataPage": {
+    "title": "Supprimer mes données",
+    "intro": "Tu peux demander la suppression des données personnelles collectées par l'application Punchlines. Remplis le formulaire ci-dessous et nous traiterons ta demande sous 30 jours.",
+    "whatDeleted": {
+      "title": "Ce qui sera supprimé",
+      "item1": "Tes données de compte et identifiants",
+      "item2": "Tes préférences, thèmes et affirmations personnalisées",
+      "item3": "Tes données d'utilisation liées à ton compte"
+    },
+    "whatRetained": {
+      "title": "Ce qui peut être conservé",
+      "content": "Les données analytiques anonymisées et les enregistrements de transactions requis pour nos obligations légales et comptables peuvent être conservés pendant la durée prévue par la loi."
+    },
+    "form": {
+      "emailLabel": "Email utilisé dans l'application",
+      "scopeLabel": "Que souhaites-tu supprimer ?",
+      "scopeAll": "Toutes mes données et mon compte",
+      "scopePartial": "Uniquement certaines données (précise ci-dessous)",
+      "detailsLabel": "Détails complémentaires (optionnel)",
+      "detailsPlaceholder": "En cas de suppression partielle, précise les données concernées, ou ajoute tout contexte utile pour identifier ton compte.",
+      "confirmLabel": "Je comprends que cette action est irréversible et que je perdrai l'accès à mes données et à mon compte.",
+      "submit": "Envoyer ma demande de suppression",
+      "mailNote": "Le bouton ouvrira ton client mail avec un message pré-rempli à destination de support@thepunchlines.app."
+    },
+    "success": "Ton client mail vient de s'ouvrir. Envoie le message pour finaliser ta demande — nous te répondrons sous 1 à 2 jours ouvrés et la suppression sera effective sous 30 jours.",
+    "alt": "Tu préfères nous écrire directement ?"
   }
 } 
