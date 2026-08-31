@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Punchlines — Tu peux encore changer."
+    "title": "Punchlines — Le regard des autres ne paie pas tes factures",
+    "description": "Utilise le plein potentiel des affirmations positives pour transformer ta vie. Sur iPhone et Android."
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -9,122 +10,16 @@
     "download": "Télécharger"
   },
   "hero": {
-    "eyebrow": "Le manifeste",
-    "titleLine1": "Tu peux encore",
-    "titleLine2": "changer.",
-    "lead": "Solitude, anxiété, perte de sens… Difficile d'en sortir quand tes pensées jouent contre toi.",
-    "lead2": "Punchlines te rend le contrôle. Des affirmations courtes, cash, qui te recâblent.",
-    "appStore": "Télécharger sur l'App Store",
-    "googlePlay": "Google Play",
-    "interested": "bientôt",
-    "note": "7 jours gratuits, sans engagement.",
-    "title": "Prêt à <span class='font-marker'>transformer</span> ton mindset ?",
-    "subtitle": "Des affirmations courtes, cash et puissantes. Personnalisées pour toi.",
-    "soon": "Bientôt",
-    "tagline": "transforme ta vie, une punchline à la fois"
-  },
-  "samples": {
-    "eyebrow": "Un avant-goût",
-    "title": "Des phrases qui claquent. Pas du blabla.",
-    "q1": "Je n'ai peur ni de l'échec, ni du succès.",
-    "q2": "Ce que je touche se transforme en or.",
-    "q3": "J'attire le succès comme un aimant.",
-    "q4": "Je crée ma réalité.",
-    "q5": "Je réussis naturellement."
-  },
-  "manifesto": {
-    "eyebrow": "Pourquoi on fait ça",
-    "title": "Le changement<br>commence à l'intérieur.",
-    "p1": "Les gens essaient de changer ce qu'ils font. Le vrai sujet, c'est ce qu'ils sont.",
-    "p2": "Moins tu auras peur, moins tu te sentiras faible ou stressé·e, et plus grand sera ton pouvoir sur ta vie."
-  },
-  "promises": {
-    "eyebrow": "Ce qu'on te promet",
-    "title": "Pas du dev perso ennuyeux.",
-    "c1": {
-      "title": "Direct, jamais guimauve.",
-      "desc": "Tutoiement, ton un peu cash, second degré. Les affirmations qui te parlent vraiment."
-    },
-    "c2": {
-      "title": "Sur-mesure, vraiment.",
-      "desc": "Tu choisis tes thèmes (confiance, calme, abondance…). L'app s'adapte à ton flow."
-    },
-    "c3": {
-      "title": "Une habitude qui tient.",
-      "desc": "Une dose quotidienne. Pas un livre à lire, pas un cours à suivre. Juste 2 minutes par jour."
-    }
-  },
-  "how": {
-    "eyebrow": "Comment ça marche",
-    "title": "Trois étapes, c'est tout.",
-    "s1": { "title": "Dis-nous qui tu es.", "desc": "Un onboarding court pour cerner ce qui te freine et ce que tu veux nourrir." },
-    "s2": { "title": "Reçois tes punchlines.", "desc": "Chaque jour, des affirmations conçues pour toi. Tu les lis, tu les ressens." },
-    "s3": { "title": "Recâble ton mental.", "desc": "Petit à petit, tes pensées changent. Tes croyances aussi. Tu n'es plus la même personne." }
-  },
-  "finalCta": {
-    "eyebrow": "À toi de jouer",
-    "title": "Plante les graines<br>du changement.",
-    "subtitle": "Sept jours offerts. Sans engagement. Sans guimauve.",
-    "appStore": "App Store",
-    "googlePlay": "Google Play",
-    "interested": "bientôt"
-  },
-  "features": {
-    "title": "Pourquoi Punchlines va changer ta vie",
-    "cards": [
-      {
-        "title": "Ta dose quotidienne",
-        "description": "Chaque jour, reçois des punchlines qui te boostent dès le réveil."
-      },
-      {
-        "title": "Du vrai, pas du blabla",
-        "description": "Des phrases directes qui te parlent vraiment. Pas de guimauve."
-      },
-      {
-        "title": "100% toi",
-        "description": "Choisis tes thèmes : confiance, calme, abondance... On s'adapte à ton flow."
-      },
-      {
-        "title": "Chasse le négatif",
-        "description": "Reprogramme ton mental et vire les pensées qui te freinent."
-      },
-      {
-        "title": "Sur-mesure",
-        "description": "Plus tu utilises l'app, plus les punchlines te correspondent."
-      },
-      {
-        "title": "Crée les tiennes",
-        "description": "Écris tes propres affirmations et garde-les toujours avec toi."
-      }
-    ]
-  },
-  "screenshots": {
-    "eyebrow": "L'app en images",
-    "title": "Découvre Punchlines.",
-    "captions": [
-      "Des punchlines qui claquent chaque jour",
-      "Boost ton mindset en quelques secondes",
-      "Choisis les vibes qui te correspondent",
-      "Cultive un mental de champion",
-      "Des affirmations qui évoluent avec toi",
-      "Crée tes propres punchlines"
-    ]
-  },
-  "cta": {
-    "title": "C'est parti !",
-    "subtitle": "Rejoins des milliers de personnes qui transforment leur quotidien grâce aux punchlines.",
-    "appStore": "App Store",
-    "googlePlay": "Google Play",
-    "soon": "Bientôt",
-    "interested": "Intéressé ?"
+    "line1": "Le regard des autres",
+    "line2": "ne paie pas tes factures",
+    "promise": "Utilise le plein potentiel des affirmations positives pour transformer ta vie",
+    "appStoreSmall": "Télécharger sur",
+    "appStoreBig": "l'App Store",
+    "playSmall": "Disponible sur",
+    "playBig": "Google Play"
   },
   "footer": {
-    "copyright": "© 2026 Punchlines. Tous droits réservés.",
-    "tagline": "Tu peux encore changer.",
-    "endline": "Le changement commence à l'intérieur.",
-    "col1": "Sur l'app",
-    "col2": "Légal",
-    "appStore": "App Store",
+    "copyright": "© 2026 Punchlines",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "support": "Support",
@@ -258,9 +153,6 @@
     },
     "response": "Nous répondons généralement sous 1 à 2 jours ouvrés."
   },
-  "androidModal": {
-    "title": "Intéressé par Android ?"
-  },
   "deleteDataPage": {
     "title": "Supprimer mes données",
     "eyebrow": "Tes données, ton choix",
@@ -289,4 +181,4 @@
     "success": "Ton client mail vient de s'ouvrir. Envoie le message pour finaliser ta demande — nous te répondrons sous 1 à 2 jours ouvrés et la suppression sera effective sous 30 jours.",
     "alt": "Tu préfères nous écrire directement ?"
   }
-} 
+}

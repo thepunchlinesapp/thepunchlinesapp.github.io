@@ -150,6 +150,16 @@ function translatePage() {
   // Update page title
   if (translations.meta && translations.meta.title) {
     document.title = translations.meta.title;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', translations.meta.title);
+  }
+
+  // Update meta description
+  if (translations.meta && translations.meta.description) {
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', translations.meta.description);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', translations.meta.description);
   }
 }
 
