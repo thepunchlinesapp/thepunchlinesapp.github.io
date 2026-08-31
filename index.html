@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Punchlines — Le regard des autres ne paie pas tes factures</title>
-<meta name="description" content="Utilise le plein potentiel des affirmations positives pour transformer ta vie. Sur iPhone et Android.">
+<meta name="description" content="Transforme ta vie grâce aux affirmations positives. Sur iPhone et Android.">
 <meta name="theme-color" content="#F7F7F2">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Punchlines — Le regard des autres ne paie pas tes factures">
-<meta property="og:description" content="Utilise le plein potentiel des affirmations positives pour transformer ta vie. Sur iPhone et Android.">
+<meta property="og:description" content="Transforme ta vie grâce aux affirmations positives. Sur iPhone et Android.">
 <meta property="og:image" content="https://thepunchlines.app/assets/og.png">
 <meta property="og:url" content="https://thepunchlines.app/">
 <meta name="twitter:card" content="summary_large_image">
@@ -64,7 +64,7 @@
     --bord:#E7E3DB; --bord-doux:#EFEBE3;
     --bleu:#4E8B99;
     --vert:#4B8250;
-    --clay:#323232; --clay-ombre:#1A1A1A;
+    --clay:#323232;
   }
 
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -150,8 +150,7 @@
     padding:12px 22px 12px 18px;
     background:var(--clay);
     color:#F5F3EE;
-    box-shadow:0 6px 0 var(--clay-ombre);
-    transition:transform .14s ease, box-shadow .14s ease;
+    transition:background .18s ease;
   }
   .cta svg { flex:none; opacity:.95; }
   .cta small {
@@ -169,8 +168,8 @@
     font-size:1.0625rem;
     line-height:1.28;
   }
-  .cta:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--clay-ombre); }
-  .cta:active { transform:translateY(6px); box-shadow:0 0 0 var(--clay-ombre); }
+  .cta:hover { background:#3F3F3F; }
+  .cta:active { background:#242424; }
   .cta:focus-visible { outline:2px solid var(--bleu); outline-offset:4px; }
 
   .point { margin:0 .4em; opacity:.6; }
@@ -246,7 +245,7 @@
       <span class="changer" data-i18n="hero.line2">ne paie pas tes factures</span>
     </h1>
 
-    <p class="promesse leve leve-3" data-i18n="hero.promise">Utilise le plein potentiel des affirmations positives pour transformer ta vie</p>
+    <p class="promesse leve leve-3" data-i18n="hero.promise">Transforme ta vie grâce aux affirmations positives</p>
 
     <div class="ctas leve leve-4">
       <a class="cta" href="https://apps.apple.com/app/apple-store/id6744821000?pt=125279170&ct=website&mt=8">
