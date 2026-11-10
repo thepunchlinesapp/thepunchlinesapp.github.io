@@ -1,1 +1,2 @@
 include: [".well-known"]
+exclude: ["README.md", "espritdelapp.md", "plan-copy.md", "scripts", "data"]

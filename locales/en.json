@@ -19,13 +19,47 @@
     "playSmall": "Get it on",
     "playBig": "Google Play"
   },
+  "home": {
+    "app": {
+      "title": "What the app does",
+      "text": "Punchlines sends you positive affirmations every day, written and picked by a team. When you start, you tell the app what you're going through: low confidence, a breakup, stress, or wanting to like yourself a bit more. The phrases follow that, and you keep the ones that speak to you. Notifications and a widget bring them back during the day."
+    },
+    "themes": {
+      "title": "Positive affirmations by theme",
+      "morning": "Morning affirmations",
+      "confidence": "Self-confidence",
+      "selfEsteem": "Self-esteem",
+      "selfLove": "Self-love",
+      "money": "Money and abundance",
+      "anxiety": "For anxiety",
+      "evening": "Evening, for sleep",
+      "work": "Work",
+      "breakup": "After a breakup",
+      "love": "Love"
+    },
+    "allAffirmations": "All positive affirmations (in French)",
+    "comparison": "Positive affirmation apps compared (in French)",
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "What is a positive affirmation?",
+      "a1": "A short sentence in the present tense that you say to yourself. For example: \"I have nothing to prove to anyone.\" It gives your inner voice something else to repeat than the thoughts that drag you down.",
+      "q2": "How do you use positive affirmations?",
+      "a2": "Pick one or two phrases that speak to you. Read them in the morning, out loud or in your head, and come back to them during the day. A widget or a wallpaper helps you see them often. Switch to a new phrase when one stops doing anything for you.",
+      "q3": "Is Punchlines free?",
+      "a3": "The download is free on iPhone and Android. To unlock everything, you need a subscription, which starts with a trial. The price is shown in the app before you commit.",
+      "q4": "Which devices does Punchlines work on?",
+      "a4": "iPhone and Android, with a widget for your home screen. On iPhone, the app also works with Apple Watch."
+    }
+  },
   "footer": {
     "copyright": "© 2026 Punchlines",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "support": "Support",
     "deleteData": "Delete my data",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "affirmations": "Positive affirmations",
+    "navLabel": "Site links"
   },
   "privacyPage": {
     "title": "Privacy Policy",
@@ -179,7 +213,7 @@
       "submit": "Send my deletion request",
       "mailNote": "The button will open your email client with a pre-filled message to support@thepunchlines.app."
     },
-    "success": "Your email client just opened. Send the message to finalize your request — we will reply within 1-2 business days and process the deletion within 30 days.",
+    "success": "Your email client just opened. Send the message to finalize your request. We will reply within 1-2 business days and process the deletion within 30 days.",
     "alt": "Prefer to write us directly?"
   }
 }
