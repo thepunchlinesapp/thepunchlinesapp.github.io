@@ -2,8 +2,9 @@
  * Internationalization script for Punchlines website
  */
 
-// Default language
-let currentLanguage = 'en';
+// Langue par défaut : le français, pour que Google voie toujours le français sur /
+const DEFAULT_LANGUAGE = 'fr';
+let currentLanguage = DEFAULT_LANGUAGE;
 
 // Available languages
 const availableLanguages = ['en', 'fr'];
@@ -32,10 +33,16 @@ function getUrlParameter(name) {
   return urlParams.get(name);
 }
 
-// Function to update URL with language parameter
+// Met ?lang= dans l'URL seulement hors français, et le retire en français
 function updateUrlLanguage(lang) {
   const url = new URL(window.location);
-  url.searchParams.set('lang', lang);
+  if (lang === DEFAULT_LANGUAGE) {
+    if (!url.searchParams.has('lang')) return;
+    url.searchParams.delete('lang');
+  } else {
+    if (url.searchParams.get('lang') === lang) return;
+    url.searchParams.set('lang', lang);
+  }
   window.history.replaceState({}, '', url);
 }
 
@@ -43,7 +50,7 @@ function updateUrlLanguage(lang) {
 window.switchLanguage = async function(lang) {
   if (lang && availableLanguages.includes(lang) && lang !== currentLanguage) {
     currentLanguage = lang;
-    localStorage.setItem('punchlines-language', currentLanguage);
+    try { localStorage.setItem('punchlines-language', currentLanguage); } catch (e) {}
     
     // Update URL with new language
     updateUrlLanguage(currentLanguage);
@@ -69,18 +76,14 @@ async function initI18n() {
   if (urlLang && availableLanguages.includes(urlLang)) {
     currentLanguage = urlLang;
   } else {
-    // Second priority: Try to get language from localStorage
-    const savedLanguage = localStorage.getItem('punchlines-language');
-    
-    // Set language from saved preference, or browser preference, or default to English
+    // Second priority: language saved by a previous visit
+    let savedLanguage = null;
+    try { savedLanguage = localStorage.getItem('punchlines-language'); } catch (e) {}
     if (savedLanguage && availableLanguages.includes(savedLanguage)) {
       currentLanguage = savedLanguage;
     } else {
-      // Check browser language
-      const browserLang = navigator.language.split('-')[0];
-      if (availableLanguages.includes(browserLang)) {
-        currentLanguage = browserLang;
-      }
+      // Otherwise French. navigator.language is deliberately ignored.
+      currentLanguage = DEFAULT_LANGUAGE;
     }
   }
   
@@ -88,7 +91,7 @@ async function initI18n() {
   updateUrlLanguage(currentLanguage);
   
   // Save to localStorage for future visits
-  localStorage.setItem('punchlines-language', currentLanguage);
+  try { localStorage.setItem('punchlines-language', currentLanguage); } catch (e) {}
   
   // Load translations for the current language
   await loadTranslations(currentLanguage);
@@ -114,9 +117,9 @@ async function loadTranslations(lang) {
     return translations;
   } catch (error) {
     console.error('Error loading translations:', error);
-    // Fallback to English if loading fails
-    if (lang !== 'en') {
-      return loadTranslations('en');
+    // Fallback to French if loading fails
+    if (lang !== DEFAULT_LANGUAGE) {
+      return loadTranslations(DEFAULT_LANGUAGE);
     }
   }
 }
@@ -147,19 +150,27 @@ function translatePage() {
     }
   });
   
+  // Title and description come from the locale only on pages that opt in
+  // (<html data-i18n-meta>, the homepage). Other pages keep their own.
+  const syncMeta = document.documentElement.hasAttribute('data-i18n-meta');
+
   // Update page title
-  if (translations.meta && translations.meta.title) {
+  if (syncMeta && translations.meta && translations.meta.title) {
     document.title = translations.meta.title;
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', translations.meta.title);
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', translations.meta.title);
   }
 
   // Update meta description
-  if (translations.meta && translations.meta.description) {
+  if (syncMeta && translations.meta && translations.meta.description) {
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute('content', translations.meta.description);
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', translations.meta.description);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', translations.meta.description);
   }
 }
 

@@ -1,0 +1,281 @@
+/* Pages de contenu (thèmes, hub, comparatif). Mêmes couleurs et polices que l'accueil. */
+:root {
+  --creme:#F7F7F2; --blanc:#FFFFFF;
+  --encre:#2B2B2B; --encre-2:#575757; --encre-3:#8C8C8C;
+  --pied:#82827E; --pied-2:#9B9B96;
+  --bord:#E7E3DB; --bord-doux:#EFEBE3;
+  --bleu:#4E8B99;
+  --vert:#4B8250;
+  --clay:#323232;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  background:var(--creme);
+  color:var(--encre);
+  font-family:'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size:1.0625rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+  position:relative;
+}
+::selection { background:rgba(255,216,172,.7); color:var(--encre); }
+
+.halo {
+  position:absolute; inset:0 0 auto 0; height:60rem; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(40rem 26rem at 50% -8rem, rgba(255,216,172,.38), transparent 62%),
+    radial-gradient(40rem 30rem at 95% 18rem, rgba(122,177,188,.12), transparent 64%);
+}
+
+a { color:var(--bleu); text-underline-offset:3px; }
+a:focus-visible { outline:2px solid var(--bleu); outline-offset:3px; border-radius:4px; }
+
+/* ---------- En-tête léger ---------- */
+.entete {
+  position:relative; z-index:1;
+  max-width:44rem; margin:0 auto;
+  padding:18px 16px 0;
+}
+.marque {
+  display:inline-flex; align-items:center; gap:10px;
+  color:var(--encre); text-decoration:none;
+  font-family:'League Spartan', 'Epilogue', sans-serif;
+  font-weight:700; font-size:1.25rem; letter-spacing:-.01em;
+}
+.marque img {
+  width:36px; height:36px; border-radius:23%;
+  border:1px solid rgba(50,50,50,.07);
+  box-shadow:0 6px 14px -8px rgba(50,50,50,.35);
+}
+
+/* ---------- Corps ---------- */
+main {
+  position:relative; z-index:1;
+  max-width:44rem; margin:0 auto;
+  padding:0 16px 56px;
+}
+
+.ariane { margin-top:28px; font-size:.8125rem; color:var(--encre-3); }
+.ariane ol { list-style:none; display:flex; flex-wrap:wrap; gap:4px 0; }
+.ariane li { display:inline; }
+.ariane li + li::before { content:"›"; margin:0 .5em; color:var(--pied-2); }
+.ariane a { color:var(--encre-3); text-decoration:none; }
+.ariane a:hover { color:var(--bleu); }
+
+h1 {
+  margin-top:14px;
+  font-family:'League Spartan', 'Epilogue', sans-serif;
+  font-weight:700;
+  font-size:clamp(2rem, 7vw, 2.75rem);
+  line-height:1.08;
+  letter-spacing:-.015em;
+  color:var(--encre);
+  text-wrap:balance;
+}
+h2 {
+  margin-top:44px;
+  font-family:'League Spartan', 'Epilogue', sans-serif;
+  font-weight:700;
+  font-size:1.5rem;
+  line-height:1.2;
+  color:var(--encre);
+}
+h3 {
+  font-family:'League Spartan', 'Epilogue', sans-serif;
+  font-weight:700;
+  font-size:1.1875rem;
+  line-height:1.25;
+}
+
+.intro { margin-top:18px; color:var(--encre-2); font-size:1.125rem; }
+.intro p + p { margin-top:10px; }
+.texte p { margin-top:12px; color:var(--encre-2); }
+
+.avertissement {
+  margin-top:20px;
+  padding:12px 14px;
+  border-left:3px solid var(--bleu);
+  background:rgba(78,139,153,.07);
+  border-radius:0 10px 10px 0;
+  font-size:.9375rem;
+  color:var(--encre-2);
+}
+
+/* ---------- La liste de phrases : du texte simple ---------- */
+.phrases {
+  margin-top:28px;
+  list-style:none;
+  counter-reset:phrase;
+  border-top:1px solid var(--bord);
+}
+.phrases li {
+  counter-increment:phrase;
+  position:relative;
+  padding:14px 0 14px 44px;
+  border-bottom:1px solid var(--bord);
+  font-size:1.125rem;
+  line-height:1.5;
+  color:var(--encre);
+}
+.phrases li::before {
+  content:counter(phrase);
+  position:absolute; left:0; top:15px;
+  width:30px;
+  text-align:right;
+  font-size:.875rem;
+  font-weight:600;
+  color:var(--encre-3);
+  font-variant-numeric:tabular-nums;
+}
+.phrases .source {
+  display:block;
+  margin-top:2px;
+  font-size:.8125rem;
+  color:var(--encre-3);
+}
+.phrases .source a { color:var(--encre-3); }
+.phrases .source a:hover { color:var(--bleu); }
+
+/* ---------- Bloc vers l'app ---------- */
+.app {
+  margin-top:40px;
+  padding:24px 20px;
+  background:var(--blanc);
+  border:1px solid var(--bord);
+  border-radius:20px;
+  text-align:center;
+}
+.app p { color:var(--encre-2); font-weight:500; max-width:28rem; margin:0 auto; }
+.app p strong { color:var(--encre); font-weight:600; }
+.ctas {
+  margin-top:18px;
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:12px;
+}
+.cta {
+  display:inline-flex; align-items:center; gap:11px;
+  text-align:left;
+  text-decoration:none;
+  white-space:nowrap;
+  border-radius:18px;
+  padding:11px 20px 11px 16px;
+  background:var(--clay);
+  color:#F5F3EE;
+  transition:background .18s ease;
+}
+.cta svg { flex:none; opacity:.95; }
+.cta small {
+  display:block;
+  font-size:.6875rem; font-weight:400; letter-spacing:.04em; line-height:1.35;
+  color:rgba(245,243,238,.66);
+}
+.cta b {
+  display:block;
+  font-family:'League Spartan', 'Epilogue', sans-serif;
+  font-weight:700; font-size:1.0625rem; line-height:1.28;
+}
+.cta:hover { background:#3F3F3F; }
+.cta:active { background:#242424; }
+.cta:focus-visible { outline:2px solid var(--bleu); outline-offset:4px; }
+
+/* ---------- Liens ---------- */
+.liens-themes {
+  margin-top:18px;
+  list-style:none;
+  display:grid; grid-template-columns:1fr; gap:10px;
+}
+.liens-themes a {
+  display:block;
+  padding:14px 16px;
+  background:var(--blanc);
+  border:1px solid var(--bord);
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--encre);
+  font-weight:600;
+  transition:border-color .18s ease;
+}
+.liens-themes a:hover { border-color:var(--bleu); }
+.liens-themes span { display:block; margin-top:2px; font-weight:400; font-size:.9375rem; color:var(--encre-2); }
+@media (min-width:640px) {
+  .liens-themes { grid-template-columns:1fr 1fr; }
+}
+
+.a-lire { margin-top:14px; list-style:none; }
+.a-lire li { padding:8px 0; border-bottom:1px solid var(--bord-doux); }
+.a-lire a { text-decoration:none; font-weight:500; }
+.a-lire a:hover { text-decoration:underline; }
+
+/* ---------- Comparatif ---------- */
+.tableau-wrap { margin-top:22px; }
+.tableau { width:100%; border-collapse:collapse; font-size:.9375rem; }
+.tableau th, .tableau td { text-align:left; vertical-align:top; padding:10px 10px; border-bottom:1px solid var(--bord); }
+.tableau thead th {
+  font-size:.75rem; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--encre-3); font-weight:600;
+}
+.tableau tbody th { font-weight:600; color:var(--encre); }
+.tableau td { color:var(--encre-2); }
+.note-tableau { margin-top:10px; font-size:.8125rem; color:var(--encre-3); }
+.tableau .editeur { display:block; font-weight:400; font-size:.8125rem; color:var(--encre-3); }
+
+@media (max-width:719px) {
+  .tableau, .tableau tbody, .tableau tr, .tableau th, .tableau td { display:block; width:100%; }
+  .tableau thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  .tableau tr {
+    background:var(--blanc);
+    border:1px solid var(--bord);
+    border-radius:14px;
+    padding:6px 14px;
+    margin-bottom:12px;
+  }
+  .tableau tbody th { border-bottom:1px solid var(--bord-doux); padding:10px 0; font-size:1.0625rem; }
+  .tableau td { border-bottom:0; padding:6px 0; }
+  .tableau td::before {
+    content:attr(data-label);
+    display:block;
+    font-size:.6875rem; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--encre-3); font-weight:600;
+  }
+}
+
+.fiches { margin-top:8px; }
+.fiche { margin-top:26px; }
+.fiche p { margin-top:8px; color:var(--encre-2); }
+
+/* ---------- Pied de page : comme l'accueil ---------- */
+footer {
+  position:relative; z-index:1;
+  padding:8px 16px 44px;
+  display:flex; flex-direction:column; align-items:center; gap:9px;
+  text-align:center;
+}
+.liens {
+  display:flex; flex-wrap:wrap; justify-content:center;
+  column-gap:16px; row-gap:6px;
+  max-width:32rem;
+}
+.liens a {
+  color:var(--pied);
+  text-decoration:none;
+  font-size:.75rem; font-weight:500;
+  transition:color .2s ease;
+}
+.liens a:hover { color:var(--bleu); }
+.mentions {
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  font-size:.75rem; line-height:1.7;
+  color:var(--pied-2);
+}
+.mentions a { color:var(--pied-2); text-decoration:none; }
+.mentions a:hover { color:var(--bleu); }
+.point { margin:0 .4em; opacity:.6; }
+.u { white-space:nowrap; }
+
+@media (max-width:374px) {
+  .cta { padding:11px 16px; gap:9px; }
+}

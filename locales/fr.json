@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Punchlines — Le regard des autres ne paie pas tes factures",
-    "description": "Transforme ta vie grâce aux affirmations positives. Sur iPhone et Android."
+    "title": "Punchlines : l'app d'affirmations positives (4,7★ sur l'App Store)",
+    "description": "Des affirmations positives en français, choisies pour toi et envoyées chaque jour. Confiance, amour de soi, calme : à télécharger sur iPhone et Android."
   },
   "nav": {
     "privacy": "Confidentialité",
@@ -10,6 +10,7 @@
     "download": "Télécharger"
   },
   "hero": {
+    "title": "Punchlines, l'application d'affirmations positives",
     "line1": "Le regard des autres",
     "line2": "ne paie pas tes factures",
     "promise": "Transforme ta vie grâce aux affirmations positives",

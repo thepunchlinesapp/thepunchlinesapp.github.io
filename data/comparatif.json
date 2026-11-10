@@ -1,0 +1,96 @@
+{
+  "slug": "meilleures-applications-affirmations-positives",
+  "title": "Meilleures applications d'affirmations positives en 2026",
+  "h1": "Les meilleures applications d'affirmations positives en 2026",
+  "description": "6 applications d'affirmations positives comparées : I am, Motivation, Punchlines, Mantra, ThinkUp, Manifest. Langue, style, note, et pour qui chacune est faite.",
+  "crumb": "Meilleures applications d'affirmations positives",
+  "avertissement": "Ce comparatif est écrit par l'équipe de Punchlines. On a donc un intérêt dans l'histoire, et on préfère te le dire dès la première ligne.",
+  "intro": [
+    "On s'en tient à ce que tu peux vérifier toi-même sur l'App Store : la langue, le style des phrases, la note publique en France. Les notes ont été relevées le 5 novembre 2026. Quand on n'a pas pu vérifier une info, on l'écrit.",
+    "Les apps sont rangées par nombre de notes sur l'App Store en France, de la plus notée à la moins notée."
+  ],
+  "dateNotes": "5 novembre 2026",
+  "apps": [
+    {
+      "nom": "Motivation",
+      "editeur": "Monkey Taps",
+      "appStoreId": "876080126",
+      "langue": "Français",
+      "plateformes": "iPhone. Android : non vérifié.",
+      "style": "Citations du jour, avec un widget pour l'écran verrouillé.",
+      "abonnement": "Essai de 3 jours, d'après les avis. Prix : non vérifié sur la fiche.",
+      "note": "4,7",
+      "nbNotes": "38 744",
+      "pourQui": "Si tu préfères lire des citations plutôt que des phrases à la première personne, Motivation est la plus notée du genre en France."
+    },
+    {
+      "nom": "I am",
+      "editeur": "Monkey Taps",
+      "appStoreId": "874656917",
+      "langue": "Français",
+      "plateformes": "iPhone. Android : non vérifié.",
+      "style": "Affirmations du jour, pensées pour l'écran verrouillé.",
+      "abonnement": "Essai de 3 jours. Abonnement mensuel, annuel ou à vie, d'après la fiche App Store française.",
+      "note": "4,7",
+      "nbNotes": "25 735",
+      "pourQui": "Si tu veux l'app d'affirmations que beaucoup de monde utilise déjà (plus de 25 000 notes en France), avec des phrases sur ton écran verrouillé, commence par I am."
+    },
+    {
+      "nom": "Punchlines",
+      "editeur": "Punchlines",
+      "appStoreId": "6744821000",
+      "langue": "Français. Phrases écrites et triées par une équipe.",
+      "plateformes": "iPhone, Android et Apple Watch.",
+      "style": "Affirmations par intentions : confiance, amour de soi, argent, calme. Widget et notifications quotidiennes.",
+      "abonnement": "Téléchargement gratuit, abonnement avec essai pour tout débloquer.",
+      "note": "4,7",
+      "nbNotes": "2 721",
+      "pourQui": "Si tu veux des phrases écrites en français, choisies selon ce que tu traverses en ce moment, et que tu es sur Android ou sur iPhone, Punchlines est faite pour ça."
+    },
+    {
+      "nom": "Mantra, Affirmations du jour",
+      "editeur": "Broftware House",
+      "appStoreId": "1202851636",
+      "langue": "Français",
+      "plateformes": "iPhone. Android : non vérifié.",
+      "style": "Affirmations quotidiennes, avec des widgets.",
+      "abonnement": "Non vérifié.",
+      "note": "4,7",
+      "nbNotes": "937",
+      "pourQui": "Si tu veux une app simple d'affirmations du jour avec des widgets, Mantra est bien notée par celles et ceux qui l'utilisent."
+    },
+    {
+      "nom": "ThinkUp",
+      "editeur": "Precise Wellness LLC",
+      "appStoreId": "906660772",
+      "langue": "Non vérifié.",
+      "plateformes": "iPhone. Android : non vérifié.",
+      "style": "Affirmations à écouter, avec une voix enregistrée.",
+      "abonnement": "Non vérifié.",
+      "note": "4,7",
+      "nbNotes": "53",
+      "pourQui": "Si tu préfères écouter tes affirmations plutôt que les lire, regarde du côté de ThinkUp. Vérifie la langue avant de t'abonner."
+    },
+    {
+      "nom": "Manifest, Affirmations du jour",
+      "editeur": "Zipo Apps Ltd.",
+      "appStoreId": "1631748635",
+      "langue": "Français",
+      "plateformes": "iPhone. Android : non vérifié.",
+      "style": "Affirmations du jour.",
+      "abonnement": "Non vérifié.",
+      "note": "4,2",
+      "nbNotes": "9",
+      "pourQui": "Avec 9 notes en France, difficile de se faire une idée. À tester si les autres ne te conviennent pas."
+    }
+  ],
+  "choisir": {
+    "titre": "Comment choisir",
+    "paragraphes": [
+      "Commence par une question simple : tu veux lire, ou écouter ? Pour lire, la plupart de ces apps font le travail. Pour écouter, ThinkUp est celle qui met la voix en avant.",
+      "Ensuite, regarde le ton. Des citations d'auteurs, des phrases à la première personne, des phrases avec un peu d'humour : ouvre l'app et lis-en dix. Tu sauras vite si la voix te parle.",
+      "Enfin, lis la fiche avant de lancer un essai. Ces apps fonctionnent souvent avec un abonnement. Note la date de fin d'essai dans ton agenda, quelle que soit l'app."
+    ]
+  },
+  "liensThemes": ["confiance-en-soi", "matin", "amour-de-soi", "anxiete", "soir"]
+}

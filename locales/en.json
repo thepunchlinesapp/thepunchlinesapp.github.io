@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Punchlines — Other people's opinions don't pay your bills",
-    "description": "Transform your life with positive affirmations. On iPhone and Android."
+    "title": "Punchlines: the positive affirmations app",
+    "description": "Positive affirmations picked for you and sent every day. Confidence, self-love, calm: download it on iPhone and Android."
   },
   "nav": {
     "privacy": "Privacy",
@@ -10,6 +10,7 @@
     "download": "Download"
   },
   "hero": {
+    "title": "Punchlines, the positive affirmations app",
     "line1": "Other people's opinions",
     "line2": "don't pay your bills",
     "promise": "Transform your life with positive affirmations",
