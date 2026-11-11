@@ -37,7 +37,8 @@ function typo(s) {
     .replace(/ ([?!;])/g, '\u202f$1')
     .replace(/ :/g, '\u00a0:')
     .replace(/(\d) (\d{3})\b/g, '$1\u202f$2')
-    .replace(/(\d) (phrases|notes)\b/g, '$1\u00a0$2');
+    .replace(/(\d) (phrases|notes)\b/g, '$1\u00a0$2')
+    .replace(/(\d) €/g, '$1\u00a0€');
 }
 const t = (s) => esc(typo(s));
 
@@ -343,27 +344,113 @@ for (const th of themes) {
     { nom: 'Accueil', url: '/' },
     { nom: comp.crumb, url: urlComp },
   ]);
-  const ficheUrl = (id) => `https://apps.apple.com/fr/app/id${id}`;
+  const NON_AFFICHE = 'non affiché sur la fiche';
+  const vide = (s) => `<span class="vide">${t(s)}</span>`;
+  const val = (s, repli = NON_AFFICHE) => (s ? t(s) : vide(repli));
+  const oui = '<span class="oui">Oui</span>';
+
+  for (const a of comp.apps) {
+    for (const champ of ['slug', 'nom', 'editeur', 'logo', 'pourQui', 'ios', 'prix']) {
+      if (!a[champ]) throw new Error(`Comparatif : ${a.nom || '?'} sans ${champ}`);
+    }
+    if (!a.ios.source || !a.ios.releve) throw new Error(`Comparatif : ${a.nom} sans source App Store datée`);
+    if (a.android && (!a.android.source || !a.android.releve)) throw new Error(`Comparatif : ${a.nom} sans source Play datée`);
+    if (!a.android && !a.androidAbsent) throw new Error(`Comparatif : ${a.nom} sans Android ni androidAbsent`);
+  }
+
+  const logo = (a, taille) =>
+    `<img class="icone" src="${esc(a.logo)}" alt="${esc(typo(a.nom))}" width="${taille}" height="${taille}" loading="lazy" decoding="async">`;
+
+  const lienApple = (a) =>
+    a.notre
+      ? `https://apps.apple.com/app/apple-store/id${a.ios.id}?pt=125279170&ct=seo-comparatif&mt=8`
+      : a.ios.url;
+  const lienPlay = (a) =>
+    a.notre
+      ? `https://play.google.com/store/apps/details?id=${a.android.package}&referrer=utm_source%3Dsite%26utm_campaign%3Dseo-comparatif`
+      : a.android.url;
+  const rel = (a) => (a.notre ? '' : ' rel="nofollow noopener"');
+
+  const noteIos = (a) =>
+    `<span class="note-val">${t(a.ios.note)}</span><span class="note-nb">${t(a.ios.nbNotes)} notes</span>`;
+  const noteAndroid = (a) => {
+    if (!a.android) return vide('pas sur Google Play');
+    if (!a.android.note) return vide('pas de note affichée');
+    return `<span class="note-val">${t(a.android.note)}</span><span class="note-nb">${t(a.android.nbAvis)} avis</span>`;
+  };
+
+  // ----- Tableau -----
   const lignes = comp.apps
     .map(
-      (a) => `<tr>
-          <th scope="row">${t(a.nom)}<span class="editeur">${t(a.editeur)}</span></th>
-          <td data-label="Langue">${t(a.langue)}</td>
-          <td data-label="Plateformes">${t(a.plateformes)}</td>
-          <td data-label="Style">${t(a.style)}</td>
-          <td data-label="Note App Store France"><span class="u">${t(a.note)}/5</span> <span class="u">(${t(a.nbNotes)} notes)</span></td>
+      (a) => `<tr${a.notre ? ' class="notre"' : ''}>
+          <th scope="row"><a class="app-cell" href="#${esc(a.slug)}">${logo(a, 40)}<span><b>${t(a.nom)}</b>${a.notre ? '<em class="badge">Notre app</em>' : `<small>${t(a.editeur)}</small>`}</span></a></th>
+          <td>${noteIos(a)}</td>
+          <td>${noteAndroid(a)}</td>
+          <td>${oui}</td>
+          <td>${a.android ? oui : vide('Non trouvée')}</td>
+          <td>${a.ios.francais ? oui : '<span class="non">Non, anglais</span>'}</td>
+          <td>${val(a.prix.mensuel)}</td>
+          <td>${val(a.prix.annuel)}</td>
+          <td>${val(a.prix.essai)}</td>
         </tr>`,
     )
     .join('\n        ');
 
+  // ----- Fiches -----
+  const ligneDl = (terme, valeur) => `<div><dt>${t(terme)}</dt><dd>${valeur}</dd></div>`;
+
   const fiches = comp.apps
-    .map(
-      (a) => `<div class="fiche">
-      <h3>${t(a.nom)}</h3>
-      <p>${t(a.pourQui)}</p>
-      <p><strong>Abonnement</strong> : ${t(a.abonnement)} <a href="${esc(ficheUrl(a.appStoreId))}" rel="nofollow">Voir la fiche App Store</a></p>
-    </div>`,
-    )
+    .map((a) => {
+      const prixIos = [
+        ligneDl('Mensuel', val(a.prix.mensuel)),
+        ligneDl('Annuel', val(a.prix.annuel)),
+        ligneDl('À vie', val(a.prix.vie)),
+        ligneDl('Essai gratuit', val(a.prix.essai)),
+      ].join('');
+      const android = a.android
+        ? `<p class="prix-android"><strong>Android</strong> : achats de ${t(a.android.fourchette)} d’après Google Play. ${t(a.android.telechargements)} téléchargements${a.android.note ? `, note ${t(a.android.note)} sur 5 (${t(a.android.nbAvis)} avis)` : ''}.${a.android.pubs ? ' La fiche indique « Contient des annonces ».' : ''}</p>`
+        : `<p class="prix-android"><strong>Android</strong> : ${t(a.androidAbsent)}</p>`;
+      const achats = a.ios.achatsIntegres
+        .map(([nom, prix]) => `<li><span>${esc(nom)}</span><span class="u">${t(prix)}</span></li>`)
+        .join('');
+      const boutonsApp = a.notre
+        ? boutons('seo-comparatif')
+        : `<div class="ctas ctas-fiche">
+        <a class="cta cta-clair" href="${esc(lienApple(a))}"${rel(a)}>${SVG_APPLE}<span><small>Voir sur</small><b>l’App Store</b></span></a>
+        ${a.android ? `<a class="cta cta-clair" href="${esc(lienPlay(a))}"${rel(a)}>${SVG_PLAY}<span><small>Voir sur</small><b>Google Play</b></span></a>` : ''}
+      </div>`;
+      return `<article class="fiche${a.notre ? ' fiche-notre' : ''}" id="${esc(a.slug)}">
+      <header class="fiche-tete">
+        ${logo(a, 64)}
+        <div>
+          <h3>${t(a.nom)}${a.notre ? ' <em class="badge">Notre app</em>' : ''}</h3>
+          <p class="fiche-sous">${t(a.editeur)} · ${t(a.style)}</p>
+        </div>
+      </header>
+      <p class="pour-qui">${t(a.pourQui)}</p>
+      <div class="colonnes">
+        <div>
+          <h4>Points forts</h4>
+          <ul class="puces puces-plus">${a.forts.map((f) => `<li>${t(f)}</li>`).join('')}</ul>
+        </div>
+        <div>
+          <h4>Limites</h4>
+          <ul class="puces puces-moins">${a.limites.map((f) => `<li>${t(f)}</li>`).join('')}</ul>
+        </div>
+      </div>
+      <h4>Prix sur iPhone</h4>
+      <dl class="prix">${prixIos}</dl>
+      ${a.prix.autres ? `<p class="prix-autres">${t(a.prix.autres)}</p>` : ''}
+      ${a.ios.noteMensuel ? `<p class="prix-autres">${t(a.ios.noteMensuel)}</p>` : ''}
+      ${android}
+      <details class="achats">
+        <summary>Les ${a.ios.achatsIntegres.length} achats intégrés affichés sur l’App Store</summary>
+        <ul>${achats}</ul>
+        <p>Langue de l’app : ${t(a.ios.langues)}. Apple Watch : ${a.ios.appleWatch ? 'oui' : 'non'}. Source : <a href="${esc(a.ios.source)}"${rel(a)}>fiche App Store</a>${a.android ? `, <a href="${esc(a.android.source)}"${rel(a)}>fiche Google Play</a>` : ''}, relevé le ${t(comp.dateReleve)}.</p>
+      </details>
+      ${boutonsApp}
+    </article>`;
+    })
     .join('\n    ');
 
   for (const s of comp.liensThemes) if (!parSlug[s]) throw new Error(`Comparatif : thème inconnu ${s}`);
@@ -376,21 +463,24 @@ for (const th of themes) {
   <div class="intro">
     ${comp.intro.map((p) => `<p>${t(p)}</p>`).join('\n    ')}
   </div>
+  <p class="releve"><time datetime="${esc(comp.dateReleveIso)}">${t(comp.ligneReleve)}</time></p>
 
   <h2>Le tableau</h2>
-  <div class="tableau-wrap">
-    <table class="tableau">
-      <thead>
-        <tr><th scope="col">App</th><th scope="col">Langue</th><th scope="col">Plateformes</th><th scope="col">Style</th><th scope="col">Note App Store France</th></tr>
-      </thead>
-      <tbody>
+  <div class="tableau-large">
+    <div class="tableau-wrap" role="region" aria-label="Tableau comparatif des apps" tabindex="0">
+      <table class="tableau">
+        <thead>
+          <tr><th scope="col">App</th><th scope="col">Note iOS</th><th scope="col">Note Android</th><th scope="col">iPhone</th><th scope="col">Android</th><th scope="col">En français</th><th scope="col">Prix mensuel</th><th scope="col">Prix annuel</th><th scope="col">Essai</th></tr>
+        </thead>
+        <tbody>
         ${lignes}
-      </tbody>
-    </table>
-    <p class="note-tableau">Notes publiques de l\u2019App Store en France, relevées le ${t(comp.dateNotes)}.</p>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-tableau">Notes sur 5. Prix iPhone, tels que nommés dans la liste des achats intégrés. Sur mobile, fais glisser le tableau.</p>
   </div>
 
-  <h2>Pour qui est faite chaque app</h2>
+  <h2>Chaque app en détail</h2>
   <div class="fiches">
     ${fiches}
   </div>
@@ -398,6 +488,11 @@ for (const th of themes) {
   <section class="texte">
     <h2>${t(comp.choisir.titre)}</h2>
     ${comp.choisir.paragraphes.map((p) => `<p>${t(p)}</p>`).join('\n    ')}
+  </section>
+
+  <section class="texte methode">
+    <h2>Notre méthode</h2>
+    ${comp.methode.map((p) => `<p>${t(p)}</p>`).join('\n    ')}
   </section>
 
   <section>
@@ -419,7 +514,7 @@ for (const th of themes) {
       '@type': 'ListItem',
       position: i + 1,
       name: typo(a.nom),
-      url: ficheUrl(a.appStoreId),
+      url: a.ios.url,
     })),
   };
   ecrire(
@@ -435,7 +530,7 @@ for (const th of themes) {
     { loc: '/', prio: '1.0' },
     { loc: urlHub, prio: '0.9' },
     ...themes.map((th) => ({ loc: urlTheme(th.slug), prio: '0.8' })),
-    { loc: urlComp, prio: '0.7' },
+    { loc: urlComp, prio: '0.7', lastmod: comp.lastmod },
     { loc: '/support.html', prio: '0.3' },
     { loc: '/privacy.html', prio: '0.2' },
     { loc: '/terms.html', prio: '0.2' },
@@ -443,7 +538,7 @@ for (const th of themes) {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
-  .map((u) => `  <url>\n    <loc>${SITE}${u.loc}</loc>\n    <lastmod>${LASTMOD}</lastmod>\n    <priority>${u.prio}</priority>\n  </url>`)
+  .map((u) => `  <url>\n    <loc>${SITE}${u.loc}</loc>\n    <lastmod>${u.lastmod || LASTMOD}</lastmod>\n    <priority>${u.prio}</priority>\n  </url>`)
   .join('\n')}
 </urlset>
 `;

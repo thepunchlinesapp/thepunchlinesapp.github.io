@@ -2,94 +2,456 @@
   "slug": "meilleures-applications-affirmations-positives",
   "title": "Meilleures applications d'affirmations positives en 2026",
   "h1": "Les meilleures applications d'affirmations positives en 2026",
-  "description": "6 applications d'affirmations positives comparées : I am, Motivation, Punchlines, Mantra, ThinkUp, Manifest. Langue, style, note, et pour qui chacune est faite.",
+  "description": "7 apps d'affirmations positives comparées : prix en euros, Android, note, langue. I am, Motivation, Punchlines, Mantra, Innertune, ThinkUp, Unique.",
   "crumb": "Meilleures applications d'affirmations positives",
-  "avertissement": "Ce comparatif est écrit par l'équipe de Punchlines. On a donc un intérêt dans l'histoire, et on préfère te le dire dès la première ligne.",
+  "lastmod": "2026-11-11",
+  "dateReleve": "11 novembre 2026",
+  "dateReleveIso": "2026-11-11",
+  "avertissement": "Ce comparatif est écrit par l'équipe de Punchlines, l'une des apps comparées. On a donc un intérêt dans l'histoire, et on préfère te le dire dès la première ligne. Pour rester juste, chaque chiffre vient de la fiche officielle de l'app, et on indique d'où.",
   "intro": [
-    "On s'en tient à ce que tu peux vérifier toi-même sur l'App Store : la langue, le style des phrases, la note publique en France. Les notes ont été relevées le 5 novembre 2026. Quand on n'a pas pu vérifier une info, on l'écrit.",
+    "Sept apps d'affirmations positives, regardées de près : le prix réel en euros, la disponibilité sur Android, la note publique, la langue de l'app. Tout se vérifie sur l'App Store et sur Google Play en France.",
     "Les apps sont rangées par nombre de notes sur l'App Store en France, de la plus notée à la moins notée."
   ],
-  "dateNotes": "5 novembre 2026",
+  "ligneReleve": "Prix et notes relevés le 11 novembre 2026 sur l'App Store et Google Play France.",
+  "methode": [
+    "On a ouvert la fiche de chaque app sur l'App Store France et sur Google Play France le 11 novembre 2026. La note, le nombre de notes, la langue et la compatibilité Apple Watch viennent de l'App Store. Le nombre de téléchargements et la note Android viennent de Google Play.",
+    "Les prix iPhone viennent de la liste « Achats intégrés » de l'App Store. Apple y montre dix lignes au plus, souvent sans dire la durée. On ne range un prix dans « mensuel » ou « annuel » que si son nom le dit. Sur Android, Google Play n'affiche qu'une fourchette, du plus petit au plus grand achat possible.",
+    "Quand une info n'est pas sur la fiche, on ne la devine pas : tu lis « non affiché sur la fiche ». Les prix bougent souvent, et l'écran d'abonnement d'une app peut proposer une autre offre. Regarde le prix final avant de valider.",
+    "On a retiré Manifest de la version précédente de ce comparatif : 9 notes en France, c'est trop peu pour en dire quelque chose. On a ajouté Innertune et Unique Daily Affirmations, deux apps connues du genre, même si leur interface est en anglais."
+  ],
   "apps": [
     {
+      "slug": "motivation",
       "nom": "Motivation",
+      "nomStore": "Motivation - Citations",
       "editeur": "Monkey Taps",
-      "appStoreId": "876080126",
-      "langue": "Français",
-      "plateformes": "iPhone. Android : non vérifié.",
-      "style": "Citations du jour, avec un widget pour l'écran verrouillé.",
-      "abonnement": "Essai de 3 jours, d'après les avis. Prix : non vérifié sur la fiche.",
-      "note": "4,7",
-      "nbNotes": "38 744",
-      "pourQui": "Si tu préfères lire des citations plutôt que des phrases à la première personne, Motivation est la plus notée du genre en France."
+      "logo": "/assets/comparatif/motivation.webp",
+      "style": "Citations du jour",
+      "pourQui": "Pour toi si tu préfères lire des citations d'auteurs plutôt que des phrases à dire à la première personne.",
+      "forts": [
+        "La plus notée du comparatif sur l'App Store en France : 38 842 notes, 4,7 sur 5.",
+        "Des widgets pour l'écran d'accueil, autant que tu veux, réglables depuis l'app.",
+        "Interface en français, app Apple Watch, et version Android téléchargée plus de 10 millions de fois."
+      ],
+      "limites": [
+        "L'app propose surtout des citations d'auteurs.",
+        "Sur Android, la fiche indique « Contient des annonces ».",
+        "Le prix mensuel n'est pas nommé dans la liste des achats intégrés."
+      ],
+      "widget": true,
+      "ios": {
+        "id": "876080126",
+        "url": "https://apps.apple.com/fr/app/id876080126",
+        "note": "4,7",
+        "nbNotes": "38 842",
+        "francais": true,
+        "langues": "Français et 13 autres langues",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["Motivation Premium (1 an)", "19,99 €"],
+          ["Motivation Premium", "11,99 €"],
+          ["Premium Motivation", "9,99 €"],
+          ["Premium Motivation", "9,99 €"],
+          ["Premium Motivation", "9,99 €"],
+          ["Premium Motivation", "59,99 €"],
+          ["Premium Motivation", "5,49 €"],
+          ["Premium Motivation", "19,99 €"],
+          ["Premium Motivation", "9,99 €"],
+          ["Motivation Premium", "3,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id876080126",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "com.hrd.motivation",
+        "nomStore": "Motivation - Phrases du jour",
+        "url": "https://play.google.com/store/apps/details?id=com.hrd.motivation&hl=fr&gl=FR",
+        "note": "4,7",
+        "nbAvis": "255 k",
+        "telechargements": "10 M+",
+        "fourchette": "2,99 € à 179,99 €",
+        "pubs": true,
+        "source": "https://play.google.com/store/apps/details?id=com.hrd.motivation&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": null,
+        "annuel": "19,99 €",
+        "vie": null,
+        "autres": "La description parle d'un abonnement mensuel, annuel ou à vie, sans en donner les prix.",
+        "essai": null
+      }
     },
     {
+      "slug": "i-am",
       "nom": "I am",
+      "nomStore": "I am - Pensée positive",
       "editeur": "Monkey Taps",
-      "appStoreId": "874656917",
-      "langue": "Français",
-      "plateformes": "iPhone. Android : non vérifié.",
-      "style": "Affirmations du jour, pensées pour l'écran verrouillé.",
-      "abonnement": "Essai de 3 jours. Abonnement mensuel, annuel ou à vie, d'après la fiche App Store française.",
-      "note": "4,7",
-      "nbNotes": "25 735",
-      "pourQui": "Si tu veux l'app d'affirmations que beaucoup de monde utilise déjà (plus de 25 000 notes en France), avec des phrases sur ton écran verrouillé, commence par I am."
+      "logo": "/assets/comparatif/i-am.webp",
+      "style": "Affirmations du jour et rappels",
+      "pourQui": "Pour toi si tu veux une app d'affirmations que beaucoup de monde utilise déjà, avec des rappels tout au long de la journée.",
+      "forts": [
+        "Très utilisée : 25 801 notes sur l'App Store en France, plus de 10 millions de téléchargements sur Android.",
+        "Des affirmations à la première personne, classées par intentions, avec des rappels que tu règles.",
+        "Interface en français, app Apple Watch."
+      ],
+      "limites": [
+        "Sur Android, la fiche indique « Contient des annonces ».",
+        "Même éditeur que Motivation, avec le même choix d'abonnements : mensuel, annuel ou à vie.",
+        "La description App Store ne parle pas de widget."
+      ],
+      "widget": null,
+      "ios": {
+        "id": "874656917",
+        "url": "https://apps.apple.com/fr/app/id874656917",
+        "note": "4,7",
+        "nbNotes": "25 801",
+        "francais": true,
+        "langues": "Français et 13 autres langues",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["I am Premium (1 an)", "35,99 €"],
+          ["I Am Premium", "39,99 €"],
+          ["I am Premium", "11,99 €"],
+          ["I am Premium", "15,99 €"],
+          ["I am Premium", "35,99 €"],
+          ["I Premium (1 mois)", "9,99 €"],
+          ["I am Premium", "59,99 €"],
+          ["Premium I am", "35,99 €"],
+          ["I am Premium", "10,99 €"],
+          ["Self Growth Essentials", "69,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id874656917",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "com.hrd.iam",
+        "nomStore": "I am Affirmations quotidiennes",
+        "url": "https://play.google.com/store/apps/details?id=com.hrd.iam&hl=fr&gl=FR",
+        "note": "4,7",
+        "nbAvis": "312 k",
+        "telechargements": "10 M+",
+        "fourchette": "2,99 € à 179,99 €",
+        "pubs": true,
+        "source": "https://play.google.com/store/apps/details?id=com.hrd.iam&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": "9,99 €",
+        "annuel": "35,99 €",
+        "vie": null,
+        "autres": "La description parle aussi d'un abonnement à vie, sans en donner le prix.",
+        "essai": null
+      }
     },
     {
+      "slug": "punchlines",
       "nom": "Punchlines",
-      "editeur": "Punchlines",
-      "appStoreId": "6744821000",
-      "langue": "Français. Phrases écrites et triées par une équipe.",
-      "plateformes": "iPhone, Android et Apple Watch.",
-      "style": "Affirmations par intentions : confiance, amour de soi, argent, calme. Widget et notifications quotidiennes.",
-      "abonnement": "Téléchargement gratuit, abonnement avec essai pour tout débloquer.",
-      "note": "4,7",
-      "nbNotes": "2 721",
-      "pourQui": "Si tu veux des phrases écrites en français, choisies selon ce que tu traverses en ce moment, et que tu es sur Android ou sur iPhone, Punchlines est faite pour ça."
+      "nomStore": "Punchlines : Affirmations",
+      "editeur": "Harry Gueguen",
+      "notre": true,
+      "logo": "/assets/comparatif/punchlines.webp",
+      "style": "Affirmations choisies selon ce que tu traverses",
+      "pourQui": "Pour toi si tu veux des phrases écrites en français, choisies selon ce que tu vis en ce moment, sur iPhone comme sur Android.",
+      "forts": [
+        "Des phrases écrites et triées en français par une équipe.",
+        "Quelques questions au début, puis l'app construit ton programme d'affirmations.",
+        "Widgets iOS, app Apple Watch, version Android."
+      ],
+      "limites": [
+        "Plus jeune que les autres : 2 736 notes sur l'App Store en France, 500+ téléchargements sur Android.",
+        "Deux langues seulement : français et anglais.",
+        "Le prix annuel change selon l'offre affichée, de 17,99 € à 49,99 €."
+      ],
+      "widget": true,
+      "ios": {
+        "id": "6744821000",
+        "url": "https://apps.apple.com/fr/app/id6744821000",
+        "note": "4,7",
+        "nbNotes": "2 736",
+        "francais": true,
+        "langues": "Français et anglais",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["Premium (1 an)", "49,99 €"],
+          ["Premium (1 an) - 7j gratuits", "34,99 €"],
+          ["Premium (1 an)", "49,99 €"],
+          ["Premium (1 an)", "29,99 €"],
+          ["Premium (1 an)", "34,99 €"],
+          ["Premium (1 trimestre) 3j essai", "17,99 €"],
+          ["Premium (Mensuel)", "9,99 €"],
+          ["Premium (1 an)", "17,99 €"],
+          ["Premium (1 mois) - 3j gratuits", "9,99 €"],
+          ["Premium (hebdomadaire)", "4,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id6744821000",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "fr.harryjmg.punchlines",
+        "nomStore": "Punchlines : Affirmations",
+        "url": "https://play.google.com/store/apps/details?id=fr.harryjmg.punchlines&hl=fr&gl=FR",
+        "note": "4,8",
+        "nbAvis": "30",
+        "telechargements": "500+",
+        "fourchette": "11,99 € à 59,99 €",
+        "pubs": false,
+        "source": "https://play.google.com/store/apps/details?id=fr.harryjmg.punchlines&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": "9,99 €",
+        "annuel": "17,99 € à 49,99 €",
+        "vie": null,
+        "autres": "Aussi : 4,99 € par semaine, 17,99 € par trimestre.",
+        "essai": "3 ou 7 jours selon l'offre"
+      }
     },
     {
-      "nom": "Mantra, Affirmations du jour",
+      "slug": "mantra",
+      "nom": "Mantra",
+      "nomStore": "Mantra - Affirmations du jour",
       "editeur": "Broftware House",
-      "appStoreId": "1202851636",
-      "langue": "Français",
-      "plateformes": "iPhone. Android : non vérifié.",
-      "style": "Affirmations quotidiennes, avec des widgets.",
-      "abonnement": "Non vérifié.",
-      "note": "4,7",
-      "nbNotes": "937",
-      "pourQui": "Si tu veux une app simple d'affirmations du jour avec des widgets, Mantra est bien notée par celles et ceux qui l'utilisent."
+      "logo": "/assets/comparatif/mantra.webp",
+      "style": "Affirmations du jour à personnaliser",
+      "pourQui": "Pour toi si tu aimes personnaliser : tes propres phrases, tes collections, ton fond d'écran, ta voix.",
+      "forts": [
+        "Plus de 30 catégories, et tu peux ajouter tes propres affirmations.",
+        "Tu peux enregistrer ta voix et l'écouter en boucle, avec des sons d'ambiance.",
+        "Interface en français, app Apple Watch, et un abonnement mensuel affiché dès 4,99 €."
+      ],
+      "limites": [
+        "Pas trouvée sur Google Play France, ni par son nom ni par son éditeur. Son site ne renvoie que vers l'App Store.",
+        "Beaucoup d'offres différentes dans la liste des achats intégrés : regarde bien laquelle tu prends."
+      ],
+      "widget": null,
+      "ios": {
+        "id": "1202851636",
+        "url": "https://apps.apple.com/fr/app/id1202851636",
+        "note": "4,7",
+        "nbNotes": "937",
+        "francais": true,
+        "langues": "Français et 9 autres langues",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["Mantra Premium Annuel", "29,99 €"],
+          ["Mantra Premium Monthly", "4,99 €"],
+          ["Mantra Premium Annual", "19,99 €"],
+          ["Mantra Premium Annual", "17,99 €"],
+          ["Mantra Premium - 3 Months", "9,99 €"],
+          ["Mantra Premium Annual", "29,99 €"],
+          ["Mantra Premium Annual", "10,99 €"],
+          ["Mantra Premium Lifetime", "74,99 €"],
+          ["Mantra Premium - Weekly", "5,99 €"],
+          ["Mantra Premium - Monthly", "9,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id1202851636",
+        "releve": "2026-11-11"
+      },
+      "android": null,
+      "androidAbsent": "Pas trouvée sur Google Play France (recherche par nom et par éditeur, le 11 novembre 2026).",
+      "prix": {
+        "mensuel": "4,99 € ou 9,99 €",
+        "annuel": "10,99 € à 29,99 €",
+        "vie": "74,99 €",
+        "autres": "Aussi : 5,99 € par semaine, 9,99 € pour 3 mois.",
+        "essai": null
+      }
     },
     {
+      "slug": "innertune",
+      "nom": "Innertune",
+      "nomStore": "Innertune: Affirmations Zen",
+      "editeur": "Innertune Media Inc.",
+      "logo": "/assets/comparatif/innertune.webp",
+      "style": "Affirmations à écouter, en playlists",
+      "pourQui": "Pour toi si tu préfères écouter tes affirmations, en fond pendant que tu travailles ou que tu t'endors.",
+      "forts": [
+        "Tout est pensé pour l'écoute : 19 voix, ou ta propre voix, et des sons pour dormir ou te concentrer.",
+        "Un mode nuit pour le sommeil, et une version gratuite pour commencer.",
+        "Sur Android aussi : plus de 100 000 téléchargements, 4,6 sur 5."
+      ],
+      "limites": [
+        "L'App Store indique une interface en anglais, même si la fiche est traduite en français.",
+        "Les voix, la plupart des sons et ta propre voix demandent l'abonnement Premium.",
+        "Pas d'app Apple Watch dans la liste des appareils compatibles."
+      ],
+      "widget": null,
+      "ios": {
+        "id": "6443625379",
+        "url": "https://apps.apple.com/fr/app/id6443625379",
+        "note": "4,8",
+        "nbNotes": "151",
+        "francais": false,
+        "langues": "Anglais",
+        "appleWatch": false,
+        "achatsIntegres": [
+          ["Innertune Premium", "39,99 €"],
+          ["Innertune Premium (Yearly)", "29,99 €"],
+          ["Innertune Premium Monthly", "9,99 €"],
+          ["Innertune Premium", "59,99 €"],
+          ["Innertune Premium Monthly", "9,95 €"],
+          ["Innertune Premium Monthly", "22,99 €"],
+          ["Innertune Premium (3 Months)", "34,99 €"],
+          ["Innertune Premium", "79,99 €"],
+          ["Innertune Premium", "34,99 €"],
+          ["Innertune Premium", "89,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id6443625379",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "com.innertune.app",
+        "nomStore": "Innertune Affirmations",
+        "url": "https://play.google.com/store/apps/details?id=com.innertune.app&hl=fr&gl=FR",
+        "note": "4,6",
+        "nbAvis": "14,3 k",
+        "telechargements": "100 k+",
+        "fourchette": "4,29 € à 104,99 €",
+        "pubs": false,
+        "source": "https://play.google.com/store/apps/details?id=com.innertune.app&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": "9,95 € à 22,99 €",
+        "annuel": "29,99 €",
+        "vie": null,
+        "autres": "Aussi : 34,99 € pour 3 mois.",
+        "essai": null
+      }
+    },
+    {
+      "slug": "thinkup",
       "nom": "ThinkUp",
+      "nomStore": "ThinkUp-Daily Affirmations app",
       "editeur": "Precise Wellness LLC",
-      "appStoreId": "906660772",
-      "langue": "Non vérifié.",
-      "plateformes": "iPhone. Android : non vérifié.",
-      "style": "Affirmations à écouter, avec une voix enregistrée.",
-      "abonnement": "Non vérifié.",
-      "note": "4,7",
-      "nbNotes": "53",
-      "pourQui": "Si tu préfères écouter tes affirmations plutôt que les lire, regarde du côté de ThinkUp. Vérifie la langue avant de t'abonner."
+      "logo": "/assets/comparatif/thinkup.webp",
+      "style": "Tes affirmations, enregistrées avec ta voix",
+      "pourQui": "Pour toi si tu veux t'enregistrer en train de dire tes affirmations, sur une musique, et les réécouter chaque jour.",
+      "forts": [
+        "Tu enregistres tes affirmations avec ta propre voix, sur une musique de fond.",
+        "Plus de 300 affirmations prêtes, sur plus de 10 objectifs de vie.",
+        "Le temps de pratique s'ajoute à l'app Santé d'Apple. Version Android avec plus de 100 000 téléchargements."
+      ],
+      "limites": [
+        "Interface en anglais seulement, d'après l'App Store.",
+        "La version gratuite se limite à trois affirmations enregistrées et une musique.",
+        "Peu de notes en France : 53."
+      ],
+      "widget": null,
+      "ios": {
+        "id": "906660772",
+        "url": "https://apps.apple.com/fr/app/id906660772",
+        "note": "4,7",
+        "nbNotes": "53",
+        "francais": false,
+        "langues": "Anglais",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["ThinkUp Premium - Monthly Subscription", "8,49 €"],
+          ["ThinkUpTrial", "43,99 €"],
+          ["ThinkUp Premium for life", "99,99 €"],
+          ["Unlimited access for one year", "42,99 €"],
+          ["ThinkUp Premium - Subscription", "13,99 €"],
+          ["Premium access for 3 months", "15,99 €"],
+          ["ThinkUp Premium For Life", "89,99 €"],
+          ["Premium for Sweatcoin", "43,99 €"],
+          ["ThinkUp Premium - Subscription", "13,99 €"]
+        ],
+        "source": "https://apps.apple.com/fr/app/id906660772",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "com.think.up",
+        "nomStore": "ThinkUp - Daily Affirmations",
+        "url": "https://play.google.com/store/apps/details?id=com.think.up&hl=fr&gl=FR",
+        "note": "4,3",
+        "nbAvis": "4,65 k",
+        "telechargements": "100 k+",
+        "fourchette": "2,29 € à 54,99 €",
+        "pubs": false,
+        "source": "https://play.google.com/store/apps/details?id=com.think.up&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": "8,49 €",
+        "annuel": "42,99 €",
+        "vie": "89,99 € ou 99,99 €",
+        "autres": "Aussi : 15,99 € pour 3 mois.",
+        "essai": null
+      }
     },
     {
-      "nom": "Manifest, Affirmations du jour",
-      "editeur": "Zipo Apps Ltd.",
-      "appStoreId": "1631748635",
-      "langue": "Français",
-      "plateformes": "iPhone. Android : non vérifié.",
-      "style": "Affirmations du jour.",
-      "abonnement": "Non vérifié.",
-      "note": "4,2",
-      "nbNotes": "9",
-      "pourQui": "Avec 9 notes en France, difficile de se faire une idée. À tester si les autres ne te conviennent pas."
+      "slug": "unique",
+      "nom": "Unique Daily Affirmations",
+      "nomStore": "Unique Daily Affirmations",
+      "editeur": "Gopher Apps LLC",
+      "logo": "/assets/comparatif/unique.webp",
+      "style": "Une affirmation par jour, en un geste",
+      "pourQui": "Pour toi si tu veux le plus simple possible : une phrase par jour, et un petit budget.",
+      "forts": [
+        "Très simple : tu appuies sur un bouton, une affirmation apparaît, tu la dis à voix haute.",
+        "Des petits prix : 0,99 € par mois, 11,99 € par an, 44,99 € à vie.",
+        "App Apple Watch, et version Android avec plus de 50 000 téléchargements."
+      ],
+      "limites": [
+        "Interface en anglais seulement, d'après l'App Store.",
+        "Sur Android, la fiche indique « Contient des annonces ».",
+        "Peu de notes en France : 44."
+      ],
+      "widget": null,
+      "ios": {
+        "id": "418693319",
+        "url": "https://apps.apple.com/fr/app/id418693319",
+        "note": "4,8",
+        "nbNotes": "44",
+        "francais": false,
+        "langues": "Anglais",
+        "appleWatch": true,
+        "achatsIntegres": [
+          ["Affirmations All Access", "0,99 €"],
+          ["Affirmations All Access Annual", "11,99 €"],
+          ["All Access Lifetime", "44,99 €"],
+          ["Amazing First Tip", "9,99 €"],
+          ["Massive First Tip", "5,99 €"],
+          ["Generous First Tip", "0,99 €"],
+          ["Amazing Tip", "9,99 €"],
+          ["Massive Tip", "5,99 €"],
+          ["Generous Tip", "0,99 €"],
+          ["Unlimited Phone Alerts", "0,99 €"]
+        ],
+        "noteMensuel": "La description précise que « All Access » est un abonnement mensuel.",
+        "source": "https://apps.apple.com/fr/app/id418693319",
+        "releve": "2026-11-11"
+      },
+      "android": {
+        "package": "com.gopherapps.affirmations",
+        "nomStore": "Unique Daily Affirmations",
+        "url": "https://play.google.com/store/apps/details?id=com.gopherapps.affirmations&hl=fr&gl=FR",
+        "note": null,
+        "nbAvis": null,
+        "telechargements": "50 k+",
+        "fourchette": "2,09 €",
+        "pubs": true,
+        "source": "https://play.google.com/store/apps/details?id=com.gopherapps.affirmations&hl=fr&gl=FR",
+        "releve": "2026-11-11"
+      },
+      "prix": {
+        "mensuel": "0,99 €",
+        "annuel": "11,99 €",
+        "vie": "44,99 €",
+        "autres": "Aussi : des pourboires facultatifs de 0,99 € à 9,99 €.",
+        "essai": null
+      }
     }
   ],
   "choisir": {
     "titre": "Comment choisir",
     "paragraphes": [
-      "Commence par une question simple : tu veux lire, ou écouter ? Pour lire, la plupart de ces apps font le travail. Pour écouter, ThinkUp est celle qui met la voix en avant.",
-      "Ensuite, regarde le ton. Des citations d'auteurs, des phrases à la première personne, des phrases avec un peu d'humour : ouvre l'app et lis-en dix. Tu sauras vite si la voix te parle.",
-      "Enfin, lis la fiche avant de lancer un essai. Ces apps fonctionnent souvent avec un abonnement. Note la date de fin d'essai dans ton agenda, quelle que soit l'app."
+      "Commence par une question simple : tu veux lire, ou écouter ? Pour lire, Motivation, I am, Punchlines, Mantra et Unique font le travail. Pour écouter, Innertune et ThinkUp mettent la voix au centre. Mantra permet aussi d'enregistrer ta voix.",
+      "Ensuite, la langue. Si tu veux une app en français de bout en bout, regarde Motivation, I am, Punchlines ou Mantra. Les trois autres ont une interface en anglais.",
+      "Sur Android, toutes sont disponibles sauf Mantra. I am, Motivation et Unique affichent des publicités sur Android.",
+      "Enfin, le prix. Il va de 0,99 € à plus de 20 € par mois selon l'app et l'offre. Si tu lances un essai gratuit, note sa date de fin dans ton agenda, quelle que soit l'app."
     ]
   },
   "liensThemes": ["confiance-en-soi", "matin", "amour-de-soi", "anxiete", "soir"]
