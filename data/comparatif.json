@@ -16,7 +16,8 @@
   "methode": [
     "On a ouvert la fiche de chaque app sur l'App Store France et sur Google Play France le 11 novembre 2026. La note, le nombre de notes, la langue et la compatibilité Apple Watch viennent de l'App Store. Le nombre de téléchargements et la note Android viennent de Google Play.",
     "Les prix iPhone viennent de la liste « Achats intégrés » de l'App Store. Apple y montre dix lignes au plus, souvent sans dire la durée. On ne range un prix dans « mensuel » ou « annuel » que si son nom le dit. Sur Android, Google Play n'affiche qu'une fourchette, du plus petit au plus grand achat possible.",
-    "Quand une info n'est pas sur la fiche, on ne la devine pas : tu lis « non affiché sur la fiche ». Les prix bougent souvent, et l'écran d'abonnement d'une app peut proposer une autre offre. Regarde le prix final avant de valider.",
+    "La durée de l'essai gratuit vient de l'offre affichée sur la fiche App Store quand elle y est (Innertune, ThinkUp). Pour Motivation et I am, elle vient des avis d'utilisateurs, qui citent tous 3 jours. Mantra propose un essai sans en donner la durée sur sa fiche. L'essai peut changer selon l'offre qu'on te montre dans l'app.",
+    "Quand une fiche ne dit pas tout, on écrit ce qu'elle montre et rien de plus. Les prix bougent souvent, et l'écran d'abonnement d'une app peut proposer une autre offre. Regarde le prix final avant de valider.",
     "On a retiré Manifest de la version précédente de ce comparatif : 9 notes en France, c'est trop peu pour en dire quelque chose. On a ajouté Innertune et Unique Daily Affirmations, deux apps connues du genre, même si leur interface est en anglais."
   ],
   "apps": [
@@ -48,16 +49,46 @@
         "langues": "Français et 13 autres langues",
         "appleWatch": true,
         "achatsIntegres": [
-          ["Motivation Premium (1 an)", "19,99 €"],
-          ["Motivation Premium", "11,99 €"],
-          ["Premium Motivation", "9,99 €"],
-          ["Premium Motivation", "9,99 €"],
-          ["Premium Motivation", "9,99 €"],
-          ["Premium Motivation", "59,99 €"],
-          ["Premium Motivation", "5,49 €"],
-          ["Premium Motivation", "19,99 €"],
-          ["Premium Motivation", "9,99 €"],
-          ["Motivation Premium", "3,99 €"]
+          [
+            "Motivation Premium (1 an)",
+            "19,99 €"
+          ],
+          [
+            "Motivation Premium",
+            "11,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "9,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "9,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "9,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "59,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "5,49 €"
+          ],
+          [
+            "Premium Motivation",
+            "19,99 €"
+          ],
+          [
+            "Premium Motivation",
+            "9,99 €"
+          ],
+          [
+            "Motivation Premium",
+            "3,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id876080126",
         "releve": "2026-11-11"
@@ -75,11 +106,11 @@
         "releve": "2026-11-11"
       },
       "prix": {
-        "mensuel": null,
+        "mensuel": "achats de 3,99 € à 59,99 €",
         "annuel": "19,99 €",
-        "vie": null,
+        "vie": "proposé, prix non listé",
         "autres": "La description parle d'un abonnement mensuel, annuel ou à vie, sans en donner les prix.",
-        "essai": null
+        "essai": "3 jours"
       }
     },
     {
@@ -110,16 +141,46 @@
         "langues": "Français et 13 autres langues",
         "appleWatch": true,
         "achatsIntegres": [
-          ["I am Premium (1 an)", "35,99 €"],
-          ["I Am Premium", "39,99 €"],
-          ["I am Premium", "11,99 €"],
-          ["I am Premium", "15,99 €"],
-          ["I am Premium", "35,99 €"],
-          ["I Premium (1 mois)", "9,99 €"],
-          ["I am Premium", "59,99 €"],
-          ["Premium I am", "35,99 €"],
-          ["I am Premium", "10,99 €"],
-          ["Self Growth Essentials", "69,99 €"]
+          [
+            "I am Premium (1 an)",
+            "35,99 €"
+          ],
+          [
+            "I Am Premium",
+            "39,99 €"
+          ],
+          [
+            "I am Premium",
+            "11,99 €"
+          ],
+          [
+            "I am Premium",
+            "15,99 €"
+          ],
+          [
+            "I am Premium",
+            "35,99 €"
+          ],
+          [
+            "I Premium (1 mois)",
+            "9,99 €"
+          ],
+          [
+            "I am Premium",
+            "59,99 €"
+          ],
+          [
+            "Premium I am",
+            "35,99 €"
+          ],
+          [
+            "I am Premium",
+            "10,99 €"
+          ],
+          [
+            "Self Growth Essentials",
+            "69,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id874656917",
         "releve": "2026-11-11"
@@ -139,9 +200,9 @@
       "prix": {
         "mensuel": "9,99 €",
         "annuel": "35,99 €",
-        "vie": null,
+        "vie": "89,99 $ aux États-Unis",
         "autres": "La description parle aussi d'un abonnement à vie, sans en donner le prix.",
-        "essai": null
+        "essai": "3 jours"
       }
     },
     {
@@ -173,16 +234,46 @@
         "langues": "Français et anglais",
         "appleWatch": true,
         "achatsIntegres": [
-          ["Premium (1 an)", "49,99 €"],
-          ["Premium (1 an) - 7j gratuits", "34,99 €"],
-          ["Premium (1 an)", "49,99 €"],
-          ["Premium (1 an)", "29,99 €"],
-          ["Premium (1 an)", "34,99 €"],
-          ["Premium (1 trimestre) 3j essai", "17,99 €"],
-          ["Premium (Mensuel)", "9,99 €"],
-          ["Premium (1 an)", "17,99 €"],
-          ["Premium (1 mois) - 3j gratuits", "9,99 €"],
-          ["Premium (hebdomadaire)", "4,99 €"]
+          [
+            "Premium (1 an)",
+            "49,99 €"
+          ],
+          [
+            "Premium (1 an) - 7j gratuits",
+            "34,99 €"
+          ],
+          [
+            "Premium (1 an)",
+            "49,99 €"
+          ],
+          [
+            "Premium (1 an)",
+            "29,99 €"
+          ],
+          [
+            "Premium (1 an)",
+            "34,99 €"
+          ],
+          [
+            "Premium (1 trimestre) 3j essai",
+            "17,99 €"
+          ],
+          [
+            "Premium (Mensuel)",
+            "9,99 €"
+          ],
+          [
+            "Premium (1 an)",
+            "17,99 €"
+          ],
+          [
+            "Premium (1 mois) - 3j gratuits",
+            "9,99 €"
+          ],
+          [
+            "Premium (hebdomadaire)",
+            "4,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id6744821000",
         "releve": "2026-11-11"
@@ -202,9 +293,9 @@
       "prix": {
         "mensuel": "9,99 €",
         "annuel": "17,99 € à 49,99 €",
-        "vie": null,
+        "vie": "pas dans la liste",
         "autres": "Aussi : 4,99 € par semaine, 17,99 € par trimestre.",
-        "essai": "3 ou 7 jours selon l'offre"
+        "essai": "7 jours"
       }
     },
     {
@@ -234,16 +325,46 @@
         "langues": "Français et 9 autres langues",
         "appleWatch": true,
         "achatsIntegres": [
-          ["Mantra Premium Annuel", "29,99 €"],
-          ["Mantra Premium Monthly", "4,99 €"],
-          ["Mantra Premium Annual", "19,99 €"],
-          ["Mantra Premium Annual", "17,99 €"],
-          ["Mantra Premium - 3 Months", "9,99 €"],
-          ["Mantra Premium Annual", "29,99 €"],
-          ["Mantra Premium Annual", "10,99 €"],
-          ["Mantra Premium Lifetime", "74,99 €"],
-          ["Mantra Premium - Weekly", "5,99 €"],
-          ["Mantra Premium - Monthly", "9,99 €"]
+          [
+            "Mantra Premium Annuel",
+            "29,99 €"
+          ],
+          [
+            "Mantra Premium Monthly",
+            "4,99 €"
+          ],
+          [
+            "Mantra Premium Annual",
+            "19,99 €"
+          ],
+          [
+            "Mantra Premium Annual",
+            "17,99 €"
+          ],
+          [
+            "Mantra Premium - 3 Months",
+            "9,99 €"
+          ],
+          [
+            "Mantra Premium Annual",
+            "29,99 €"
+          ],
+          [
+            "Mantra Premium Annual",
+            "10,99 €"
+          ],
+          [
+            "Mantra Premium Lifetime",
+            "74,99 €"
+          ],
+          [
+            "Mantra Premium - Weekly",
+            "5,99 €"
+          ],
+          [
+            "Mantra Premium - Monthly",
+            "9,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id1202851636",
         "releve": "2026-11-11"
@@ -255,7 +376,7 @@
         "annuel": "10,99 € à 29,99 €",
         "vie": "74,99 €",
         "autres": "Aussi : 5,99 € par semaine, 9,99 € pour 3 mois.",
-        "essai": null
+        "essai": "oui, durée non précisée"
       }
     },
     {
@@ -286,16 +407,46 @@
         "langues": "Anglais",
         "appleWatch": false,
         "achatsIntegres": [
-          ["Innertune Premium", "39,99 €"],
-          ["Innertune Premium (Yearly)", "29,99 €"],
-          ["Innertune Premium Monthly", "9,99 €"],
-          ["Innertune Premium", "59,99 €"],
-          ["Innertune Premium Monthly", "9,95 €"],
-          ["Innertune Premium Monthly", "22,99 €"],
-          ["Innertune Premium (3 Months)", "34,99 €"],
-          ["Innertune Premium", "79,99 €"],
-          ["Innertune Premium", "34,99 €"],
-          ["Innertune Premium", "89,99 €"]
+          [
+            "Innertune Premium",
+            "39,99 €"
+          ],
+          [
+            "Innertune Premium (Yearly)",
+            "29,99 €"
+          ],
+          [
+            "Innertune Premium Monthly",
+            "9,99 €"
+          ],
+          [
+            "Innertune Premium",
+            "59,99 €"
+          ],
+          [
+            "Innertune Premium Monthly",
+            "9,95 €"
+          ],
+          [
+            "Innertune Premium Monthly",
+            "22,99 €"
+          ],
+          [
+            "Innertune Premium (3 Months)",
+            "34,99 €"
+          ],
+          [
+            "Innertune Premium",
+            "79,99 €"
+          ],
+          [
+            "Innertune Premium",
+            "34,99 €"
+          ],
+          [
+            "Innertune Premium",
+            "89,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id6443625379",
         "releve": "2026-11-11"
@@ -315,9 +466,9 @@
       "prix": {
         "mensuel": "9,95 € à 22,99 €",
         "annuel": "29,99 €",
-        "vie": null,
+        "vie": "pas dans la liste",
         "autres": "Aussi : 34,99 € pour 3 mois.",
-        "essai": null
+        "essai": "3 jours"
       }
     },
     {
@@ -348,15 +499,42 @@
         "langues": "Anglais",
         "appleWatch": true,
         "achatsIntegres": [
-          ["ThinkUp Premium - Monthly Subscription", "8,49 €"],
-          ["ThinkUpTrial", "43,99 €"],
-          ["ThinkUp Premium for life", "99,99 €"],
-          ["Unlimited access for one year", "42,99 €"],
-          ["ThinkUp Premium - Subscription", "13,99 €"],
-          ["Premium access for 3 months", "15,99 €"],
-          ["ThinkUp Premium For Life", "89,99 €"],
-          ["Premium for Sweatcoin", "43,99 €"],
-          ["ThinkUp Premium - Subscription", "13,99 €"]
+          [
+            "ThinkUp Premium - Monthly Subscription",
+            "8,49 €"
+          ],
+          [
+            "ThinkUpTrial",
+            "43,99 €"
+          ],
+          [
+            "ThinkUp Premium for life",
+            "99,99 €"
+          ],
+          [
+            "Unlimited access for one year",
+            "42,99 €"
+          ],
+          [
+            "ThinkUp Premium - Subscription",
+            "13,99 €"
+          ],
+          [
+            "Premium access for 3 months",
+            "15,99 €"
+          ],
+          [
+            "ThinkUp Premium For Life",
+            "89,99 €"
+          ],
+          [
+            "Premium for Sweatcoin",
+            "43,99 €"
+          ],
+          [
+            "ThinkUp Premium - Subscription",
+            "13,99 €"
+          ]
         ],
         "source": "https://apps.apple.com/fr/app/id906660772",
         "releve": "2026-11-11"
@@ -378,7 +556,7 @@
         "annuel": "42,99 €",
         "vie": "89,99 € ou 99,99 €",
         "autres": "Aussi : 15,99 € pour 3 mois.",
-        "essai": null
+        "essai": "7 jours"
       }
     },
     {
@@ -409,16 +587,46 @@
         "langues": "Anglais",
         "appleWatch": true,
         "achatsIntegres": [
-          ["Affirmations All Access", "0,99 €"],
-          ["Affirmations All Access Annual", "11,99 €"],
-          ["All Access Lifetime", "44,99 €"],
-          ["Amazing First Tip", "9,99 €"],
-          ["Massive First Tip", "5,99 €"],
-          ["Generous First Tip", "0,99 €"],
-          ["Amazing Tip", "9,99 €"],
-          ["Massive Tip", "5,99 €"],
-          ["Generous Tip", "0,99 €"],
-          ["Unlimited Phone Alerts", "0,99 €"]
+          [
+            "Affirmations All Access",
+            "0,99 €"
+          ],
+          [
+            "Affirmations All Access Annual",
+            "11,99 €"
+          ],
+          [
+            "All Access Lifetime",
+            "44,99 €"
+          ],
+          [
+            "Amazing First Tip",
+            "9,99 €"
+          ],
+          [
+            "Massive First Tip",
+            "5,99 €"
+          ],
+          [
+            "Generous First Tip",
+            "0,99 €"
+          ],
+          [
+            "Amazing Tip",
+            "9,99 €"
+          ],
+          [
+            "Massive Tip",
+            "5,99 €"
+          ],
+          [
+            "Generous Tip",
+            "0,99 €"
+          ],
+          [
+            "Unlimited Phone Alerts",
+            "0,99 €"
+          ]
         ],
         "noteMensuel": "La description précise que « All Access » est un abonnement mensuel.",
         "source": "https://apps.apple.com/fr/app/id418693319",
@@ -441,7 +649,7 @@
         "annuel": "11,99 €",
         "vie": "44,99 €",
         "autres": "Aussi : des pourboires facultatifs de 0,99 € à 9,99 €.",
-        "essai": null
+        "essai": "aucun annoncé"
       }
     }
   ],
@@ -454,5 +662,11 @@
       "Enfin, le prix. Il va de 0,99 € à plus de 20 € par mois selon l'app et l'offre. Si tu lances un essai gratuit, note sa date de fin dans ton agenda, quelle que soit l'app."
     ]
   },
-  "liensThemes": ["confiance-en-soi", "matin", "amour-de-soi", "anxiete", "soir"]
+  "liensThemes": [
+    "confiance-en-soi",
+    "matin",
+    "amour-de-soi",
+    "anxiete",
+    "soir"
+  ]
 }
