@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "fr.harryjmg.punchlines",
-      "sha256_cert_fingerprints": ["A_REMPLACER"]
+      "sha256_cert_fingerprints": ["CB:A4:B1:58:A4:4C:97:CF:B2:53:72:30:4E:80:A6:77:0F:D4:70:EF:14:B7:7F:1A:8F:90:E8:9B:09:27:07:C6"]
     }
   }
 ]
